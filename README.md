@@ -4,4 +4,4 @@ Sisteminha  que mostra a execução dos exercícios da semana 1 do curso de Java
 ---
 ## Vídeo so sisteminha rodando.
 
-![](sistema.mov)
+![video](sistema.mov)
