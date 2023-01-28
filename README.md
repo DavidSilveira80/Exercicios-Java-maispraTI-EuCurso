@@ -2,3 +2,5 @@
 Sisteminha  que mostra a execução dos exercícios da semana 1 do curso de Java da iniciativa +praTi
 
 ---
+## Demonstração do sistema em funcionamento
+![](sistema.gif)
