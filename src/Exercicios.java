@@ -65,17 +65,19 @@ public class Exercicios {
 
         if(salarioBruto < 1000){
             double salarioLiquido = salarioBruto - ((6 * salarioBruto) / 100);
-            System.out.printf("Seu salário bruto é R$ %.2f", salarioBruto);
-            System.out.printf("Salário liquido é R$ %.2f", salarioLiquido);
+            System.out.printf("Seu salário bruto é R$ %.2f\n", salarioBruto);
+            System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto > 1000 && salarioBruto <= 2500){
             double salarioLiquido = salarioBruto - ((8 * salarioBruto) / 100);
-            System.out.printf("Salário liquido é R$ %.2f", salarioLiquido);
+            System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto > 2500 && salarioBruto <= 4800){
             double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
-            System.out.printf("Salário liquido é R$ %.2f", salarioLiquido);
+            System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto > 4800){
             double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
-            System.out.printf("Salário liquido é R$ %.2f", salarioLiquido);
+            System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
+        }else{
+            System.out.println("Salário fora da faixa.");
         }
 
     }
