@@ -13,7 +13,7 @@ public class Exercicios {
         int contador = 0;
 
         while (contador < 3) {
-            System.out.printf("Informe o 1º número: ", contador + 1);
+            System.out.printf("Informe o %dº número: ", contador + 1);
             tresInteiros.add(entrada.nextInt());
             contador++;
         }
