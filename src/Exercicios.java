@@ -73,15 +73,9 @@ public class Exercicios {
         }else if(salarioBruto > 2500 && salarioBruto <= 4800){
             double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
             System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
-        }else if(salarioBruto > 4800){
+        }else if(salarioBruto > 4800) {
             double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
             System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
-        }else{
-            System.out.println("Salário fora da faixa.");
         }
-
     }
 }
-
-
-
