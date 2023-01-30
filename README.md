@@ -3,4 +3,4 @@ Sisteminha  que mostra a execução dos exercícios da semana 1 do curso de Java
 
 ---
 ## Demonstração do sistema em funcionamento
-![](sistema.gif)
+![](demoSemana1.gif)
