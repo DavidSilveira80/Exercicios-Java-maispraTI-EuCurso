@@ -2,5 +2,5 @@
 Sisteminha  que mostra a execução dos exercícios da semana 1 do curso de Java da iniciativa EuCurso/+praTi
 
 ---
-## Demonstração do sistema em funcionamento
+## Demonstração da execução do sistema
 ![](demoSemana1.gif)
