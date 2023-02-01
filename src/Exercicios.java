@@ -78,4 +78,67 @@ public class Exercicios {
             System.out.printf("Salário liquido é R$ %.2f\n", salarioLiquido);
         }
     }
+    public static void mostrarExercicioPoo1Jogador(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("""
+                            Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
+                            E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
+                            quantidade de gols/assistências.
+                            Também criar dois métodos  para ver o número de gols e assistências.
+                            """);
+        int loop = 0;
+        while(loop == 0){
+
+            System.out.println();
+            System.out.print("INFORME O NOME DO JOGADOR: ");
+            String nome = entrada.nextLine();
+            Jogador jogador = new Jogador(nome);
+            int option;
+            do{
+                System.out.println();
+                System.out.println("JOGADOR: " + jogador.getNomeJogador());
+                Menus.mostrarMenuJogador();
+                System.out.print("INFORME SUA ESCOLHA: ");
+                option = entrada.nextInt();
+            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
+            switch(option){
+                case 1:
+                    System.out.println();
+                    System.out.println("ADICIONAR GOLS.");
+                    System.out.println();
+                    System.out.print("INFORME QUANTOS GOLS QUER ADICIONAR: ");
+                    int gol = entrada.nextInt();
+                    jogador.adicionarGol(gol);
+
+                    break;
+                case 2:
+                    System.out.println();
+                    System.out.println("ADICIONAR ASSISTÊNCIAS.");
+                    System.out.println();
+                    System.out.print("INFORME QUANTAS ASSISTÊNCIAS QUER ADICIONAR: ");
+                    int assistencia = entrada.nextInt();
+                    jogador.adicionarAssistencia(assistencia);
+                    break;
+                case 3:
+                    System.out.println();
+                    System.out.println("MOSTRAR NÚMERO DE GOLS.");
+                    System.out.println();
+                    jogador.mostrarNumerosDeGols();
+                    break;
+                case 4:
+                    System.out.println();
+                    System.out.println("MOSTRAR NÚMERO DE ASSISTÊNCIAS.");
+                    System.out.println();
+                    jogador.mostrarNumeroDeAssistencias();
+                    break;
+                case 5:
+                    System.out.println();
+                    System.out.println("SAINDO.");
+                    loop = 1;
+                    break;
+            }
+
+        }
+
+    }
 }
