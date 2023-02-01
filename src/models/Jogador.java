@@ -1,3 +1,5 @@
+package models;
+
 public class Jogador {
     String nomeJogador;
     int gols, assistencia;

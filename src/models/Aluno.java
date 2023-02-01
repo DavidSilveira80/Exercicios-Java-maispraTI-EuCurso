@@ -1,3 +1,5 @@
+package models;
+
 public class Aluno {
     String nomeAluno;
     double nota1, nota2, nota3, media, maiorNota, menorNota, notasSomadas;
