@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Locale;
 
 public class Exercicios {
     public static void mostrarResultadoExercicio1() {
@@ -48,7 +49,9 @@ public class Exercicios {
         }
     }
     public static void mostrarResultadoExercicio3(){
+        Locale.setDefault(Locale.US);
         Scanner entrada = new Scanner(System.in);
+
         System.out.println();
         System.out.println("""
                 Escreva um programa que leia o salário bruto de um funcionário e mostre o
@@ -141,4 +144,34 @@ public class Exercicios {
         }
 
     }
+    public static void mostrarExercicioPoo2Aluno(){
+        Locale.setDefault(Locale.US);
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("""
+                Criar uma classe aluno que receba um nome, nota1, nota2 e nota3, onde o montante das 
+                notas podem chegar no máximo 100.
+                Cria um método que retorne o nome do aluno, sua média, a maior e menor nota
+                """);
+        System.out.println();
+        System.out.print("INFORME O NOME DO ALUNO: ");
+        String nome = entrada.nextLine();
+        System.out.print("INFORME O PRIMEIRA NOTA DO ALUNO: ");
+        double nota1 = entrada.nextDouble();
+        System.out.print("INFORME A SEGUNDA NOTA DO ALUNO: ");
+        double nota2 = entrada.nextDouble();
+        System.out.print("INFORME A TERCEIRA NOTA DO ALUNO: ");
+        double nota3 = entrada.nextDouble();
+        System.out.println();
+        Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
+        aluno.somarNotas();
+        if(aluno.getNotasSomadas() <= 100){
+            aluno.calcularMedia();
+            aluno.acharMaiorNota();
+            aluno.acharMenorNota();
+            System.out.println(aluno.mostrarBoletimAluno());
+        }else{
+            System.out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
+        }
+    }
+
 }

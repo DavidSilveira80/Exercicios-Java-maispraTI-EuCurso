@@ -5,7 +5,8 @@ public class Menus {
         System.out.println("   2 - PARA EXECUTAR EXERCÍCIO 2               ");
         System.out.println("   3 - PARA EXECUTAR EXERCÍCIO 3               ");
         System.out.println("   4 - PARA EXECUTAR EXERCÍCIO POO 1 JOGADOR   ");
-        System.out.println("   5 - PARA SAIR            ");
+        System.out.println("   5 - PARA EXECUTAR EXERCÍCIO POO 2 ALUNO     ");
+        System.out.println("   6 - PARA SAIR            ");
 
     }
     public static void mostrarMenuJogador(){

@@ -108,8 +108,8 @@ public class Aluno {
     public String mostrarBoletimAluno(){
         String saida = String.format("""
                           BOLETIM ESCOLAR
-                     ALUNO %S
-                     MÉDIA: %f.1f
+                     ALUNO %s
+                     MÉDIA: %.1f
                      MAIOR NOTA: %.1f
                      MENOR NOTA: %.1f     
                 """,this.nomeAluno, this.media, this.maiorNota, this.menorNota);

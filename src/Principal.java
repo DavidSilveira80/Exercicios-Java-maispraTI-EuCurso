@@ -9,7 +9,7 @@ public class Principal {
                 Menus.mostrarMenuPrincipal();
                 System.out.print("INFORME SUA ESCOLHA: ");
                 option = entrada.nextInt();
-            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
+            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
             switch(option){
                 case 1:
                     System.out.println();
@@ -29,11 +29,14 @@ public class Principal {
                 case 4:
                     System.out.println("Exercício POO 1");
                     System.out.println();
-
-                    System.out.println();
                     Exercicios.mostrarExercicioPoo1Jogador();
                     break;
                 case 5:
+                    System.out.println("Exercício POO 2");
+                    System.out.println();
+                    Exercicios.mostrarExercicioPoo2Aluno();
+                    break;
+                case 6:
                     System.out.println("SAINDO.");
                     loop = 1;
                     break;
