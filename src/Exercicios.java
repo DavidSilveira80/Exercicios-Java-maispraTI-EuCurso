@@ -88,14 +88,15 @@ public class Exercicios {
                             E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
                             quantidade de gols/assistências.
                             Também criar dois métodos  para ver o número de gols e assistências.
-                            """);
+                           """);
+        System.out.println();
+        System.out.print("INFORME O NOME DO JOGADOR: ");
+        String nome = entrada.nextLine();
+        Jogador jogador = new Jogador(nome);
+
         int loop = 0;
         while(loop == 0){
 
-            System.out.println();
-            System.out.print("INFORME O NOME DO JOGADOR: ");
-            String nome = entrada.nextLine();
-            Jogador jogador = new Jogador(nome);
             int option;
             do{
                 System.out.println();
