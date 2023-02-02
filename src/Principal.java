@@ -3,6 +3,7 @@ import utils.Menus;
 import static utils.Entradas.entradaInteira;
 
 public class Principal {
+
     public static void main(String[] args){
         int loop = 0;
         while(loop == 0){
@@ -11,7 +12,8 @@ public class Principal {
                 Menus.mostrarMenuPrincipal();
                 System.out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
+            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6
+                   && option != 7);
             switch(option){
                 case 1:
                     System.out.println();
@@ -39,6 +41,11 @@ public class Principal {
                     Exercicios.mostrarExercicioPoo2Aluno();
                     break;
                 case 6:
+                    System.out.println("EXERCÍCIO P00 3");
+                    System.out.println();
+                    Exercicios.mostrarExercicioPoo3Aluno2();
+                    break;
+                case 7:
                     System.out.println("SAINDO.");
                     loop = 1;
                     break;

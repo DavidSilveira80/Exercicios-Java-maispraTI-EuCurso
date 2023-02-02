@@ -1,4 +1,5 @@
 import models.Aluno;
+import models.Aluno2;
 import models.Jogador;
 import utils.Menus;
 
@@ -10,8 +11,10 @@ import java.util.Locale;
 
 import static utils.Entradas.entradaDouble;
 import static utils.Entradas.entradaInteira;
+import static utils.Entradas.validarNotas;
 
 public class Exercicios {
+
     public static void mostrarResultadoExercicio1() {
         System.out.println();
         System.out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
@@ -53,6 +56,7 @@ public class Exercicios {
                     valorAbaixoDeUmaDuzia);
         }
     }
+
     public static void mostrarResultadoExercicio3(){
         Locale.setDefault(Locale.US);
 
@@ -85,6 +89,7 @@ public class Exercicios {
             System.out.printf("O SALÁRIO LIQUIDO É R$ %.2f\n", salarioLiquido);
         }
     }
+
     public static void mostrarExercicioPoo1Jogador(){
         Scanner entrada = new Scanner(System.in);
         System.out.println("""
@@ -145,6 +150,7 @@ public class Exercicios {
             }
         }
     }
+
     public static void mostrarExercicioPoo2Aluno(){
         Locale.setDefault(Locale.US);
         Scanner entrada = new Scanner(System.in);
@@ -173,5 +179,44 @@ public class Exercicios {
         }else{
             System.out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
         }
+    }
+
+    public static void mostrarExercicioPoo3Aluno2(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("""
+                Crie uma classe Aluno com os campos nome, matrícula e notas[3].
+                Essa classe deve ser encapsulada e no momento de adicionar uma nova nota,
+                ela deve verificar se o somatório será maior que 100, caso for. Deixe uma
+                mensagem que não foi possível e peça para adicionar novamente uma nota.
+                """);
+
+        Aluno2 aluno2 = new Aluno2();
+        System.out.print("INFORME O NOME DO ALUNO: ");
+        String nomeAluno = entrada.nextLine();
+        aluno2.setNomeAluno(nomeAluno);
+        System.out.printf("INFORME A MATRICULA DO ALUNO ", aluno2.getNomeAluno() + "(ATÉ 4 DIGITOS) :");
+        int matricula = entradaInteira();
+        aluno2.setMatricula(matricula);
+
+        System.out.println();
+        System.out.println("------------------------------------------------");
+        System.out.println("INFORMAR AS NOTAS DO ALUNO " + aluno2.getNomeAluno() + ".");
+        System.out.println();
+
+        System.out.print("INFORMAR A 1ª NOTA: ");
+        double nota1 = entradaDouble();
+        aluno2.setNota1(validarNotas(nota1, aluno2));
+
+        System.out.print("INFORMAR A 2° NOTA: ");
+        double nota2 = entradaDouble();
+        aluno2.setNota2(validarNotas(nota2, aluno2));
+
+        System.out.print("INFORMAR A 3º NOTA: ");
+        double nota3 = entradaDouble();
+        aluno2.setNota3(validarNotas(nota3, aluno2));
+
+        System.out.println();
+        aluno2.mostrarBoletim();
+        System.out.println();
     }
 }

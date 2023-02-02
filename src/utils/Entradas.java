@@ -1,8 +1,11 @@
 package utils;
 
+import models.Aluno2;
+
 import java.util.Scanner;
 
 public class Entradas {
+
     public static int entradaInteira() {
         Scanner entrada = new Scanner(System.in);
         boolean continuarLeitura = true;
@@ -31,5 +34,19 @@ public class Entradas {
             }
         }
         return entraDouble;
+    }
+
+    //FUNÇÃO RECURSIVA
+    public static double validarNotas(double nota, Aluno2 aluno) {
+
+        if(aluno.getSomatorio() + nota >= 100){
+            System.out.println("NÃO FOI POSSÍVEL ADICIONAR NOTA. SOMATÓRIO MAIOR OU IGUAL À 100 PONTOS.");
+            System.out.print("INFORME A NOTA NOVAMENTE: ");
+            nota = entradaDouble();
+            nota = validarNotas(nota, aluno);
+        }else{
+            aluno.setSomatorio(aluno.getSomatorio() + nota);
+        }
+        return nota;
     }
 }

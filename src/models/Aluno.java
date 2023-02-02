@@ -26,9 +26,9 @@ public class Aluno {
     }
 
     public double acharMaiorNota(){
-        if(this.nota1 > this.nota2 && this.nota1 > this.nota3){
+        if(this.nota1 >= this.nota2 && this.nota1 >= this.nota3){
             this.maiorNota = this.nota1;
-        }else if(this.nota2 > this.nota1 && this.nota2 > this.nota3){
+        }else if(this.nota2 >= this.nota1 && this.nota2 >= this.nota3){
             this.maiorNota = this.nota2;
         }else{
             this.maiorNota = this.nota3;
@@ -37,9 +37,9 @@ public class Aluno {
     }
 
     public double acharMenorNota(){
-        if(this.nota1 < this.nota2 && this.nota1 < this.nota3){
+        if(this.nota1 <= this.nota2 && this.nota1 <= this.nota3){
             this.menorNota = this.nota1;
-        }else if(this.nota2 < this.nota1 && this.nota2 < this.nota3){
+        }else if(this.nota2 <= this.nota1 && this.nota2 <= this.nota3){
             this.menorNota = this.nota2;
         }else{
             this.menorNota = this.nota3;
