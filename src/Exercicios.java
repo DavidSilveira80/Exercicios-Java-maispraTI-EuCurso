@@ -272,12 +272,10 @@ public class Exercicios {
                     System.out.println("ALTERAR STATUS DO PEDIDO.");
                     pedido.alterarStatusPedido();
                     pedido.mostrarPedido(pedido);
-
                     break;
                 case 3:
                     System.out.println("GERAR NOTA DO PEDIDO");
-                    pedido.alterarStatusPedido();
-
+                    pedido.mostrarPedido(pedido);
                     break;
 
                 case 4:
