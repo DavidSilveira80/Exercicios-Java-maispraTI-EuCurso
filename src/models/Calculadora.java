@@ -9,7 +9,7 @@ public class Calculadora {
         int a = Entradas.entradaInteira();
         System.out.print("IFORME O PRIMEIRO NÚMERO: ");
         int b = Entradas.entradaInteira();
-        System.out.printf("%d + %d = %d  ", a, b, a + b);
+        System.out.printf("%d + %d = %d\n", a, b, a + b);
     }
 
     public static void subtrair(){
@@ -17,7 +17,7 @@ public class Calculadora {
         int a = Entradas.entradaInteira();
         System.out.print("IFORME O PRIMEIRO NÚMERO: ");
         int b = Entradas.entradaInteira();
-        System.out.printf("%d - %d = %d", a, b, a - b);
+        System.out.printf("%d - %d = %d\n", a, b, a - b);
     }
 
     public static void multiplicar(){
@@ -25,7 +25,7 @@ public class Calculadora {
         int a = Entradas.entradaInteira();
         System.out.print("IFORME O PRIMEIRO NÚMERO: ");
         int b = Entradas.entradaInteira();
-        System.out.printf("%d X %d = %d", a, b, a * b);
+        System.out.printf("%d X %d = %d\n", a, b, a * b);
     }
 
     public static void dividir(){
