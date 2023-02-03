@@ -54,7 +54,7 @@ public class Entradas {
         String item = "";
         switch(codigo){
             case 1:
-                item = "X SALADA ";
+                item = "X SALADA";
                 break;
             case 2:
                 item = "X FRANGO";

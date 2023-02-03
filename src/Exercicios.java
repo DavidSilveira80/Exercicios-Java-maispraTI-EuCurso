@@ -240,17 +240,21 @@ public class Exercicios {
             switch (option) {
                 case 1:
                     System.out.println("FAZER PEDIDO.");
-                    System.out.println();
-                    Menus.mostrarMenuLanchesValor();
+
 
                     int loop = 0;
                     int option2;
                     int codigoItem;
 
                     while (loop == 0) {
-                        System.out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
-
-                        codigoItem = entradaInteira();
+                        do {
+                            System.out.println();
+                            Menus.mostrarMenuLanchesValor();
+                            System.out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
+                            codigoItem = entradaInteira();
+                        }while(codigoItem != 1 && codigoItem != 2 && codigoItem != 3 && codigoItem != 4
+                                && codigoItem != 5 && codigoItem != 6 && codigoItem != 7
+                                && codigoItem != 8 && codigoItem != 9 && codigoItem != 10);
                         String item;
                         double vItem;
 
@@ -258,7 +262,7 @@ public class Exercicios {
                         vItem = Entradas.selecionarValorItemPedido(item, pedido);
 
                         pedido.adicionarItens(item, vItem);
-                        System.out.print("Continuar com o pedido?(1 - sim/ 2 - não): ");
+                        System.out.print("CONTINUAR COM O PEDIDO?(1 - SIM/ 2 - NÃO): ");
                         option2 = entradaInteira();
                         if (option2 == 1) {
                         } else {
@@ -281,6 +285,51 @@ public class Exercicios {
                 case 4:
                     System.out.println("SAINDO");
                     loopPrincipal = 1;
+                    break;
+            }
+        }
+    }
+
+    public static void mostrarExecucaoExercicioPoo5Calculadora(){
+        System.out.println();
+        System.out.println("      CALCULADORA PARA 2 DIGITOS        ");
+        System.out.println();
+        System.out.println("""
+                Crie uma classe Calculadora com os métodos das operações matemáticas
+                estáticos.
+                Soma, Subtração, Multiplicação e Divisão.
+                Use essa classe sem instanciar ela.
+                """);
+        System.out.println();
+
+        int loop = 0;
+        int option;
+        while(loop == 0){
+            do{
+                Menus.mostrarmenuCalculadora();
+                System.out.print("INFORME SUA ESCOLHA: ");
+                option = Entradas.entradaInteira();
+            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
+            switch(option){
+                case 1:
+                    System.out.println("ADIÇÃO");
+                    Calculadora.somar();
+                    break;
+                case 2:
+                    System.out.println("SUBTRAÇÃO");
+                    Calculadora.subtrair();
+                    break;
+                case 3:
+                    System.out.println("MULTIPLICAÇÃO");
+                    Calculadora.multiplicar();
+                    break;
+                case 4:
+                    System.out.println("DIVISÃO");
+                    Calculadora.dividir();
+                    break;
+                case 5:
+                    System.out.println("SAINDO");
+                    loop = 1;
                     break;
             }
         }
