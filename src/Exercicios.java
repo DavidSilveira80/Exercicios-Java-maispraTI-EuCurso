@@ -230,45 +230,61 @@ public class Exercicios {
         Pedidos pedido = new Pedidos();
         System.out.println();
         int option;
-        do{
-            Menus.mostrarMenuPrincipalLancheria();
-            System.out.print("INFORME SUA ESCOLHA: ");
-            option = Entradas.entradaInteira();
-        }while(option != 1 && option != 2 && option != 3);
-        switch(option){
-            case 1:
-                System.out.println("FAZER PEDIDO.");
-                System.out.println();
-                Menus.mostrarMenuLanchesValor();
-                int loop = 0;
-                int option2;
-                int codigoItem;
-                while(loop == 0){
-                    System.out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
-                    codigoItem = entradaInteira();
-                    String item;
-                    double vItem;
-                    item = Entradas.selecionarPedidoItem(codigoItem, pedido);
-                    vItem = Entradas.selecionarValorItemPedido(item, pedido);
-                    pedido.adicionarItens(item, vItem);
-                    System.out.print("Continuar com o pedido?(1 - sim/ 2 - não): ");
-                    option2 = entradaInteira();
-                    if(option2 == 1 ){
-                    }else{
-                        loop = 1;
+        int loopPrincipal = 0;
+        while(loopPrincipal == 0) {
+            do {
+                Menus.mostrarMenuPrincipalLancheria();
+                System.out.print("INFORME SUA ESCOLHA: ");
+                option = Entradas.entradaInteira();
+            } while (option != 1 && option != 2 && option != 3 && option != 4);
+            switch (option) {
+                case 1:
+                    System.out.println("FAZER PEDIDO.");
+                    System.out.println();
+                    Menus.mostrarMenuLanchesValor();
+
+                    int loop = 0;
+                    int option2;
+                    int codigoItem;
+
+                    while (loop == 0) {
+                        System.out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
+
+                        codigoItem = entradaInteira();
+                        String item;
+                        double vItem;
+
+                        item = Entradas.selecionarPedidoItem(codigoItem, pedido);
+                        vItem = Entradas.selecionarValorItemPedido(item, pedido);
+
+                        pedido.adicionarItens(item, vItem);
+                        System.out.print("Continuar com o pedido?(1 - sim/ 2 - não): ");
+                        option2 = entradaInteira();
+                        if (option2 == 1) {
+                        } else {
+                            loop = 1;
+                        }
                     }
-                }
-                pedido.setStatus(Status.ANOTANDO_PEDIDO);
-                pedido.mostrarPedido(pedido);
-                break;
-            case 2:
-                System.out.println("ALTERAR STATUS DO PEDIDO.");
-                break;
-            case 3:
-                System.out.println("GERAR NOTA DO PEDIDO");
-                break;
+                    pedido.setStatus(Status.ANOTANDO_PEDIDO);
+                    pedido.mostrarPedido(pedido);
+                    break;
+                case 2:
+                    System.out.println("ALTERAR STATUS DO PEDIDO.");
+                    pedido.alterarStatusPedido();
+                    pedido.mostrarPedido(pedido);
+
+                    break;
+                case 3:
+                    System.out.println("GERAR NOTA DO PEDIDO");
+                    pedido.alterarStatusPedido();
+
+                    break;
+
+                case 4:
+                    System.out.println("SAINDO");
+                    loopPrincipal = 1;
+                    break;
+            }
         }
-
-
     }
 }

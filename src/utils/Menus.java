@@ -30,7 +30,8 @@ public class Menus {
                                     O QUE DESEJA?
                                1 - FAZER SEU PEDIDO
                                2 - ALTERAR STATUS DO PEDIDO
-                               3 - GERAR NOTA DO PEDIDO   
+                               3 - GERAR NOTA DO PEDIDO
+                               4 - SAIR   
                 """);
 
     }
@@ -51,6 +52,15 @@ public class Menus {
                      8 - PIZZAS TODOS OS SABORES        R$  30.00
                      9 - REFRIGERANTE                   R$  12.00
                      10 - CERVEJA                       R$  18.00
+                """);
+    }
+    public static void mostrarMenuStatus(){
+        System.out.println("""
+                ----------------------------------
+                       1 - ANOTANDO_PEDIDO
+                       2 - EM_ANDAMENTO
+                       3 - ENTREGUE
+                       4 - PAGO
                 """);
     }
 
