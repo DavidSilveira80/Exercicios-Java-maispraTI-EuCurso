@@ -1,7 +1,7 @@
-import models.Aluno;
-import models.Aluno2;
-import models.Jogador;
+import models.*;
+import utils.Entradas;
 import utils.Menus;
+import utils.Status;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -218,5 +218,57 @@ public class Exercicios {
         System.out.println();
         aluno2.mostrarBoletim();
         System.out.println();
+    }
+
+    public static void mostrarExecucaoExercicioPoo4Pedido(){
+        System.out.println("""
+                Crie uma classe Pedido com os campos Itens[10], status e valorTotal.
+                Essa classe deverá ter os métodos para adicionar itens, que receberá como
+                parâmetro o item e o valor.
+                Também deverá ter um método para alterar o status do pedido.
+                """);
+        Pedidos pedido = new Pedidos();
+        System.out.println();
+        int option;
+        do{
+            Menus.mostrarMenuPrincipalLancheria();
+            System.out.print("INFORME SUA ESCOLHA: ");
+            option = Entradas.entradaInteira();
+        }while(option != 1 && option != 2 && option != 3);
+        switch(option){
+            case 1:
+                System.out.println("FAZER PEDIDO.");
+                System.out.println();
+                Menus.mostrarMenuLanchesValor();
+                int loop = 0;
+                int option2;
+                int codigoItem;
+                while(loop == 0){
+                    System.out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
+                    codigoItem = entradaInteira();
+                    String item;
+                    double vItem;
+                    item = Entradas.selecionarPedidoItem(codigoItem, pedido);
+                    vItem = Entradas.selecionarValorItemPedido(item, pedido);
+                    pedido.adicionarItens(item, vItem);
+                    System.out.print("Continuar com o pedido?(1 - sim/ 2 - não): ");
+                    option2 = entradaInteira();
+                    if(option2 == 1 ){
+                    }else{
+                        loop = 1;
+                    }
+                }
+                pedido.setStatus(Status.ANOTANDO_PEDIDO);
+                pedido.mostrarPedido(pedido);
+                break;
+            case 2:
+                System.out.println("ALTERAR STATUS DO PEDIDO.");
+                break;
+            case 3:
+                System.out.println("GERAR NOTA DO PEDIDO");
+                break;
+        }
+
+
     }
 }

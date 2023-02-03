@@ -1,3 +1,4 @@
+import models.Pedidos;
 import utils.Menus;
 
 import static utils.Entradas.entradaInteira;
@@ -13,7 +14,7 @@ public class Principal {
                 System.out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
             }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6
-                   && option != 7);
+                   && option != 7 && option != 8);
             switch(option){
                 case 1:
                     System.out.println();
@@ -46,6 +47,10 @@ public class Principal {
                     Exercicios.mostrarExercicioPoo3Aluno2();
                     break;
                 case 7:
+                    System.out.println("EXERCÍCIO POO 4");
+                    Exercicios.mostrarExecucaoExercicioPoo4Pedido();
+                    break;
+                case 8:
                     System.out.println("SAINDO.");
                     loop = 1;
                     break;
