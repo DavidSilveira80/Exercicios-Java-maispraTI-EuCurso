@@ -264,8 +264,7 @@ public class Exercicios {
                         pedido.adicionarItens(item, vItem);
                         System.out.print("CONTINUAR COM O PEDIDO?(1 - SIM/ 2 - NÃO): ");
                         option2 = entradaInteira();
-                        if (option2 == 1) {
-                        } else {
+                        if (option2 == 2) {
                             loop = 1;
                         }
                     }
