@@ -78,16 +78,16 @@ public class Exercicios {
         if(salarioBruto < 1000){
             double salarioLiquido = salarioBruto - ((6 * salarioBruto) / 100);
             System.out.printf("O SEU SALÁRIO BRUTO É R$ %.2f\n", salarioBruto);
-            System.out.printf("O SALÁRIO LIQUIDO É R$ %.2f\n", salarioLiquido);
+            System.out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto >= 1000 && salarioBruto <= 2500){
             double salarioLiquido = salarioBruto - ((8 * salarioBruto) / 100);
-            System.out.printf("O SALÁRIO LIQUIDO É R$ %.2f\n", salarioLiquido);
+            System.out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto >= 2500 && salarioBruto <= 4800){
             double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
-            System.out.printf("O SALÁRIO LIQUIDO É R$ %.2f\n", salarioLiquido);
+            System.out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
         }else if(salarioBruto > 4800) {
             double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
-            System.out.printf("O SALÁRIO LIQUIDO É R$ %.2f\n", salarioLiquido);
+            System.out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
         }
     }
 
