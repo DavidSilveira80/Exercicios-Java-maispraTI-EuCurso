@@ -40,6 +40,5 @@ public class Calculadora {
             System.out.println();
             System.out.println("NÃO É POSSÍVEL REALIZAR UMA DIVISÃO POR ZERO.");
         }
-
     }
 }

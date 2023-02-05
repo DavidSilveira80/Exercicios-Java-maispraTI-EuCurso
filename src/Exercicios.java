@@ -19,7 +19,9 @@ public class Exercicios {
         System.out.println();
         System.out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
         System.out.println();
+
         List<Integer> tresInteiros = new ArrayList<>();
+
         int contador = 0;
 
         while (contador < 3) {
@@ -59,7 +61,6 @@ public class Exercicios {
 
     public static void mostrarResultadoExercicio3(){
         Locale.setDefault(Locale.US);
-
         System.out.println();
         System.out.println("""
                 Escreva um programa que leia o salário bruto de um funcionário e mostre o

@@ -10,12 +10,7 @@ import java.util.List;
 public class Pedidos extends Itens {
     private Itens iten;
     private Status status;
-    private double valorTotal;
     public List<Itens> itens = new ArrayList<>();
-
-    public Status getStatus() {
-        return status;
-    }
 
     public void setStatus(Status status) {
         this.status = status;
@@ -79,5 +74,4 @@ public class Pedidos extends Itens {
                 break;
         }
     }
-
 }
