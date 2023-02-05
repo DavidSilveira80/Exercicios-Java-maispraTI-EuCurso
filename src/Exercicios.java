@@ -242,7 +242,6 @@ public class Exercicios {
                 case 1:
                     System.out.println("FAZER PEDIDO.");
 
-
                     int loop = 0;
                     int option2;
                     int codigoItem;
@@ -275,14 +274,21 @@ public class Exercicios {
                     break;
                 case 2:
                     System.out.println("ALTERAR STATUS DO PEDIDO.");
-                    pedido.alterarStatusPedido();
-                    pedido.mostrarPedido(pedido);
+                    if(pedido.itens.isEmpty()){
+                        System.out.println("NÃO HÁ PEDIDOS FEITOS.");
+                    }else{
+                        pedido.alterarStatusPedido();
+                        pedido.mostrarPedido(pedido);
+                    }
                     break;
                 case 3:
                     System.out.println("GERAR NOTA DO PEDIDO");
-                    pedido.mostrarPedido(pedido);
+                    if(pedido.itens.isEmpty()){
+                        System.out.println("NÃO HÁ PEDIDOS FEITOS.");
+                    }else{
+                        pedido.mostrarPedido(pedido);
+                    }
                     break;
-
                 case 4:
                     System.out.println("SAINDO");
                     loopPrincipal = 1;

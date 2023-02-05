@@ -1,4 +1,3 @@
-import models.Pedidos;
 import utils.Menus;
 
 import static utils.Entradas.entradaInteira;
