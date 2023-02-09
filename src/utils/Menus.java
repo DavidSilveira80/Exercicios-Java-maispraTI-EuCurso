@@ -3,16 +3,19 @@ package utils;
 public class Menus {
 
     public static void mostrarMenuPrincipal(){
-        System.out.println("----------------------------------------------------");
-        System.out.println("   1 - PARA EXECUTAR EXERCÍCIO 1                    ");
-        System.out.println("   2 - PARA EXECUTAR EXERCÍCIO 2                    ");
-        System.out.println("   3 - PARA EXECUTAR EXERCÍCIO 3                    ");
-        System.out.println("   4 - PARA EXECUTAR EXERCÍCIO POO 1 JOGADOR        ");
-        System.out.println("   5 - PARA EXECUTAR EXERCÍCIO POO 2 ALUNO          ");
-        System.out.println("   6 - PARA EXECUTAR EXERCÍCIO POO 3 ALUNO 2        ");
-        System.out.println("   7 - PARA EXECUTAR EXERCÍCIO POO 4 PEDIDO         ");
-        System.out.println("   8 - PARA EXECUTAR EXERCÍCIO POO 5 CALCULADORA    ");
-        System.out.println("   9 - PARA SAIR            ");
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("   1 - PARA EXECUTAR EXERCÍCIO 1                             ");
+        System.out.println("   2 - PARA EXECUTAR EXERCÍCIO 2                             ");
+        System.out.println("   3 - PARA EXECUTAR EXERCÍCIO 3                             ");
+        System.out.println("   4 - PARA EXECUTAR EXERCÍCIO POO 1 JOGADOR                 ");
+        System.out.println("   5 - PARA EXECUTAR EXERCÍCIO POO 2 ALUNO                   ");
+        System.out.println("   6 - PARA EXECUTAR EXERCÍCIO POO 3 ALUNO 2                 ");
+        System.out.println("   7 - PARA EXECUTAR EXERCÍCIO POO 4 PEDIDO                  ");
+        System.out.println("   8 - PARA EXECUTAR EXERCÍCIO POO 5 CALCULADORA             ");
+        System.out.println("   9 - PARA EXECUTAR EXERCÍCIO POO 6 FUNCIONÁRIO             ");
+        System.out.println("   10 - PARA EXECUTAR EXERCÍCIO POO 7 FUNCIONÁRIO HERANÇA    ");
+        System.out.println("   11 - PARA EXECUTAR EXERCÍCIO POO 8 ANIMAL HERANÇA         ");
+        System.out.println("   12 - PARA SAIR                                            ");
 
     }
 
