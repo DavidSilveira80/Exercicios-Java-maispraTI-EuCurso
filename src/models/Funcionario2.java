@@ -11,19 +11,6 @@ public abstract class Funcionario2 {
         this.valorHoras = valorHoras;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public int getTotalHoras() {
-        return totalHoras;
-    }
-
-
-    public double getValorHoras() {
-        return valorHoras;
-    }
-
    public abstract double retornaValorTotal();
 
     public abstract String mostrarRelatorio();

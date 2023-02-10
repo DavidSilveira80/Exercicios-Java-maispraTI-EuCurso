@@ -17,7 +17,6 @@ import static utils.Entradas.selecionarValorItemPedido;
 import static utils.Menus.*;
 
 public class Exercicios {
-
     public static void executarExercicio1() {
         out.println();
         out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");

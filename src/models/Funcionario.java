@@ -3,7 +3,7 @@ package models;
 import static java.lang.System.out;
 
 public class Funcionario {
-    private String nome, funcao, setor;
+    public String nome, funcao, setor;
 
     public Funcionario(String nome, String funcao, String setor){
         this.nome = nome;

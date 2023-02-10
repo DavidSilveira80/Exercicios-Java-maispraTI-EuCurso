@@ -1,9 +1,6 @@
-import models.Funcionario;
 import utils.Menus;
 
 import static utils.Entradas.entradaInteira;
-
-
 import static java.lang.System.out;
 import static utils.Exercicios.*;
 

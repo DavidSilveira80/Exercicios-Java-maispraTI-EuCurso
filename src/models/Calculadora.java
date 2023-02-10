@@ -1,7 +1,6 @@
 package models;
 
 import static utils.Entradas.entradaInteira;
-
 import static java.lang.System.out;
 
 public class Calculadora {
