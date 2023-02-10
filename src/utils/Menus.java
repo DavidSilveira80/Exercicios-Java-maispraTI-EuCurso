@@ -7,6 +7,7 @@ public class Menus {
     public static void mostrarMenuPrincipal(){
         out.println("-------------------------------------------------------------");
         out.println("   1 - PARA EXECUTAR EXERCÍCIO 1                             ");
+        out.println("   2 - PARA EXECUTAR EXERCÍCIO 2                             ");
         out.println("   3 - PARA EXECUTAR EXERCÍCIO 3                             ");
         out.println("   4 - PARA EXECUTAR EXERCÍCIO POO 1 JOGADOR                 ");
         out.println("   5 - PARA EXECUTAR EXERCÍCIO POO 2 ALUNO                   ");
