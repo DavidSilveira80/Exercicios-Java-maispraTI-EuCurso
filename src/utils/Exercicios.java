@@ -360,7 +360,7 @@ public class Exercicios {
 
         List<Funcionario> funcionarios = new ArrayList<>();
         int contador = 0;
-        while(contador < 2){
+        while(contador < 10){
             out.println();
             out.printf("INFORME O NOME DO %dº FUNCIONÁRIO: ", contador + 1);
             String nome = entrada.nextLine();
