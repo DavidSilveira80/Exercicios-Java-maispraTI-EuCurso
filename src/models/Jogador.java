@@ -1,5 +1,7 @@
 package models;
 
+import static java.lang.System.out;
+
 public class Jogador {
     String nomeJogador;
     int gols, assistencia;
@@ -14,23 +16,23 @@ public class Jogador {
 
     public void adicionarGol(int gol){
         this.gols += gol;
-        System.out.println();
-        System.out.println("ADICIONANDO " + gols + " GOL(S).");
+        out.println();
+        out.println("ADICIONANDO " + gols + " GOL(S).");
     }
 
     public void adicionarAssistencia(int assistencia){
         this.assistencia += assistencia;
-        System.out.println();
-        System.out.println("ADICIONANDO " + assistencia + " ASSITÊNCIA(S).");
+        out.println();
+        out.println("ADICIONANDO " + assistencia + " ASSITÊNCIA(S).");
     }
 
     public void mostrarNumerosDeGols(){
-        System.out.println("JOGADOR " + this.nomeJogador + " MARCOU: ");
-        System.out.println("NÚMERO DE GOLS " + this.gols);
+        out.println("JOGADOR " + this.nomeJogador + " MARCOU: ");
+        out.println("NÚMERO DE GOLS " + this.gols);
     }
 
     public void mostrarNumeroDeAssistencias(){
-        System.out.println("JOGADOR " + this.nomeJogador + " FEZ: ");
-        System.out.println("NÚMERO DE ASSISTÊNCIAS " + this.assistencia);
+        out.println("JOGADOR " + this.nomeJogador + " FEZ: ");
+        out.println("NÚMERO DE ASSISTÊNCIAS " + this.assistencia);
     }
 }

@@ -4,6 +4,8 @@ import utils.Entradas;
 import utils.Menus;
 import utils.Status;
 
+import static java.lang.System.out;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,17 +27,17 @@ public class Pedidos extends Itens {
     }
 
     public void mostrarPedido(Pedidos pedido){
-       System.out.println();
-       System.out.printf("STATUS PEDIDO --> %s\n", this.status);
-       System.out.println("ITENS                              VALOR: ");
+       out.println();
+       out.printf("STATUS PEDIDO --> %s\n", this.status);
+       out.println("ITENS                              VALOR: ");
        for(Itens item : pedido.itens){
           String itenFormatado = String.format("%s----------------------------->", item.getIten());
           String valorFormatado = String.format("R$ %.2f", item.getValorDoIten());
-          System.out.printf("%s   %s\n",itenFormatado, valorFormatado);
+          out.printf("%s   %s\n",itenFormatado, valorFormatado);
        }
-       System.out.printf("TOTAL: R$ %.2f\n",calcularValorTotal());
-       System.out.println();
-       System.out.println();
+       out.printf("TOTAL: R$ %.2f\n",calcularValorTotal());
+       out.println();
+       out.println();
     }
 
     public double calcularValorTotal(){
@@ -52,24 +54,24 @@ public class Pedidos extends Itens {
 
         do{
             Menus.mostrarMenuStatus();
-            System.out.print("INFORME SUA ESCOLHA: ");
+            out.print("INFORME SUA ESCOLHA: ");
             option = Entradas.entradaInteira();
         }while(option != 1 && option != 2 && option != 3 && option != 4);
         switch(option){
             case 1:
-                System.out.println("ALTERANDO PARA ANOTANDO_PEDIDO");
+                out.println("ALTERANDO PARA ANOTANDO_PEDIDO");
                 this.status = Status.ANOTANDO_PEDIDO;
                 break;
             case 2:
-                System.out.println("ALTERANDO PARA EM_ANDAMENTO");
+                out.println("ALTERANDO PARA EM_ANDAMENTO");
                 this.status = Status.EM_ANDAMENTO;
                 break;
             case 3:
-                System.out.println("ALTERANDO PARA ENTREGUE");
+                out.println("ALTERANDO PARA ENTREGUE");
                 this.status = Status.ENTREGUE;
                 break;
             case 4:
-                System.out.println("ALTERANDO PARA PAGO");
+                out.println("ALTERANDO PARA PAGO");
                 this.status = Status.PAGO;
                 break;
         }
