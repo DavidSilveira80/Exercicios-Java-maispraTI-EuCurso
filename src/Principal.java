@@ -1,17 +1,11 @@
+import models.Funcionario;
 import utils.Menus;
 
 import static utils.Entradas.entradaInteira;
-import static utils.Exercicios.mostrarResultadoExercicio1;
-import static utils.Exercicios.mostrarResultadoExercicio2;
-import static utils.Exercicios.mostrarResultadoExercicio3;
-import static utils.Exercicios.mostrarExercicioPoo1Jogador;
-import static utils.Exercicios.mostrarExercicioPoo2Aluno;
-import static utils.Exercicios.mostrarExercicioPoo3Aluno2;
-import static utils.Exercicios.mostrarExecucaoExercicioPoo4Pedido;
-import static utils.Exercicios.mostrarExecucaoExercicioPoo5Calculadora;
 
 
 import static java.lang.System.out;
+import static utils.Exercicios.*;
 
 public class Principal {
 
@@ -24,7 +18,7 @@ public class Principal {
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
             }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6
-                   && option != 7 && option != 8 && option != 9);
+                   && option != 7 && option != 8 && option != 9 && option != 10 && option != 11 && option != 12);
             switch(option){
                 case 1:
                     out.println();
@@ -67,6 +61,23 @@ public class Principal {
                     mostrarExecucaoExercicioPoo5Calculadora();
                     break;
                 case 9:
+                    out.println("EXERCÍCIO POO 6");
+                    out.println();
+                    mostrarExercicioPoo6Funcionario1();
+                    break;
+                case 10:
+                    out.println("EXERCÍCIO POO 7");
+                    out.println();
+                    mostrarExercicioPoo7Animal();
+                    break;
+                case 11:
+                    out.println("EXERCÍCIO POO 8");
+                    out.println();
+                    mostrarExercicioPoo8Funcionario2();
+                    out.println();
+
+                    break;
+                case 12:
                     out.println("SAINDO.");
                     loop = 1;
                     break;

@@ -2,9 +2,7 @@ package utils;
 
 import models.Aluno2;
 import models.Pedidos;
-
 import static java.lang.System.out;
-
 import java.util.Scanner;
 
 public class Entradas {

@@ -80,4 +80,41 @@ public class Menus {
                               5 - PARA SAIR    
                 """);
     }
+
+    public static void mostrarMenuExercicioFuncionario2(){
+        out.println("=======================================================================");
+        out.println("            1 - PARA PROGRAMADOR                                       ");
+        out.println("            2 - PARA CONTADOR                                          ");
+        out.println("            3 - PARA ADMINISTRADOR                                     ");
+
+    }
+
+
+    // -----------------------------------SEÇÃO ENUNCIADOS GRANDES -------------------------------------------------
+
+    public static void mostrarEnunciadoExercicioAnimal(){
+        out.println("""
+                            Crie uma classe Animal depois crie classes filhas apartir dessa classe.
+                            A classe Animal deve ter um método e as classes filhas devem sobreescrever 
+                            esse método.
+                            (esse método pode ser qualquer coisa que eles têm em comum.
+                            """);
+    }
+
+    public static void mostrarEnunciadoExercicioFuncionario2(){
+        out.println("""
+                            Crie uma classe abstrata Funcionário que tenha os campos:
+                            nome
+                            valorHora
+                            totalHoras
+                            Esta classe também deve ter o método abstrato para retornar o valor total a receber.
+                            Depois crie algumas classes que estendam a classe funcionário.
+                            Todas as classes filhas devem ter um campo constante com o valor de bonificação 
+                            e a partir deste campo, fazer o cálculo do total a receber.
+                            
+                            programador 5%
+                            contador 3%
+                            administrador 6%
+                            """);
+    }
 }

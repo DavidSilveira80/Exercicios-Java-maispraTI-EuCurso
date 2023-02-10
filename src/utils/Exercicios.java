@@ -14,11 +14,7 @@ import static utils.Entradas.entradaInteira;
 import static utils.Entradas.validarNotas;
 import static utils.Entradas.selecionarPedidoItem;
 import static utils.Entradas.selecionarValorItemPedido;
-
-import static utils.Menus.mostrarMenuJogador;
-import static utils.Menus.mostrarMenuPrincipalLancheria;
-import static utils.Menus.mostrarMenuLanchesValor;
-import static utils.Menus.mostrarmenuCalculadora;
+import static utils.Menus.*;
 
 public class Exercicios {
 
@@ -345,6 +341,123 @@ public class Exercicios {
                     loop = 1;
                     break;
             }
+        }
+    }
+
+    public static void mostrarExercicioPoo6Funcionario1(){
+        Scanner entrada = new Scanner(System.in);
+        out.println("""
+                            Crie uma classe do tipo funcionário com os campos:
+                            nome
+                            função
+                            setor
+                            Crie uma lista com 10 objetos do tipo funcionário dentro dela.
+                            Depois exiba no console todas as informações de cada objeto.
+                            """);
+
+        out.println("-------------------------------------------");
+        out.println("          CADASTRANDO 10 FUNCIONÁRIOS      ");
+
+
+        List<Funcionario> funcionarios = new ArrayList<>();
+        int contador = 0;
+        while(contador < 2){
+            out.println();
+            out.printf("INFORME O NOME DO %dº FUNCIONÁRIO: ", contador + 1);
+            String nome = entrada.nextLine();
+            out.print("INFORME A FUNÇÃO: ");
+            String funcao = entrada.nextLine();
+            out.print("INFORME O SETOR: ");
+            String setor = entrada.nextLine();
+            funcionarios.add(new Funcionario(nome, funcao, setor));
+            contador++;
+        }
+        out.println("LISTANDO OS 10 FUNCIONÁRIOS E SEUS ATRIBUTOS");
+        for(Funcionario funcionario : funcionarios){
+            funcionario.mostrarFuncionario();
+        }
+    }
+
+    public static void mostrarExercicioPoo7Animal(){
+        mostrarEnunciadoExercicioAnimal();
+
+        out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
+        out.println();
+        Animal animal = new Animal("pica-pau", "ave", "Alpiste");
+        out.println(animal);
+        out.println(animal.alimentar());
+
+        out.println("""
+                       
+                       AQUI É UM OBJETO INSTÂNCIADO DA CLASSE TIGRE QUE HERDA DA CLASSE ANIMAL E SOBREESCREVE
+                       O MÉTODO ALIMENTAR DA CLASSE ANIMAL:
+                       """);
+        Tigre tigre = new Tigre("Tigrão", "mamifero", "Carne");
+        out.println(tigre);
+        out.println(tigre.alimentar());
+
+    }
+    public static void mostrarExercicioPoo8Funcionario2(){
+        Scanner entrada = new Scanner(System.in);
+        mostrarEnunciadoExercicioFuncionario2();
+        out.println();
+        int option;
+        do{
+            mostrarMenuExercicioFuncionario2();
+            out.print("INFORME SUA ESCOLHA: ");
+            option = entradaInteira();
+        }while(option != 1 && option !=2 && option != 3);
+        switch(option){
+            case 1:
+                out.println("PROGRAMADOR");
+                out.println();
+
+                out.print("INFORME O NOME DO PROFISSIONAL: ");
+                String nomeProgramador = entrada.nextLine();
+
+                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                int totalHorasProgramador = entradaInteira();
+
+                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                double valorHorasProgramador = entradaDouble();
+
+                Programador programador = new Programador(nomeProgramador, totalHorasProgramador,
+                        valorHorasProgramador);
+                out.println(programador.mostrarRelatorio());
+                break;
+            case 2:
+                out.println("CONTADOR");
+                out.println();
+
+                out.print("INFORME O NOME DO PROFISSIONAL: ");
+                String nomeContador = entrada.nextLine();
+
+                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                int totalHorasContador = entradaInteira();
+
+                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                double valorHorasContador = entradaDouble();
+
+                Contador contador = new Contador(nomeContador, totalHorasContador, valorHorasContador);
+                out.println(contador.mostrarRelatorio());
+                break;
+            case 3:
+                out.println("ADMINISTRADOR");
+                out.println();
+
+                out.print("INFORME O NOME DO PROFISSIONAL: ");
+                String nomeAdministrador = entrada.nextLine();
+
+                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                int totalHorasAdministrador = entradaInteira();
+
+                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                double valorHorasAdministrador = entradaDouble();
+
+                Administrador administrador = new Administrador(nomeAdministrador, totalHorasAdministrador,
+                        valorHorasAdministrador);
+                out.println(administrador.mostrarRelatorio());
+                break;
         }
     }
 }
