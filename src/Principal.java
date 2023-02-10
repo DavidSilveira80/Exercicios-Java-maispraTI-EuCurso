@@ -23,57 +23,57 @@ public class Principal {
                 case 1:
                     out.println();
                     out.println("EXERCÍCIO 1");
-                    mostrarResultadoExercicio1();
+                    executarExercicio1();
                     break;
                 case 2:
                     out.println();
                     out.println("EXERCÍCIO 2");
-                    mostrarResultadoExercicio2();
+                    executarExercicio2();
                     break;
                 case 3:
                     out.println();
                     out.println("EXERCÍCIO 3");
-                    mostrarResultadoExercicio3();
+                    executarExercicio3();
                     break;
                 case 4:
                     out.println("EXERCÍCIO POO 1");
                     out.println();
-                    mostrarExercicioPoo1Jogador();
+                    executarExercicioPoo1Jogador();
                     break;
                 case 5:
                     out.println("EXERCÍCIO POO 2");
                     out.println();
-                    mostrarExercicioPoo2Aluno();
+                    executarExercicioPoo2Aluno();
                     break;
                 case 6:
                     out.println("EXERCÍCIO P00 3");
                     out.println();
-                    mostrarExercicioPoo3Aluno2();
+                    executarExercicioPoo3Aluno2();
                     break;
                 case 7:
                     out.println("EXERCÍCIO POO 4");
                     out.println();
-                    mostrarExecucaoExercicioPoo4Pedido();
+                    executarExercicioPoo4Pedido();
                     break;
                 case 8:
                     out.println("EXERCÍCIO POO 5");
                     out.println();
-                    mostrarExecucaoExercicioPoo5Calculadora();
+                    executarExercicioPoo5Calculadora();
                     break;
                 case 9:
                     out.println("EXERCÍCIO POO 6");
                     out.println();
-                    mostrarExercicioPoo6Funcionario1();
+                    executarExercicioPoo6Funcionario1();
                     break;
                 case 10:
                     out.println("EXERCÍCIO POO 7");
                     out.println();
-                    mostrarExercicioPoo7Animal();
+                    executarExercicioPoo7Animal();
                     break;
                 case 11:
                     out.println("EXERCÍCIO POO 8");
                     out.println();
-                    mostrarExercicioPoo8Funcionario2();
+                    executarExercicioPoo8Funcionario2();
                     out.println();
 
                     break;

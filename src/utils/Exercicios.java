@@ -18,7 +18,7 @@ import static utils.Menus.*;
 
 public class Exercicios {
 
-    public static void mostrarResultadoExercicio1() {
+    public static void executarExercicio1() {
         out.println();
         out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
         out.println();
@@ -38,7 +38,7 @@ public class Exercicios {
         out.println("O MENOR NÚMERO É: " + menor);
     }
 
-    public static void mostrarResultadoExercicio2(){
+    public static void executarExercicio2(){
         out.println();
         out.println("""
                 As maçãs custam 0,30 cada se forem compradas menos que uma dúzia e 0,25
@@ -62,7 +62,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarResultadoExercicio3(){
+    public static void executarExercicio3(){
         Locale.setDefault(Locale.US);
         out.println();
         out.println("""
@@ -94,7 +94,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExercicioPoo1Jogador(){
+    public static void executarExercicioPoo1Jogador(){
         Scanner entrada = new Scanner(System.in);
         out.println("""
                             Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
@@ -155,7 +155,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExercicioPoo2Aluno(){
+    public static void executarExercicioPoo2Aluno(){
         Locale.setDefault(Locale.US);
         Scanner entrada = new Scanner(System.in);
         out.println("""
@@ -185,7 +185,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExercicioPoo3Aluno2(){
+    public static void executarExercicioPoo3Aluno2(){
         Scanner entrada = new Scanner(System.in);
         out.println("""
                 Crie uma classe Aluno com os campos nome, matrícula e notas[3].
@@ -224,7 +224,7 @@ public class Exercicios {
         out.println();
     }
 
-    public static void mostrarExecucaoExercicioPoo4Pedido(){
+    public static void executarExercicioPoo4Pedido(){
         out.println("""
                 Crie uma classe Pedido com os campos Itens[10], status e valorTotal.
                 Essa classe deverá ter os métodos para adicionar itens, que receberá como
@@ -299,7 +299,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExecucaoExercicioPoo5Calculadora(){
+    public static void executarExercicioPoo5Calculadora(){
         out.println();
         out.println("      CALCULADORA PARA 2 DIGITOS        ");
         out.println();
@@ -344,7 +344,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExercicioPoo6Funcionario1(){
+    public static void executarExercicioPoo6Funcionario1(){
         Scanner entrada = new Scanner(System.in);
         out.println("""
                             Crie uma classe do tipo funcionário com os campos:
@@ -378,7 +378,7 @@ public class Exercicios {
         }
     }
 
-    public static void mostrarExercicioPoo7Animal(){
+    public static void executarExercicioPoo7Animal(){
         mostrarEnunciadoExercicioAnimal();
 
         out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
@@ -397,7 +397,7 @@ public class Exercicios {
         out.println(tigre.alimentar());
 
     }
-    public static void mostrarExercicioPoo8Funcionario2(){
+    public static void executarExercicioPoo8Funcionario2(){
         Scanner entrada = new Scanner(System.in);
         mostrarEnunciadoExercicioFuncionario2();
         out.println();
