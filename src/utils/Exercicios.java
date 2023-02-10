@@ -115,7 +115,7 @@ public class Exercicios {
                 mostrarMenuJogador();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
+            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
             switch(option){
                 case 1:
                     out.println();
@@ -146,6 +146,12 @@ public class Exercicios {
                     jogador.mostrarNumeroDeAssistencias();
                     break;
                 case 5:
+                    out.println();
+                    out.println("MOSTRAR NÚMERO DE GOLS E ASSISTÊNCIAS.");
+                    out.println();
+                    jogador.mostrarNumeroDeGolsEAssistencias();
+                    break;
+                case 6:
                     out.println();
                     out.println("SAINDO.");
                     loop = 1;
@@ -377,7 +383,7 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo7Animal(){
+    public static void executarExercicioPoo8Animal(){
         mostrarEnunciadoExercicioAnimal();
 
         out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
@@ -391,12 +397,12 @@ public class Exercicios {
                        AQUI É UM OBJETO INSTÂNCIADO DA CLASSE TIGRE QUE HERDA DA CLASSE ANIMAL E SOBREESCREVE
                        O MÉTODO ALIMENTAR DA CLASSE ANIMAL:
                        """);
-        Tigre tigre = new Tigre("Tigrão", "mamifero", "Carne");
+        Animal tigre = new Tigre("Tigrão", "mamifero", "Carne");
         out.println(tigre);
         out.println(tigre.alimentar());
 
     }
-    public static void executarExercicioPoo8Funcionario2(){
+    public static void executarExercicioPoo7Funcionario2(){
         Scanner entrada = new Scanner(System.in);
         mostrarEnunciadoExercicioFuncionario2();
         out.println();

@@ -22,12 +22,13 @@ public class Menus {
     }
 
     public static void mostrarMenuJogador(){
-        out.println("---------------------------------------------------------");
-        out.println("    1 - PARA ADICIONAR GOLS                              ");
-        out.println("    2 - PARA ADICIONAR ASSISTÊNCIAS                      ");
-        out.println("    3 - PARA MOSTRAR NÚMERO DE GOLS DO JOGADOR           ");
-        out.println("    4 - PARA MOSTRAR O NÚMERO DE ASSISTÊNCIAS DO JOGADOR ");
-        out.println("    5 - PARA SAIR                                        ");
+        out.println("------------------------------------------------------------------");
+        out.println("    1 - PARA ADICIONAR GOLS                                       ");
+        out.println("    2 - PARA ADICIONAR ASSISTÊNCIAS                               ");
+        out.println("    3 - PARA MOSTRAR NÚMERO DE GOLS DO JOGADOR                    ");
+        out.println("    4 - PARA MOSTRAR O NÚMERO DE ASSISTÊNCIAS DO JOGADOR          ");
+        out.println("    5 - PARA MOSTRAR O NÚMERO DE GOLS E ASSISTÊNCIAS              ");
+        out.println("    6 - PARA SAIR                                                 ");
     }
 
     public static void mostrarMenuPrincipalLancheria(){

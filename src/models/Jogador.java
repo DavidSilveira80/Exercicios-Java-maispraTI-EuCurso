@@ -35,4 +35,10 @@ public class Jogador {
         out.println("JOGADOR " + this.nomeJogador + " FEZ: ");
         out.println("NÚMERO DE ASSISTÊNCIAS " + this.assistencia);
     }
+
+    public void mostrarNumeroDeGolsEAssistencias(){
+        out.println("JOGADOR " + this.nomeJogador + " FEZ: ");
+        out.println("NÚMERO DE GOLS: " + this.gols);
+        out.println("NÚMERO DE ASSISTÊNCIAS: " + this.assistencia);
+    }
 }

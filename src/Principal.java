@@ -65,14 +65,13 @@ public class Principal {
                 case 10:
                     out.println("EXERCÍCIO POO 7");
                     out.println();
-                    executarExercicioPoo7Animal();
+                    executarExercicioPoo7Funcionario2();
                     break;
                 case 11:
                     out.println("EXERCÍCIO POO 8");
                     out.println();
-                    executarExercicioPoo8Funcionario2();
+                    executarExercicioPoo8Animal();
                     out.println();
-
                     break;
                 case 12:
                     out.println("SAINDO.");
