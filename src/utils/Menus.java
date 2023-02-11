@@ -17,8 +17,10 @@ public class Menus {
         out.println("   9 - PARA EXECUTAR EXERCÍCIO POO 6 FUNCIONÁRIO             ");
         out.println("   10 - PARA EXECUTAR EXERCÍCIO POO 7 FUNCIONÁRIO HERANÇA    ");
         out.println("   11 - PARA EXECUTAR EXERCÍCIO POO 8 ANIMAL HERANÇA         ");
-        out.println("   12 - PARA SAIR                                            ");
-
+        out.println("   12 - PARA EXECUTAR EXERCÍCIO POO 9 INTERFACE BANCO        ");
+        out.println("   13 - PARA EXECUTAR EXERCÍCIO POO 10 EXCEÇÃO 1 BANCO       ");
+        out.println("   14 - PARA EXECUTAR EXERCÍCIO POO 11 EXCEÇÃO 2 PRODUTO     ");
+        out.println("   15 - PARA SAIR                                            ");
     }
 
     public static void mostrarMenuJogador(){
@@ -40,7 +42,6 @@ public class Menus {
                                3 - GERAR NOTA DO PEDIDO
                                4 - SAIR   
                 """);
-
     }
 
     public static void mostrarMenuLanchesValor(){
