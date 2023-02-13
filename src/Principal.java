@@ -1,5 +1,6 @@
-import models.ContaPoupanca;
+import models.MinhaExceptionExercicio10;
 import utils.Menus;
+
 
 import static utils.Entradas.entradaInteira;
 import static java.lang.System.out;
@@ -7,7 +8,7 @@ import static utils.Exercicios.*;
 
 public class Principal {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws MinhaExceptionExercicio10 {
         int loop = 0;
         while(loop == 0){
             int option;
@@ -82,27 +83,13 @@ public class Principal {
                     out.println();
                     break;
                 case 13:
-                    out.println("""
-                            Seguindo o exercício 1…
-                            Crie uma exceção personalizada que deverá ser lançada nesses casos:
-                            Ao tentar fazer saque maior que o saldo.
-                            Ao tentar fazer um depósito maior que 10 mil.
-                            Trate essas exceções.
-                            """);
+                    out.println("EXERCÍCIO POO 10");
+                    executarExercicioPoo10Excecao1();
+
                     break;
                 case 14:
-                    out.println("""
-                            O código abaixo lançará algumas exceções. Trate eles de uma forma que o código
-                            continuará com a próxima etapa. (Deve-se usar a estrutura try-catch)
-                            
-                            List<String> lista = null;
-                            lista.add("Produto 1");
-                            lista.get(2);
-                            lista.add("Produto 2");
-                            for(String produto : lista) {
-                                System.out.println(produto);
-                            }
-                            """);
+                    out.println("EXERCÍCIO POO 11");
+                    executarExercicioPoo11Excecao2();
                     break;
                 case 15:
                     out.println("SAINDO.");

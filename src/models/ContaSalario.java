@@ -26,5 +26,4 @@ public class ContaSalario extends ContaCorrente{
                 SALDO: R$ %.2f
                 """, this.numeroDaConta, this.nomeDoTitular, this.saldo);
     }
-
 }

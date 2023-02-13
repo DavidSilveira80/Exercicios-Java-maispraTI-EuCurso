@@ -136,4 +136,13 @@ public class Menus {
         out.println("        3 - PARA MOSTRAR EXTRATO           ");
         out.println("        4 - PARA SAIR                      ");
     }
+
+    public static void mostrarMenuExercicioPoo10Excecao1(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA O EXEMPLO DE SAQUE        ");
+        out.println("        2 - PARA O EXEMPLO DE DEPOSITO     ");
+        out.println("        3 - PARA SAIR                      ");
+
+    }
+
 }
