@@ -465,4 +465,130 @@ public class Exercicios {
                 break;
         }
     }
+
+    public static void executarExercicioPoo9InterfaceBanco(){
+        out.println();
+        out.println("""
+                            Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
+                            Depois crie classes que usarão esta Interface.
+                            Exemplos de classe: ContaCorrente, ContaPoupanca, ContaSalario;
+                            No método de saque, a conta corrente deverá ter um taxa de 10, conta poupança de 5 e
+                            conta salário 0.
+                            No método para depósito a conta corrente deverá ter um acréscimo de 1% até 10.000,
+                            conta poupança de 3% até 3.000 e na conta salário não ter.
+                            No método para ver Extrato deverá aparecer informações do titular e qual tipo de conta
+                            
+                            """);
+        out.println();
+
+        int paradaPrincipal = 0;
+        while(paradaPrincipal == 0){
+            int option1;
+            do{
+                mostrarMenuPrincipalBancoInterface();
+                out.print("INFORME SUA ESCOLHA: ");
+                option1 = entradaInteira();
+            }while(option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4);
+            switch(option1){
+                case 1:
+                    out.println("CONTA CORRENTE");
+                    out.println();
+                    ContaCorrente contaC = new ContaCorrente();
+
+                    int paradaContaCorrente = 0;
+                    while(paradaContaCorrente == 0){
+                        int optionContaCorrente;
+                        do{
+                            mostrarMenuSecundarioBancoInterface();
+                            out.println("INFORME SUA ESCOLHA: ");
+                            optionContaCorrente = entradaInteira();
+                        }while(optionContaCorrente != 1 && optionContaCorrente != 2 &&
+                                optionContaCorrente != 3 && optionContaCorrente != 4);
+                        switch(optionContaCorrente){
+                            case 1:
+                                out.println("DEPOSITAR");
+                                break;
+                            case 2:
+                                out.println("SACAR");
+                                break;
+                            case 3:
+                                out.println("EXTRATO");
+                                break;
+                            case 4:
+                                out.println("VOLTAR");
+                                out.println();
+                                paradaContaCorrente = 1;
+                        }
+                    }
+                    break;
+                case 2:
+                    out.println("CONTA POUPANÇA");
+                    out.println();
+                    ContaPoupanca contaP = new ContaPoupanca();
+
+                    int paradaContaPoupanca = 0;
+                    while(paradaContaPoupanca == 0){
+                        int optionContaPoupanca;
+                        do{
+                            mostrarMenuSecundarioBancoInterface();
+                            out.println("INFORME SUA ESCOLHA: ");
+                            optionContaPoupanca = entradaInteira();
+                        }while(optionContaPoupanca != 1 && optionContaPoupanca != 2 &&
+                                optionContaPoupanca != 3 && optionContaPoupanca != 4);
+                        switch(optionContaPoupanca){
+                            case 1:
+                                out.println("DEPOSITAR");
+                                break;
+                            case 2:
+                                out.println("SACAR");
+                                break;
+                            case 3:
+                                out.println("EXTRATO");
+                                break;
+                            case 4:
+                                out.println("VOLTAR");
+                                out.println();
+                                paradaContaPoupanca = 1;
+                        }
+                    }
+                    break;
+                case 3:
+                    out.println("CONTA SALÁRIO");
+                    out.println();
+                    ContaSalario contaS = new ContaSalario();
+
+                    int paradaContaSalario = 0;
+                    while(paradaContaSalario == 0){
+                        int optionContaSalario;
+                        do{
+                            mostrarMenuSecundarioBancoInterface();
+                            out.println("INFORME SUA ESCOLHA: ");
+                            optionContaSalario = entradaInteira();
+                        }while(optionContaSalario != 1 && optionContaSalario != 2 &&
+                                optionContaSalario != 3 && optionContaSalario != 4);
+                        switch(optionContaSalario){
+                            case 1:
+                                out.println("DEPOSITAR");
+                                break;
+                            case 2:
+                                out.println("SACAR");
+                                break;
+                            case 3:
+                                out.println("EXTRATO");
+                                break;
+                            case 4:
+                                out.println("VOLTAR");
+                                out.println();
+                                paradaContaSalario = 1;
+                        }
+                    }
+                    break;
+                case 4:
+                    out.println("SAIR");
+                    out.println();
+                    out.println("ENCERRANDO");
+                    paradaPrincipal = 1;
+            }
+        }
+    }
 }

@@ -1,3 +1,4 @@
+import models.ContaPoupanca;
 import utils.Menus;
 
 import static utils.Entradas.entradaInteira;
@@ -75,17 +76,10 @@ public class Principal {
                     out.println();
                     break;
                 case 12:
-                    out.println("""
-                            Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
-                            Depois crie classes que usarão esta Interface.
-                            Exemplos de classe: ContaCorrente, ContaPoupanca, ContaSalario;
-                            No método de saque, a conta corrente deverá ter um taxa de 10, conta poupança de 5 e
-                            conta salário 0.
-                            No método para depósito a conta corrente deverá ter um acréscimo de 1% até 10.000,
-                            conta poupança de 3% até 3.000 e na conta salário não ter.
-                            No método para ver Extrato deverá aparecer informações do titular e qual tipo de conta
-                            
-                            """);
+                    out.println("EXERCÍCIO POO 9");
+                    out.println();
+                    executarExercicioPoo9InterfaceBanco();
+                    out.println();
                     break;
                 case 13:
                     out.println("""

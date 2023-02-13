@@ -120,4 +120,20 @@ public class Menus {
                             administrador 6%
                             """);
     }
+
+    public static void mostrarMenuPrincipalBancoInterface(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA CONTA CORRENTE            ");
+        out.println("        2 - PARA CONTA POUPANÇA            ");
+        out.println("        3 - PARA CONTA SALÁRIO             ");
+        out.println("        4 - PARA SAIR                      ");
+    }
+
+    public static void mostrarMenuSecundarioBancoInterface(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA DEPOSITAR                 ");
+        out.println("        2 - PARA SACAR                     ");
+        out.println("        3 - PARA MOSTRAR EXTRATO           ");
+        out.println("        4 - PARA SAIR                      ");
+    }
 }
