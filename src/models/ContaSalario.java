@@ -5,9 +5,8 @@ public class ContaSalario extends ContaCorrente{
     private String nomeDoTitular;
     private double saldo;
 
-    final double taxaDeSaque = 5;
-    final double acrescimoDeDeposito = 0.03;
-    final double tetoParaAcrescimoDeposito = 3000;
+    final double taxaDeSaque = 0.0;
+    final double acrescimoDeDeposito = 0.0;
 
 
     public void setNumeroDaConta(int numeroDaConta) {
@@ -27,4 +26,5 @@ public class ContaSalario extends ContaCorrente{
                 SALDO: R$ %.2f
                 """, this.numeroDaConta, this.nomeDoTitular, this.saldo);
     }
+
 }

@@ -467,6 +467,7 @@ public class Exercicios {
     }
 
     public static void executarExercicioPoo9InterfaceBanco(){
+        Scanner entrada = new Scanner(System.in);
         out.println();
         out.println("""
                             Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
@@ -495,6 +496,13 @@ public class Exercicios {
                     out.println();
                     ContaCorrente contaC = new ContaCorrente();
 
+                    out.print("INFORME NO NÚMERO DA CONTA: ");
+                    int numeroContaCorrente = entradaInteira();
+                    out.print("INFORME O NOME DO TITULAR DA CONTA: ");
+                    String nomeTitularContaCorrente = entrada.nextLine();
+                    contaC.setNumeroDaConta(numeroContaCorrente);
+                    contaC.setNomeDoTitular(nomeTitularContaCorrente);
+
                     int paradaContaCorrente = 0;
                     while(paradaContaCorrente == 0){
                         int optionContaCorrente;
@@ -507,12 +515,18 @@ public class Exercicios {
                         switch(optionContaCorrente){
                             case 1:
                                 out.println("DEPOSITAR");
+                                out.println();
+                                contaC.depositar();
                                 break;
                             case 2:
                                 out.println("SACAR");
+                                out.println();
+                                contaC.sacar();
                                 break;
                             case 3:
                                 out.println("EXTRATO");
+                                out.println();
+                                out.print(contaC.verExtrato());
                                 break;
                             case 4:
                                 out.println("VOLTAR");
@@ -526,6 +540,13 @@ public class Exercicios {
                     out.println();
                     ContaPoupanca contaP = new ContaPoupanca();
 
+                    out.print("INFORME NO NÚMERO DA CONTA: ");
+                    int numeroContaPoupanca = entradaInteira();
+                    out.print("INFORME O NOME DO TITULAR DA CONTA: ");
+                    String nomeTitularContaPoupanca = entrada.nextLine();
+                    contaP.setNumeroDaConta(numeroContaPoupanca);
+                    contaP.setNomeDoTitular(nomeTitularContaPoupanca);
+
                     int paradaContaPoupanca = 0;
                     while(paradaContaPoupanca == 0){
                         int optionContaPoupanca;
@@ -538,12 +559,15 @@ public class Exercicios {
                         switch(optionContaPoupanca){
                             case 1:
                                 out.println("DEPOSITAR");
+                                contaP.depositar();
                                 break;
                             case 2:
                                 out.println("SACAR");
+                                contaP.sacar();
                                 break;
                             case 3:
                                 out.println("EXTRATO");
+                                out.print(contaP.verExtrato());
                                 break;
                             case 4:
                                 out.println("VOLTAR");
@@ -557,6 +581,13 @@ public class Exercicios {
                     out.println();
                     ContaSalario contaS = new ContaSalario();
 
+                    out.print("INFORME NO NÚMERO DA CONTA: ");
+                    int numeroContaSalario = entradaInteira();
+                    out.print("INFORME O NOME DO TITULAR DA CONTA: ");
+                    String nomeTitularContaSalario = entrada.nextLine();
+                    contaS.setNumeroDaConta(numeroContaSalario);
+                    contaS.setNomeDoTitular(nomeTitularContaSalario);
+
                     int paradaContaSalario = 0;
                     while(paradaContaSalario == 0){
                         int optionContaSalario;
@@ -569,12 +600,15 @@ public class Exercicios {
                         switch(optionContaSalario){
                             case 1:
                                 out.println("DEPOSITAR");
+                                contaS.depositar();
                                 break;
                             case 2:
                                 out.println("SACAR");
+                                contaS.sacar();
                                 break;
                             case 3:
                                 out.println("EXTRATO");
+                                out.print(contaS.verExtrato());
                                 break;
                             case 4:
                                 out.println("VOLTAR");
