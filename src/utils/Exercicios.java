@@ -3,11 +3,8 @@ package utils;
 import models.*;
 import static java.lang.System.out;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Locale;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static utils.Entradas.entradaDouble;
 import static utils.Entradas.entradaInteira;
@@ -37,7 +34,7 @@ public class Exercicios {
         out.println("O MENOR NÚMERO É: " + menor);
     }
 
-    public static void executarExercicio2(){
+    public static void executarExercicio2() {
         out.println();
         out.println("""
                 As maçãs custam 0,30 cada se forem compradas menos que uma dúzia e 0,25
@@ -52,16 +49,16 @@ public class Exercicios {
         double valorApartirDeUmaDuzia = 0.25;
         double valorAbaixoDeUmaDuzia = 0.30;
 
-        if(quantidadeMacas >= 12){
+        if (quantidadeMacas >= 12) {
             out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
                     valorApartirDeUmaDuzia);
-        }else{
+        } else {
             out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
                     valorAbaixoDeUmaDuzia);
         }
     }
 
-    public static void executarExercicio3(){
+    public static void executarExercicio3() {
         Locale.setDefault(Locale.US);
         out.println();
         out.println("""
@@ -77,46 +74,46 @@ public class Exercicios {
         out.print("INFORME O SEU SALÁRIO BRUTO: R$ ");
         double salarioBruto = entradaDouble();
 
-        if(salarioBruto < 1000){
+        if (salarioBruto < 1000) {
             double salarioLiquido = salarioBruto - ((6 * salarioBruto) / 100);
             out.printf("O SEU SALÁRIO BRUTO É R$ %.2f\n", salarioBruto);
             out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        }else if(salarioBruto >= 1000 && salarioBruto <= 2500){
+        } else if (salarioBruto >= 1000 && salarioBruto <= 2500) {
             double salarioLiquido = salarioBruto - ((8 * salarioBruto) / 100);
             out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        }else if(salarioBruto >= 2500 && salarioBruto <= 4800){
+        } else if (salarioBruto >= 2500 && salarioBruto <= 4800) {
             double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
             out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        }else if(salarioBruto > 4800) {
+        } else if (salarioBruto > 4800) {
             double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
             out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
         }
     }
 
-    public static void executarExercicioPoo1Jogador(){
+    public static void executarExercicioPoo1Jogador() {
         Scanner entrada = new Scanner(System.in);
         out.println("""
-                            Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
-                            E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
-                            quantidade de gols/assistências.
-                            Também criar dois métodos  para ver o número de gols e assistências.
-                           """);
+                 Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
+                 E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
+                 quantidade de gols/assistências.
+                 Também criar dois métodos  para ver o número de gols e assistências.
+                """);
         out.println();
         out.print("INFORME O NOME DO JOGADOR: ");
         String nome = entrada.nextLine();
         Jogador jogador = new Jogador(nome);
 
         int loop = 0;
-        while(loop == 0){
+        while (loop == 0) {
             int option;
-            do{
+            do {
                 out.println();
                 out.println("JOGADOR: " + jogador.getNomeJogador());
                 mostrarMenuJogador();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
-            switch(option){
+            } while (option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
+            switch (option) {
                 case 1:
                     out.println();
                     out.println("ADICIONAR GOLS.");
@@ -160,7 +157,7 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo2Aluno(){
+    public static void executarExercicioPoo2Aluno() {
         Locale.setDefault(Locale.US);
         Scanner entrada = new Scanner(System.in);
         out.println("""
@@ -180,17 +177,17 @@ public class Exercicios {
         out.println();
         Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
         aluno.somarNotas();
-        if(aluno.getNotasSomadas() <= 100){
+        if (aluno.getNotasSomadas() <= 100) {
             aluno.calcularMedia();
             aluno.acharMaiorNota();
             aluno.acharMenorNota();
             out.println(aluno.mostrarBoletimAluno());
-        }else{
+        } else {
             out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
         }
     }
 
-    public static void executarExercicioPoo3Aluno2(){
+    public static void executarExercicioPoo3Aluno2() {
         Scanner entrada = new Scanner(System.in);
         out.println("""
                 Crie uma classe Aluno com os campos nome, matrícula e notas[3].
@@ -229,7 +226,7 @@ public class Exercicios {
         out.println();
     }
 
-    public static void executarExercicioPoo4Pedido(){
+    public static void executarExercicioPoo4Pedido() {
         out.println("""
                 Crie uma classe Pedido com os campos Itens[10], status e valorTotal.
                 Essa classe deverá ter os métodos para adicionar itens, que receberá como
@@ -240,7 +237,7 @@ public class Exercicios {
         out.println();
         int option;
         int loopPrincipal = 0;
-        while(loopPrincipal == 0) {
+        while (loopPrincipal == 0) {
             do {
                 mostrarMenuPrincipalLancheria();
                 out.print("INFORME SUA ESCOLHA: ");
@@ -260,7 +257,7 @@ public class Exercicios {
                             mostrarMenuLanchesValor();
                             out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
                             codigoItem = entradaInteira();
-                        }while(codigoItem != 1 && codigoItem != 2 && codigoItem != 3 && codigoItem != 4
+                        } while (codigoItem != 1 && codigoItem != 2 && codigoItem != 3 && codigoItem != 4
                                 && codigoItem != 5 && codigoItem != 6 && codigoItem != 7
                                 && codigoItem != 8 && codigoItem != 9 && codigoItem != 10);
                         String item;
@@ -281,18 +278,18 @@ public class Exercicios {
                     break;
                 case 2:
                     out.println("ALTERAR STATUS DO PEDIDO.");
-                    if(pedido.itens.isEmpty()){
+                    if (pedido.itens.isEmpty()) {
                         out.println("NÃO HÁ PEDIDOS FEITOS.");
-                    }else{
+                    } else {
                         pedido.alterarStatusPedido();
                         pedido.mostrarPedido(pedido);
                     }
                     break;
                 case 3:
                     out.println("GERAR NOTA DO PEDIDO");
-                    if(pedido.itens.isEmpty()){
+                    if (pedido.itens.isEmpty()) {
                         out.println("NÃO HÁ PEDIDOS FEITOS.");
-                    }else{
+                    } else {
                         pedido.mostrarPedido(pedido);
                     }
                     break;
@@ -304,7 +301,7 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo5Calculadora(){
+    public static void executarExercicioPoo5Calculadora() {
         out.println();
         out.println("      CALCULADORA PARA 2 DIGITOS        ");
         out.println();
@@ -318,13 +315,13 @@ public class Exercicios {
 
         int loop = 0;
         int option;
-        while(loop == 0){
-            do{
+        while (loop == 0) {
+            do {
                 mostrarmenuCalculadora();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
-            switch(option){
+            } while (option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
+            switch (option) {
                 case 1:
                     out.println("ADIÇÃO");
                     Calculadora.somar();
@@ -349,16 +346,16 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo6Funcionario1(){
+    public static void executarExercicioPoo6Funcionario1() {
         Scanner entrada = new Scanner(System.in);
         out.println("""
-                            Crie uma classe do tipo funcionário com os campos:
-                            nome
-                            função
-                            setor
-                            Crie uma lista com 10 objetos do tipo funcionário dentro dela.
-                            Depois exiba no console todas as informações de cada objeto.
-                            """);
+                Crie uma classe do tipo funcionário com os campos:
+                nome
+                função
+                setor
+                Crie uma lista com 10 objetos do tipo funcionário dentro dela.
+                Depois exiba no console todas as informações de cada objeto.
+                """);
 
         out.println("-------------------------------------------");
         out.println("          CADASTRANDO 10 FUNCIONÁRIOS      ");
@@ -366,7 +363,7 @@ public class Exercicios {
 
         List<Funcionario> funcionarios = new ArrayList<>();
         int contador = 0;
-        while(contador < 10){
+        while (contador < 10) {
             out.println();
             out.printf("INFORME O NOME DO %dº FUNCIONÁRIO: ", contador + 1);
             String nome = entrada.nextLine();
@@ -378,12 +375,12 @@ public class Exercicios {
             contador++;
         }
         out.println("LISTANDO OS 10 FUNCIONÁRIOS E SEUS ATRIBUTOS");
-        for(Funcionario funcionario : funcionarios){
+        for (Funcionario funcionario : funcionarios) {
             funcionario.mostrarFuncionario();
         }
     }
 
-    public static void executarExercicioPoo8Animal(){
+    public static void executarExercicioPoo8Animal() {
         mostrarEnunciadoExercicioAnimal();
 
         out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
@@ -393,26 +390,27 @@ public class Exercicios {
         out.println(animal.alimentar());
 
         out.println("""
-                       
-                       AQUI É UM OBJETO INSTÂNCIADO DA CLASSE TIGRE QUE HERDA DA CLASSE ANIMAL E SOBREESCREVE
-                       O MÉTODO ALIMENTAR DA CLASSE ANIMAL:
-                       """);
+                                       
+                AQUI É UM OBJETO INSTÂNCIADO DA CLASSE TIGRE QUE HERDA DA CLASSE ANIMAL E SOBREESCREVE
+                O MÉTODO ALIMENTAR DA CLASSE ANIMAL:
+                """);
         Animal tigre = new Tigre("Tigrão", "mamifero", "Carne");
         out.println(tigre);
         out.println(tigre.alimentar());
 
     }
-    public static void executarExercicioPoo7Funcionario2(){
+
+    public static void executarExercicioPoo7Funcionario2() {
         Scanner entrada = new Scanner(System.in);
         mostrarEnunciadoExercicioFuncionario2();
         out.println();
         int option;
-        do{
+        do {
             mostrarMenuExercicioFuncionario2();
             out.print("INFORME SUA ESCOLHA: ");
             option = entradaInteira();
-        }while(option != 1 && option !=2 && option != 3);
-        switch(option){
+        } while (option != 1 && option != 2 && option != 3);
+        switch (option) {
             case 1:
                 out.println("PROGRAMADOR");
                 out.println();
@@ -466,31 +464,31 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo9InterfaceBanco(){
+    public static void executarExercicioPoo9InterfaceBanco() {
         Scanner entrada = new Scanner(System.in);
         out.println();
         out.println("""
-                            Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
-                            Depois crie classes que usarão esta Interface.
-                            Exemplos de classe: ContaCorrente, ContaPoupanca, ContaSalario;
-                            No método de saque, a conta corrente deverá ter um taxa de 10, conta poupança de 5 e
-                            conta salário 0.
-                            No método para depósito a conta corrente deverá ter um acréscimo de 1% até 10.000,
-                            conta poupança de 3% até 3.000 e na conta salário não ter.
-                            No método para ver Extrato deverá aparecer informações do titular e qual tipo de conta
-                            
-                            """);
+                Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
+                Depois crie classes que usarão esta Interface.
+                Exemplos de classe: ContaCorrente, ContaPoupanca, ContaSalario;
+                No método de saque, a conta corrente deverá ter um taxa de 10, conta poupança de 5 e
+                conta salário 0.
+                No método para depósito a conta corrente deverá ter um acréscimo de 1% até 10.000,
+                conta poupança de 3% até 3.000 e na conta salário não ter.
+                No método para ver Extrato deverá aparecer informações do titular e qual tipo de conta
+                                            
+                """);
         out.println();
 
         int paradaPrincipal = 0;
-        while(paradaPrincipal == 0){
+        while (paradaPrincipal == 0) {
             int option1;
-            do{
+            do {
                 mostrarMenuPrincipalBancoInterface();
                 out.print("INFORME SUA ESCOLHA: ");
                 option1 = entradaInteira();
-            }while(option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4);
-            switch(option1){
+            } while (option1 != 1 && option1 != 2 && option1 != 3 && option1 != 4);
+            switch (option1) {
                 case 1:
                     out.println("CONTA CORRENTE");
                     out.println();
@@ -504,15 +502,15 @@ public class Exercicios {
                     contaC.setNomeDoTitular(nomeTitularContaCorrente);
 
                     int paradaContaCorrente = 0;
-                    while(paradaContaCorrente == 0){
+                    while (paradaContaCorrente == 0) {
                         int optionContaCorrente;
-                        do{
+                        do {
                             mostrarMenuSecundarioBancoInterface();
                             out.println("INFORME SUA ESCOLHA: ");
                             optionContaCorrente = entradaInteira();
-                        }while(optionContaCorrente != 1 && optionContaCorrente != 2 &&
+                        } while (optionContaCorrente != 1 && optionContaCorrente != 2 &&
                                 optionContaCorrente != 3 && optionContaCorrente != 4);
-                        switch(optionContaCorrente){
+                        switch (optionContaCorrente) {
                             case 1:
                                 out.println("DEPOSITAR");
                                 out.println();
@@ -548,15 +546,15 @@ public class Exercicios {
                     contaP.setNomeDoTitular(nomeTitularContaPoupanca);
 
                     int paradaContaPoupanca = 0;
-                    while(paradaContaPoupanca == 0){
+                    while (paradaContaPoupanca == 0) {
                         int optionContaPoupanca;
-                        do{
+                        do {
                             mostrarMenuSecundarioBancoInterface();
                             out.println("INFORME SUA ESCOLHA: ");
                             optionContaPoupanca = entradaInteira();
-                        }while(optionContaPoupanca != 1 && optionContaPoupanca != 2 &&
+                        } while (optionContaPoupanca != 1 && optionContaPoupanca != 2 &&
                                 optionContaPoupanca != 3 && optionContaPoupanca != 4);
-                        switch(optionContaPoupanca){
+                        switch (optionContaPoupanca) {
                             case 1:
                                 out.println("DEPOSITAR");
                                 contaP.depositar();
@@ -589,15 +587,15 @@ public class Exercicios {
                     contaS.setNomeDoTitular(nomeTitularContaSalario);
 
                     int paradaContaSalario = 0;
-                    while(paradaContaSalario == 0){
+                    while (paradaContaSalario == 0) {
                         int optionContaSalario;
-                        do{
+                        do {
                             mostrarMenuSecundarioBancoInterface();
                             out.println("INFORME SUA ESCOLHA: ");
                             optionContaSalario = entradaInteira();
-                        }while(optionContaSalario != 1 && optionContaSalario != 2 &&
+                        } while (optionContaSalario != 1 && optionContaSalario != 2 &&
                                 optionContaSalario != 3 && optionContaSalario != 4);
-                        switch(optionContaSalario){
+                        switch (optionContaSalario) {
                             case 1:
                                 out.println("DEPOSITAR");
                                 contaS.depositar();
@@ -626,26 +624,26 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo10Excecao1() throws MinhaExceptionExercicio10{
+    public static void executarExercicioPoo10Excecao1() throws MinhaExceptionExercicio10 {
         out.println("""
-                            Seguindo o exercício 1…
-                            Crie uma exceção personalizada que deverá ser lançada nesses casos:
-                            Ao tentar fazer saque maior que o saldo.
-                            Ao tentar fazer um depósito maior que 10 mil.
-                            Trate essas exceções.
-                            """);
+                Seguindo o exercício 1…
+                Crie uma exceção personalizada que deverá ser lançada nesses casos:
+                Ao tentar fazer saque maior que o saldo.
+                Ao tentar fazer um depósito maior que 10 mil.
+                Trate essas exceções.
+                """);
         out.println();
         out.println("NESTE EXERCÍCIO TANTO O EXEMPLO DE SAQUE E O DE DEPÓSITO IRÃO DERRUBAR O SISTEMINHA.\n" +
                 "PARA CONTINUAR EXECUNTANDO O PROGRAMA VOCÊ TERÁ DE EXECUTA-LO NOVAMENTE.");
         int parada = 0;
-        while(parada == 0){
+        while (parada == 0) {
             int option;
-            do{
+            do {
                 mostrarMenuExercicioPoo10Excecao1();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3 );
-            switch(option){
+            } while (option != 1 && option != 2 && option != 3);
+            switch (option) {
                 case 1:
                     out.println("SACAR");
                     out.println("SAQUE ONDE LANÇARÁ UMA EXCEÇÃO.");
@@ -653,7 +651,7 @@ public class Exercicios {
                     out.print("INFORME O VALOR DO SAQUE: R$ ");
                     double saque = entradaDouble();
 
-                    if(saque > saldo){
+                    if (saque > saldo) {
                         throw new MinhaExceptionExercicio10("SALDO INSUFICIENTE PARA O SAQUE.\n" +
                                 "saldo == " + saldo + " saque == " + saque);
                     }
@@ -665,8 +663,8 @@ public class Exercicios {
                     out.print("INFORME O VALOR DO DEPÓSITO: R$ ");
                     double valorDeposito = entradaDouble();
 
-                    if(valorDeposito > tetoDeposito){
-                        throw new  MinhaExceptionExercicio10("O VALOR DO DEPÓSITO É MAIOR QUE SEU TETO.\n" +
+                    if (valorDeposito > tetoDeposito) {
+                        throw new MinhaExceptionExercicio10("O VALOR DO DEPÓSITO É MAIOR QUE SEU TETO.\n" +
                                 "tetoDeposito == " + tetoDeposito + " valorDeposito == " + valorDeposito);
                     }
                     break;
@@ -674,19 +672,19 @@ public class Exercicios {
         }
     }
 
-    public static void executarExercicioPoo11Excecao2(){
+    public static void executarExercicioPoo11Excecao2() {
         out.println("""
-                            O código abaixo lançará algumas exceções. Trate eles de uma forma que o código
-                            continuará com a próxima etapa. (Deve-se usar a estrutura try-catch)
-                            
-                            List<String> lista = null;
-                            lista.add("Produto 1");
-                            lista.get(2);
-                            lista.add("Produto 2");
-                            for(String produto : lista) {
-                                out.println(produto);
-                            }
-                            """);
+                O código abaixo lançará algumas exceções. Trate eles de uma forma que o código
+                continuará com a próxima etapa. (Deve-se usar a estrutura try-catch)
+                                            
+                List<String> lista = null;
+                lista.add("Produto 1");
+                lista.get(2);
+                lista.add("Produto 2");
+                for(String produto : lista) {
+                    out.println(produto);
+                }
+                """);
 
         List<String> lista = null;
         try {
@@ -696,14 +694,14 @@ public class Exercicios {
             for (String produto : lista) {
                 out.println(produto);
             }
-        }catch(NullPointerException e){
+        } catch (NullPointerException e) {
             out.println("SEU CÓDIGO ESTÁ GERANDO UM ERRO " + e.getMessage());
         }
 
 
         out.println("""
                 O TRATAMENTO QUE FOI DADO PARA O RESULTADO ACIMA FOI O SEGUINTE: 
-                
+                                
                 List<String> lista = null;
                         try {
                             lista.add("Produto 1");
@@ -717,4 +715,48 @@ public class Exercicios {
                         }
                 """);
     }
+
+    public static void executarExercicioStreamsFrutas() {
+
+        out.println("""
+                Nós temos uma lista com várias frutas: 
+                Maçã, Laranja, Limão, Pêra, Abacate,
+                Morango, Ameixa, Manga, Maracujá.
+                                
+                Utilizando stream, crie uma nova lista sem as frutas que 
+                começam com a letra
+                "M"
+                """);
+        int parada;
+        do {
+            List<String> listaDeFrutas1 = new ArrayList<>(Arrays.asList("Maçã", "Laranja",
+                    "Limão", "Pêra", "Abacate", "Morango", "Ameixa", "Manga", "Maracujá"));
+
+            List<String> lsiatDeFrutas2 = listaDeFrutas1.stream().filter(elemento ->
+                    !elemento.startsWith("M")).collect(Collectors.toList());
+
+            out.println(listaDeFrutas1);
+            out.println(lsiatDeFrutas2);
+
+            out.println("""
+                                    
+                    A execução acima é resultado deste código:
+                                    
+                    List<String> listaDeFrutas1 = new ArrayList<>(Arrays.asList("Maçã", "Laranja",
+                                    "Limão", "Pêra", "Abacate", "Morango", "Ameixa", "Manga", "Maracujá"));
+                                    
+                            List<String> lsiatDeFrutas2 = listaDeFrutas1.stream().filter(elemento ->\s
+                                    !elemento.startsWith("M")).collect(Collectors.toList());
+                                    
+                            out.println(listaDeFrutas1);
+                            out.println(lsiatDeFrutas2);
+                                    
+                                    
+                    """);
+            out.print("OBSERVE O RESULTADO DA EXECUÇÃO. PARA SAIR DIGITE 1: ");
+            parada = entradaInteira();
+        } while (parada != 1);
+    }
 }
+
+
