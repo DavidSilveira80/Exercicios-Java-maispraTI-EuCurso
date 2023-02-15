@@ -5,25 +5,25 @@ import static java.lang.System.out;
 public class Menus {
 
     public static void mostrarMenuPrincipal(){
-        out.println("-------------------------------------------------------------");
-        out.println("   1 - PARA EXECUTAR EXERCÍCIO 1                             ");
-        out.println("   2 - PARA EXECUTAR EXERCÍCIO 2                             ");
-        out.println("   3 - PARA EXECUTAR EXERCÍCIO 3                             ");
-        out.println("   4 - PARA EXECUTAR EXERCÍCIO POO 1 JOGADOR                 ");
-        out.println("   5 - PARA EXECUTAR EXERCÍCIO POO 2 ALUNO                   ");
-        out.println("   6 - PARA EXECUTAR EXERCÍCIO POO 3 ALUNO 2                 ");
-        out.println("   7 - PARA EXECUTAR EXERCÍCIO POO 4 PEDIDO                  ");
-        out.println("   8 - PARA EXECUTAR EXERCÍCIO POO 5 CALCULADORA             ");
-        out.println("   9 - PARA EXECUTAR EXERCÍCIO POO 6 FUNCIONÁRIO             ");
-        out.println("   10 - PARA EXECUTAR EXERCÍCIO POO 7 FUNCIONÁRIO HERANÇA    ");
-        out.println("   11 - PARA EXECUTAR EXERCÍCIO POO 8 ANIMAL HERANÇA         ");
-        out.println("   12 - PARA EXECUTAR EXERCÍCIO POO 9 INTERFACE BANCO        ");
-        out.println("   13 - PARA EXECUTAR EXERCÍCIO POO 10 EXCEÇÃO 1 BANCO       ");
-        out.println("   14 - PARA EXECUTAR EXERCÍCIO POO 11 EXCEÇÃO 2 PRODUTO     ");
-        out.println("   15 - PARA EXECUTAR EXERCÍCIO STREAMS FRUTAS               ");
-        out.println("   16 - PARA EXECUTAR EXERCÍCIO MAP 1 ALUNO              ");
-        out.println("   17 - PARA EXECUTAR EXERCÍCIO PRÉ-SISTEMA COMPRA           ");
-        out.println("   18 - PARA SAIR                                            ");
+        out.println("----------------------------------------------------------------");
+        out.println("   1 - PARA EXECUTAR EXERCÍCIO 1                                ");
+        out.println("   2 - PARA EXECUTAR EXERCÍCIO 2                                ");
+        out.println("   3 - PARA EXECUTAR EXERCÍCIO 3                                ");
+        out.println("   4 - PARA EXECUTAR EXERCÍCIO 4 POO 1 JOGADOR                  ");
+        out.println("   5 - PARA EXECUTAR EXERCÍCIO 5 POO 2 ALUNO                    ");
+        out.println("   6 - PARA EXECUTAR EXERCÍCIO 6 POO 3 ALUNO 2                  ");
+        out.println("   7 - PARA EXECUTAR EXERCÍCIO 7 POO 4 PEDIDO                   ");
+        out.println("   8 - PARA EXECUTAR EXERCÍCIO 8 POO 5 CALCULADORA              ");
+        out.println("   9 - PARA EXECUTAR EXERCÍCIO 9 POO 6 FUNCIONÁRIO              ");
+        out.println("   10 - PARA EXECUTAR EXERCÍCIO 10 POO 7 FUNCIONÁRIO HERANÇA    ");
+        out.println("   11 - PARA EXECUTAR EXERCÍCIO 11 POO 8 ANIMAL HERANÇA         ");
+        out.println("   12 - PARA EXECUTAR EXERCÍCIO 12 POO 9 INTERFACE BANCO        ");
+        out.println("   13 - PARA EXECUTAR EXERCÍCIO 13 POO 10 EXCEÇÃO 1 BANCO       ");
+        out.println("   14 - PARA EXECUTAR EXERCÍCIO 14 POO 11 EXCEÇÃO 2 PRODUTO     ");
+        out.println("   15 - PARA EXECUTAR EXERCÍCIO 15 STREAMS FRUTAS               ");
+        out.println("   16 - PARA EXECUTAR EXERCÍCIO 16 MAP 1 ALUNO                  ");
+        out.println("   17 - PARA EXECUTAR EXERCÍCIO 17 PRÉ-SISTEMA COMPRA           ");
+        out.println("   18 - PARA SAIR                                               ");
     }
 
     public static void mostrarMenuJogador(){
