@@ -6,6 +6,7 @@ import java.util.List;
 
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
+import static utils.Entradas.informarFluxo1E2;
 
 public class Exercicio1 {
     public static void executarExercicio1() {
@@ -18,12 +19,11 @@ public class Exercicio1 {
 
             maiorEMenorNumeros(informarNumeros(numerosInformados));
 
-            option = continuarFluxoMaiorEMenorNumeros();
+            option = informarFluxo1E2();
         }while(option != 2);
     }
 
     //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------
-
 
     public static List<Integer> informarNumeros(List<Integer> listavazia){
 
@@ -40,11 +40,5 @@ public class Exercicio1 {
         int menorNumero = Collections.min(numeros);
 
         out.printf("\nO MAIOR NÚMERO É: %d\nO MENOR NÚMERO É: %d\n\n", maiorNumero, menorNumero);
-    }
-
-    public static int continuarFluxoMaiorEMenorNumeros(){
-        out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
-        return entradaInteira();
-
     }
 }

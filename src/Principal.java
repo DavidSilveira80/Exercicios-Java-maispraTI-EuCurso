@@ -38,86 +38,73 @@ public class Principal {
                     && option != 17 && option != 18);
             switch(option){
                 case 1:
-                    out.println();
-                    out.println("EXERCÍCIO 1");
+                    out.println("\nEXERCÍCIO 1\n");
                     executarExercicio1();
                     break;
                 case 2:
-                    out.println();
-                    out.println("EXERCÍCIO 2");
+                    out.println("\nEXERCÍCIO 2\n");
                     executarExercicio2();
                     break;
                 case 3:
-                    out.println();
-                    out.println("EXERCÍCIO 3");
+                    out.println("\nEXERCÍCIO 3\n");
                     executarExercicio3();
                     break;
                 case 4:
-                    out.println("EXERCÍCIO POO 1");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 1\n");
                     executarExercicio4Poo1Jogador();
                     break;
                 case 5:
-                    out.println("EXERCÍCIO POO 2");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 2\n");
                     executarExercicio5Poo2Aluno();
                     break;
                 case 6:
-                    out.println("EXERCÍCIO P00 3");
-                    out.println();
+                    out.println("\nEXERCÍCIO P00 3\n");
                     executarExercicio6Poo3Aluno2();
                     break;
                 case 7:
-                    out.println("EXERCÍCIO POO 4");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 4\n");
                     executarExercicio7Poo4Pedido();
                     break;
                 case 8:
-                    out.println("EXERCÍCIO POO 5");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 5\n");
                     executarExercicio8Poo5Calculadora();
                     break;
                 case 9:
-                    out.println("EXERCÍCIO POO 6");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 6\n");
                     executarExercicio9Poo6Funcionario1();
                     break;
                 case 10:
-                    out.println("EXERCÍCIO POO 7");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 7\n");
                     executarExercicio10Poo7Funcionario2();
                     break;
                 case 11:
-                    out.println("EXERCÍCIO POO 8");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 8\n");
                     executarExercicio11Poo8Animal();
                     out.println();
                     break;
                 case 12:
-                    out.println("EXERCÍCIO POO 9");
-                    out.println();
+                    out.println("\nEXERCÍCIO POO 9\n");
                     executarExercicio12Poo9InterfaceBanco();
                     out.println();
                     break;
                 case 13:
-                    out.println("EXERCÍCIO POO 10");
+                    out.println("\nEXERCÍCIO POO 10\n");
                     executarExercicio13Poo10Excecao1();
                     break;
                 case 14:
-                    out.println("EXERCÍCIO POO 11");
+                    out.println("\nEXERCÍCIO POO 11\n");
                     executarExercicio14Poo11Excecao2();
                     break;
                 case 15:
-                    out.println("EXERCÍCIO STREAMS 1");
-                    out.println();
+                    out.println("\nEXERCÍCIO STREAMS 1\n");
                     executarExercicio15StreamsFrutas();
                     break;
                 case 16:
-                    out.println("EXERCÍCIO STREAM 2");
+                    out.println("\nEXERCÍCIO STREAM 2\n");
                     executarExercicio16Map1Aluno();
                     break;
                 case 17:
-                    out.println("EXERCÍCIO PRÉ-SISTEMA COMPRA");
+                    out.println("\nEXERCÍCIO PRÉ-SISTEMA COMPRA");
                     executarExercicio17PreSistemaCompra();
                     break;
                 case 18:

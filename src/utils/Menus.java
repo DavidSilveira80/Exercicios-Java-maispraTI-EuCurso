@@ -92,7 +92,36 @@ public class Menus {
         out.println("            1 - PARA PROGRAMADOR                                       ");
         out.println("            2 - PARA CONTADOR                                          ");
         out.println("            3 - PARA ADMINISTRADOR                                     ");
+    }
 
+    public static void mostrarMenuPrincipalBancoInterface(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA CONTA CORRENTE            ");
+        out.println("        2 - PARA CONTA POUPANÇA            ");
+        out.println("        3 - PARA CONTA SALÁRIO             ");
+        out.println("        4 - PARA SAIR                      ");
+    }
+
+    public static void mostrarMenuSecundarioBancoInterface(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA DEPOSITAR                 ");
+        out.println("        2 - PARA SACAR                     ");
+        out.println("        3 - PARA MOSTRAR EXTRATO           ");
+        out.println("        4 - PARA SAIR                      ");
+    }
+
+    public static void mostrarMenuExercicioPoo10Excecao1(){
+        out.println("-------------------------------------------");
+        out.println("        1 - PARA O EXEMPLO DE SAQUE        ");
+        out.println("        2 - PARA O EXEMPLO DE DEPOSITO     ");
+        out.println("        3 - PARA SAIR                      ");
+    }
+
+    public static void mostrarMenuPrincipalExercicio17(){
+        out.println("------------------------------------------------------");
+        out.println("        1 - PARA INSERIR COMPRA                       ");
+        out.println("        2 - PARA VER COMPRAS EM UM DIA ESPECÍFICO     ");
+        out.println("        3 - PARA SAIR                                 ");
     }
 
 
@@ -124,28 +153,13 @@ public class Menus {
                             """);
     }
 
-    public static void mostrarMenuPrincipalBancoInterface(){
-        out.println("-------------------------------------------");
-        out.println("        1 - PARA CONTA CORRENTE            ");
-        out.println("        2 - PARA CONTA POUPANÇA            ");
-        out.println("        3 - PARA CONTA SALÁRIO             ");
-        out.println("        4 - PARA SAIR                      ");
+    public static void mostrarEnunciadoExercicio17(){
+        out.println("""
+                \nCrie uma classe Compra com os campos "descricao" e "dataCompra".
+                Depois crie um sistema com algum laço de repetição que tenha três opções:
+                ● Inserir uma nova compra
+                ● Ver compras em algum dia específico.
+                ● Sair do sistema e finalizar.
+                """);
     }
-
-    public static void mostrarMenuSecundarioBancoInterface(){
-        out.println("-------------------------------------------");
-        out.println("        1 - PARA DEPOSITAR                 ");
-        out.println("        2 - PARA SACAR                     ");
-        out.println("        3 - PARA MOSTRAR EXTRATO           ");
-        out.println("        4 - PARA SAIR                      ");
-    }
-
-    public static void mostrarMenuExercicioPoo10Excecao1(){
-        out.println("-------------------------------------------");
-        out.println("        1 - PARA O EXEMPLO DE SAQUE        ");
-        out.println("        2 - PARA O EXEMPLO DE DEPOSITO     ");
-        out.println("        3 - PARA SAIR                      ");
-
-    }
-
 }

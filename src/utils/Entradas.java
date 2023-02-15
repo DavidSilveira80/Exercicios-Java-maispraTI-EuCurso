@@ -125,4 +125,9 @@ public class Entradas {
         pedido.setValorDoIten(valorItem);
         return valorItem;
     }
+
+    public static int informarFluxo1E2(){
+        out.print("\nQUER CONTINUAR(1-SIM/2-NÃO): ");
+        return entradaInteira();
+    }
 }
