@@ -15,23 +15,30 @@ import static utils.Menus.*;
 
 public class Exercicios {
     public static void executarExercicio1() {
-        out.println();
-        out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
-        out.println();
+        int option;
+        do{
+            out.println();
+            out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
+            out.println();
 
-        List<Integer> tresInteiros = new ArrayList<>();
+            List<Integer> tresInteiros = new ArrayList<>();
 
-        int contador = 0;
+            int contador = 0;
 
-        while (contador < 3) {
-            out.printf("INFORME O %dº NÚMERO: ", contador + 1);
-            tresInteiros.add(entradaInteira());
-            contador++;
-        }
-        int maior = Collections.max(tresInteiros);
-        int menor = Collections.min(tresInteiros);
-        out.println("O MAIOR NÚMERO É: " + maior);
-        out.println("O MENOR NÚMERO É: " + menor);
+            while (contador < 3) {
+                out.printf("INFORME O %dº NÚMERO: ", contador + 1);
+                tresInteiros.add(entradaInteira());
+                contador++;
+            }
+            int maior = Collections.max(tresInteiros);
+            int menor = Collections.min(tresInteiros);
+            out.println("O MAIOR NÚMERO É: " + maior);
+            out.println("O MENOR NÚMERO É: " + menor);
+            out.println();
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        }while(option != 2);
+
     }
 
     public static void executarExercicio2() {
@@ -42,20 +49,27 @@ public class Exercicios {
                 Escreva um programa que leia a quantidade de maçãs compradas e depois
                 imprima o valor total da compra no console.
                 """);
+        out.println();
+        int option;
+        do{
+            out.print("INFORME A QUANTIDADE DE MAÇÃS QUE VOCÊ QUER COMPRAR: ");
+            int quantidadeMacas = entradaInteira();
 
-        out.print("INFORME A QUANTIDADE DE MAÇÃS QUE VOCÊ QUER COMPRAR: ");
-        int quantidadeMacas = entradaInteira();
+            double valorApartirDeUmaDuzia = 0.25;
+            double valorAbaixoDeUmaDuzia = 0.30;
 
-        double valorApartirDeUmaDuzia = 0.25;
-        double valorAbaixoDeUmaDuzia = 0.30;
+            if (quantidadeMacas >= 12) {
+                out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
+                        valorApartirDeUmaDuzia);
+            } else {
+                out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
+                        valorAbaixoDeUmaDuzia);
+            }
+            out.println();
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        }while(option != 2);
 
-        if (quantidadeMacas >= 12) {
-            out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
-                    valorApartirDeUmaDuzia);
-        } else {
-            out.printf("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", quantidadeMacas, quantidadeMacas *
-                    valorAbaixoDeUmaDuzia);
-        }
     }
 
     public static void executarExercicio3() {
@@ -70,24 +84,28 @@ public class Exercicios {
                 Até R$ 4.800 é 10%
                 Maior que 4.800 é 15%
                 """);
-
-        out.print("INFORME O SEU SALÁRIO BRUTO: R$ ");
-        double salarioBruto = entradaDouble();
-
-        if (salarioBruto < 1000) {
-            double salarioLiquido = salarioBruto - ((6 * salarioBruto) / 100);
-            out.printf("O SEU SALÁRIO BRUTO É R$ %.2f\n", salarioBruto);
-            out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        } else if (salarioBruto >= 1000 && salarioBruto <= 2500) {
-            double salarioLiquido = salarioBruto - ((8 * salarioBruto) / 100);
-            out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        } else if (salarioBruto >= 2500 && salarioBruto <= 4800) {
-            double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
-            out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        } else if (salarioBruto > 4800) {
-            double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
-            out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
-        }
+        out.println();
+        int option;
+        do{
+            out.print("INFORME O SEU SALÁRIO BRUTO: R$ ");
+            double salarioBruto = entradaDouble();
+            if (salarioBruto < 1000) {
+                double salarioLiquido = salarioBruto - ((6 * salarioBruto) / 100);
+                out.printf("O SEU SALÁRIO BRUTO É R$ %.2f\n", salarioBruto);
+                out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
+            } else if (salarioBruto >= 1000 && salarioBruto <= 2500) {
+                double salarioLiquido = salarioBruto - ((8 * salarioBruto) / 100);
+                out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
+            } else if (salarioBruto >= 2500 && salarioBruto <= 4800) {
+                double salarioLiquido = salarioBruto - ((10 * salarioBruto) / 100);
+                out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
+            } else if (salarioBruto > 4800) {
+                double salarioLiquido = salarioBruto - ((15 * salarioBruto) / 100);
+                out.printf("O SALÁRIO LÍQUIDO É R$ %.2f\n", salarioLiquido);
+            }
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        }while(option != 2);
     }
 
     public static void executarExercicioPoo1Jogador() {
@@ -165,26 +183,32 @@ public class Exercicios {
                 notas podem chegar no máximo 100.
                 Cria um método que retorne o nome do aluno, sua média, a maior e menor nota
                 """);
-        out.println();
-        out.print("INFORME O NOME DO ALUNO: ");
-        String nome = entrada.nextLine();
-        out.print("INFORME O PRIMEIRA NOTA DO ALUNO: ");
-        double nota1 = entradaDouble();
-        out.print("INFORME A SEGUNDA NOTA DO ALUNO: ");
-        double nota2 = entradaDouble();
-        out.print("INFORME A TERCEIRA NOTA DO ALUNO: ");
-        double nota3 = entradaDouble();
-        out.println();
-        Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
-        aluno.somarNotas();
-        if (aluno.getNotasSomadas() <= 100) {
-            aluno.calcularMedia();
-            aluno.acharMaiorNota();
-            aluno.acharMenorNota();
-            out.println(aluno.mostrarBoletimAluno());
-        } else {
-            out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
-        }
+        int option;
+        do{
+            out.println();
+            out.print("INFORME O NOME DO ALUNO: ");
+            String nome = entrada.nextLine();
+            out.print("INFORME O PRIMEIRA NOTA DO ALUNO: ");
+            double nota1 = entradaDouble();
+            out.print("INFORME A SEGUNDA NOTA DO ALUNO: ");
+            double nota2 = entradaDouble();
+            out.print("INFORME A TERCEIRA NOTA DO ALUNO: ");
+            double nota3 = entradaDouble();
+            out.println();
+            Aluno aluno = new Aluno(nome, nota1, nota2, nota3);
+            aluno.somarNotas();
+            if (aluno.getNotasSomadas() <= 100) {
+                aluno.calcularMedia();
+                aluno.acharMaiorNota();
+                aluno.acharMenorNota();
+                out.println(aluno.mostrarBoletimAluno());
+            } else {
+                out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
+            }
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        }while(option != 2);
+
     }
 
     public static void executarExercicioPoo3Aluno2() {
@@ -195,35 +219,41 @@ public class Exercicios {
                 ela deve verificar se o somatório será maior que 100, caso for. Deixe uma
                 mensagem que não foi possível e peça para adicionar novamente uma nota.
                 """);
+        int option;
+        do{
+            out.println();
+            Aluno2 aluno2 = new Aluno2();
+            out.print("INFORME O NOME DO ALUNO: ");
+            String nomeAluno = entrada.nextLine();
+            aluno2.setNomeAluno(nomeAluno);
+            out.printf("INFORME A MATRICULA DO ALUNO ", aluno2.getNomeAluno() + "(ATÉ 4 DIGITOS) :");
+            int matricula = entradaInteira();
+            aluno2.setMatricula(matricula);
 
-        Aluno2 aluno2 = new Aluno2();
-        out.print("INFORME O NOME DO ALUNO: ");
-        String nomeAluno = entrada.nextLine();
-        aluno2.setNomeAluno(nomeAluno);
-        out.printf("INFORME A MATRICULA DO ALUNO ", aluno2.getNomeAluno() + "(ATÉ 4 DIGITOS) :");
-        int matricula = entradaInteira();
-        aluno2.setMatricula(matricula);
+            out.println();
+            out.println("------------------------------------------------");
+            out.println("INFORMAR AS NOTAS DO ALUNO " + aluno2.getNomeAluno() + ".");
+            out.println();
 
-        out.println();
-        out.println("------------------------------------------------");
-        out.println("INFORMAR AS NOTAS DO ALUNO " + aluno2.getNomeAluno() + ".");
-        out.println();
+            out.print("INFORMAR A 1ª NOTA: ");
+            double nota1 = entradaDouble();
+            aluno2.setNota1(validarNotas(nota1, aluno2));
 
-        out.print("INFORMAR A 1ª NOTA: ");
-        double nota1 = entradaDouble();
-        aluno2.setNota1(validarNotas(nota1, aluno2));
+            System.out.print("INFORMAR A 2° NOTA: ");
+            double nota2 = entradaDouble();
+            aluno2.setNota2(validarNotas(nota2, aluno2));
 
-        System.out.print("INFORMAR A 2° NOTA: ");
-        double nota2 = entradaDouble();
-        aluno2.setNota2(validarNotas(nota2, aluno2));
+            out.print("INFORMAR A 3º NOTA: ");
+            double nota3 = entradaDouble();
+            aluno2.setNota3(validarNotas(nota3, aluno2));
 
-        out.print("INFORMAR A 3º NOTA: ");
-        double nota3 = entradaDouble();
-        aluno2.setNota3(validarNotas(nota3, aluno2));
+            out.println();
+            aluno2.mostrarBoletim();
+            out.println();
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
 
-        out.println();
-        aluno2.mostrarBoletim();
-        out.println();
+        }while(option != 2);
     }
 
     public static void executarExercicioPoo4Pedido() {
@@ -356,112 +386,129 @@ public class Exercicios {
                 Crie uma lista com 10 objetos do tipo funcionário dentro dela.
                 Depois exiba no console todas as informações de cada objeto.
                 """);
+        out.println();
+        int option;
+        do{
+            out.println("-------------------------------------------");
+            out.println("          CADASTRANDO 10 FUNCIONÁRIOS      ");
 
-        out.println("-------------------------------------------");
-        out.println("          CADASTRANDO 10 FUNCIONÁRIOS      ");
 
-
-        List<Funcionario> funcionarios = new ArrayList<>();
-        int contador = 0;
-        while (contador < 10) {
+            List<Funcionario> funcionarios = new ArrayList<>();
+            int contador = 0;
+            while (contador < 10) {
+                out.println();
+                out.printf("INFORME O NOME DO %dº FUNCIONÁRIO: ", contador + 1);
+                String nome = entrada.nextLine();
+                out.print("INFORME A FUNÇÃO: ");
+                String funcao = entrada.nextLine();
+                out.print("INFORME O SETOR: ");
+                String setor = entrada.nextLine();
+                funcionarios.add(new Funcionario(nome, funcao, setor));
+                contador++;
+            }
+            out.println("LISTANDO OS 10 FUNCIONÁRIOS E SEUS ATRIBUTOS");
+            for (Funcionario funcionario : funcionarios) {
+                funcionario.mostrarFuncionario();
+            }
             out.println();
-            out.printf("INFORME O NOME DO %dº FUNCIONÁRIO: ", contador + 1);
-            String nome = entrada.nextLine();
-            out.print("INFORME A FUNÇÃO: ");
-            String funcao = entrada.nextLine();
-            out.print("INFORME O SETOR: ");
-            String setor = entrada.nextLine();
-            funcionarios.add(new Funcionario(nome, funcao, setor));
-            contador++;
-        }
-        out.println("LISTANDO OS 10 FUNCIONÁRIOS E SEUS ATRIBUTOS");
-        for (Funcionario funcionario : funcionarios) {
-            funcionario.mostrarFuncionario();
-        }
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        }while(option != 2);
     }
 
     public static void executarExercicioPoo8Animal() {
         mostrarEnunciadoExercicioAnimal();
 
-        out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
-        out.println();
-        Animal animal = new Animal("pica-pau", "ave", "Alpiste");
-        out.println(animal);
-        out.println(animal.alimentar());
+        int option;
+        do{
+            out.println("AQUI É UM OBJETO INSTÂNCIADO DA CLASSE ANIMAL COM SEU MÉTODO ALMENTAR(): ");
+            out.println();
+            Animal animal = new Animal("pica-pau", "ave", "Alpiste");
+            out.println(animal);
+            out.println(animal.alimentar());
 
-        out.println("""
+            out.println("""
                                        
                 AQUI É UM OBJETO INSTÂNCIADO DA CLASSE TIGRE QUE HERDA DA CLASSE ANIMAL E SOBREESCREVE
                 O MÉTODO ALIMENTAR DA CLASSE ANIMAL:
                 """);
-        Animal tigre = new Tigre("Tigrão", "mamifero", "Carne");
-        out.println(tigre);
-        out.println(tigre.alimentar());
-
+            Animal tigre = new Tigre("Tigrão", "mamifero", "Carne");
+            out.println(tigre);
+            out.println(tigre.alimentar());
+            out.println();
+            out.print("PARA VOLTAR DIGITE 2: ");
+            option = entradaInteira();
+        }while(option != 2);
     }
 
     public static void executarExercicioPoo7Funcionario2() {
         Scanner entrada = new Scanner(System.in);
         mostrarEnunciadoExercicioFuncionario2();
         out.println();
-        int option;
-        do {
-            mostrarMenuExercicioFuncionario2();
-            out.print("INFORME SUA ESCOLHA: ");
-            option = entradaInteira();
-        } while (option != 1 && option != 2 && option != 3);
-        switch (option) {
-            case 1:
-                out.println("PROGRAMADOR");
-                out.println();
+        int loop;
+        do{
+            int option;
+            do {
+                mostrarMenuExercicioFuncionario2();
+                out.print("INFORME SUA ESCOLHA: ");
+                option = entradaInteira();
+            } while (option != 1 && option != 2 && option != 3);
+            switch (option) {
+                case 1:
+                    out.println("PROGRAMADOR");
+                    out.println();
 
-                out.print("INFORME O NOME DO PROFISSIONAL: ");
-                String nomeProgramador = entrada.nextLine();
+                    out.print("INFORME O NOME DO PROFISSIONAL: ");
+                    String nomeProgramador = entrada.nextLine();
 
-                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
-                int totalHorasProgramador = entradaInteira();
+                    out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                    int totalHorasProgramador = entradaInteira();
 
-                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
-                double valorHorasProgramador = entradaDouble();
+                    out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                    double valorHorasProgramador = entradaDouble();
 
-                Programador programador = new Programador(nomeProgramador, totalHorasProgramador,
-                        valorHorasProgramador);
-                out.println(programador.mostrarRelatorio());
-                break;
-            case 2:
-                out.println("CONTADOR");
-                out.println();
+                    Programador programador = new Programador(nomeProgramador, totalHorasProgramador,
+                            valorHorasProgramador);
+                    out.println(programador.mostrarRelatorio());
+                    break;
+                case 2:
+                    out.println("CONTADOR");
+                    out.println();
 
-                out.print("INFORME O NOME DO PROFISSIONAL: ");
-                String nomeContador = entrada.nextLine();
+                    out.print("INFORME O NOME DO PROFISSIONAL: ");
+                    String nomeContador = entrada.nextLine();
 
-                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
-                int totalHorasContador = entradaInteira();
+                    out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                    int totalHorasContador = entradaInteira();
 
-                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
-                double valorHorasContador = entradaDouble();
+                    out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                    double valorHorasContador = entradaDouble();
 
-                Contador contador = new Contador(nomeContador, totalHorasContador, valorHorasContador);
-                out.println(contador.mostrarRelatorio());
-                break;
-            case 3:
-                out.println("ADMINISTRADOR");
-                out.println();
+                    Contador contador = new Contador(nomeContador, totalHorasContador, valorHorasContador);
+                    out.println(contador.mostrarRelatorio());
+                    break;
+                case 3:
+                    out.println("ADMINISTRADOR");
+                    out.println();
 
-                out.print("INFORME O NOME DO PROFISSIONAL: ");
-                String nomeAdministrador = entrada.nextLine();
+                    out.print("INFORME O NOME DO PROFISSIONAL: ");
+                    String nomeAdministrador = entrada.nextLine();
 
-                out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
-                int totalHorasAdministrador = entradaInteira();
+                    out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
+                    int totalHorasAdministrador = entradaInteira();
 
-                out.print("INFORME O VALOR POR HORA TRABALHADA: ");
-                double valorHorasAdministrador = entradaDouble();
+                    out.print("INFORME O VALOR POR HORA TRABALHADA: ");
+                    double valorHorasAdministrador = entradaDouble();
 
-                Administrador administrador = new Administrador(nomeAdministrador, totalHorasAdministrador,
-                        valorHorasAdministrador);
-                out.println(administrador.mostrarRelatorio());
-                break;
-        }
+                    Administrador administrador = new Administrador(nomeAdministrador, totalHorasAdministrador,
+                            valorHorasAdministrador);
+                    out.println(administrador.mostrarRelatorio());
+                    break;
+            }
+            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+            loop = entradaInteira();
+        }while(loop != 2);
+
     }
 
     public static void executarExercicioPoo9InterfaceBanco() {
@@ -698,8 +745,10 @@ public class Exercicios {
             out.println("SEU CÓDIGO ESTÁ GERANDO UM ERRO " + e.getMessage());
         }
 
-
-        out.println("""
+        out.println();
+        int option;
+        do{
+            out.println("""
                 O TRATAMENTO QUE FOI DADO PARA O RESULTADO ACIMA FOI O SEGUINTE: 
                                 
                 List<String> lista = null;
@@ -714,6 +763,11 @@ public class Exercicios {
                             out.println("SEU CÓDIGO ESTÁ GERANDO UM ERRO " + e.getMessage());
                         }
                 """);
+            out.println();
+            out.print("PARA VOLTAR DIGITE 2: ");
+            option = entradaInteira();
+        }while(option != 2);
+
     }
 
     public static void executarExercicioStreamsFrutas() {
@@ -757,6 +811,88 @@ public class Exercicios {
             parada = entradaInteira();
         } while (parada != 1);
     }
+    public static void executarExercicioMap1Aluno(){
+        Scanner entrada = new Scanner(System.in);
+        out.println();
+        out.println("""
+                Crie um sistema utilizando do-while que insira alunos em um Map. A chave
+                (Key) deverá ser a matrícula do aluno e o valor (Value) deverá ser o próprio
+                objeto Aluno.
+                Depois crie uma funcionalidade para remover alunos deste Map através da
+                chave
+                """);
+        out.println();
+
+        Map<String, Aluno3Streams> mapaAluno = new HashMap<>();
+
+        int loop;
+        do {
+            int option;
+            do {
+                out.println("CADASTRO DE ALUNOS");
+                out.println();
+
+                out.print("INFORME A MATRÍCULA DO ALUNO: ");
+                String matricula = entrada.nextLine();
+
+                out.print("INFORME O NOME DO ALUNO: ");
+                String nome = entrada.nextLine();
+
+                mapaAluno.put(matricula, new Aluno3Streams(matricula, nome));
+
+                out.println();
+                out.print("QUER ADICIONAR OUTRO ALUNO(1-SIM/2-NÃO): ");
+                option = entradaInteira();
+            } while (option != 2);
+
+            out.println();
+            out.println("SEGUE OS ALUNOS CADASTRADOS");
+
+            for(Aluno3Streams aluno : mapaAluno.values()){
+                out.println(aluno.toString());
+            }
+
+            out.println();
+            int loopExcluir;
+            do{
+                out.println("EXCLUSÃO DE ALUNOS");
+                out.print("INFORME A MATRICULADO ALUNO QUE QUER EXCLUIR: ");
+                String matriculaParaRemover = entrada.nextLine();
+
+                Aluno3Streams alunoParaRemover = mapaAluno.get(matriculaParaRemover);
+
+                mapaAluno.remove(alunoParaRemover.getMatricula());
+
+                out.println();
+                if(mapaAluno.isEmpty()){
+                    out.println("TODOS ALUNOS REMOVIDOS.");
+                }else{
+
+                    for(Aluno3Streams alunosQueRestam : mapaAluno.values()){
+                        out.println(alunosQueRestam.toString());
+                    }
+                }
+
+                out.println();
+                out.print("QUER EXCLUIR OUTRO ALUNO(1-SIM/2-NÃO): ");
+                loopExcluir = entradaInteira();
+            }while(loopExcluir != 2);
+
+            out.print("QUER EXECUTAR O PROGRAMA NOVAMENTE(1-SIM/2-NÃO): ");
+            loop = entradaInteira();
+
+        }while(loop != 2);
+    }
+
+    public static void executarExercicioPreSistemaCompra(){
+        out.println();
+        out.println("""
+                Crie uma classe Compra com os campos "descricao" e "dataCompra".
+                Depois crie um sistema com algum laço de repetição que tenha três opções:
+                ● Inserir uma nova compra
+                ● Ver compras em algum dia específico.
+                ● Sair do sistema e finalizar.
+                """);
+        out.println();
+    }
 }
-
-

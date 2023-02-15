@@ -20,8 +20,10 @@ public class Menus {
         out.println("   12 - PARA EXECUTAR EXERCÍCIO POO 9 INTERFACE BANCO        ");
         out.println("   13 - PARA EXECUTAR EXERCÍCIO POO 10 EXCEÇÃO 1 BANCO       ");
         out.println("   14 - PARA EXECUTAR EXERCÍCIO POO 11 EXCEÇÃO 2 PRODUTO     ");
-        out.println("   15 - PARA EXECUTAR EXERCÇICIO STREAMS FRUTAS              ");
-        out.println("   16 - PARA SAIR                                            ");
+        out.println("   15 - PARA EXECUTAR EXERCÍCIO STREAMS FRUTAS               ");
+        out.println("   16 - PARA EXECUTAR EXERCÍCIO MAP 1 ALUNO              ");
+        out.println("   17 - PARA EXECUTAR EXERCÍCIO PRÉ-SISTEMA COMPRA           ");
+        out.println("   18 - PARA SAIR                                            ");
     }
 
     public static void mostrarMenuJogador(){

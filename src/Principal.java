@@ -18,7 +18,8 @@ public class Principal {
                 option = entradaInteira();
             }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6
                    && option != 7 && option != 8 && option != 9 && option != 10 && option != 11 &&
-                    option != 12 && option != 13 && option != 14 && option != 15 && option != 16);
+                    option != 12 && option != 13 && option != 14 && option != 15 && option != 16
+                    && option != 17 && option != 18);
             switch(option){
                 case 1:
                     out.println();
@@ -92,11 +93,19 @@ public class Principal {
                     executarExercicioPoo11Excecao2();
                     break;
                 case 15:
-                    out.println("EXERCÍCIO STREAMS");
+                    out.println("EXERCÍCIO STREAMS 1");
                     out.println();
                     executarExercicioStreamsFrutas();
                     break;
                 case 16:
+                    out.println("EXERCÍCIO STREAM 2");
+                    executarExercicioMap1Aluno();
+                    break;
+                case 17:
+                    out.println("EXERCÍCIO PRÉ-SISTEMA COMPRA");
+                    executarExercicioPreSistemaCompra();
+                    break;
+                case 18:
                     out.println("SAINDO.");
                     loop = 1;
                     break;
