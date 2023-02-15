@@ -11,28 +11,40 @@ public class Exercicio1 {
     public static void executarExercicio1() {
         int option;
         do{
-            out.println();
-            out.println("Escreva um programa para ler 3 valores e printe o maior e o menor entre eles.");
-            out.println();
+            out.println("Escreva um programa para ler 3 valores e printe o " +
+                        "maior e o menor entre eles.\n");
 
-            List<Integer> tresInteiros = new ArrayList<>();
+            List<Integer> numerosInformados = new ArrayList<>();
 
-            int contador = 0;
+            maiorEMenorNumeros(informarNumeros(numerosInformados));
 
-            while (contador < 3) {
-                out.printf("INFORME O %dº NÚMERO: ", contador + 1);
-                tresInteiros.add(entradaInteira());
-                contador++;
-            }
-            int maior = Collections.max(tresInteiros);
-            int menor = Collections.min(tresInteiros);
-            out.println();
-            out.println("O MAIOR NÚMERO É: " + maior);
-            out.println("O MENOR NÚMERO É: " + menor);
-            out.println();
-            out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
-            option = entradaInteira();
+            option = continuarFluxoMaiorEMenorNumeros();
         }while(option != 2);
+    }
+
+    //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------
+
+
+    public static List<Integer> informarNumeros(List<Integer> listavazia){
+
+        for(int contador=0; contador < 3; contador++) {
+            out.printf("INFORME O %dº NÚMERO: ", contador + 1);
+            listavazia.add(entradaInteira());
+        }
+        return listavazia;
+    }
+
+    public static void maiorEMenorNumeros(List<Integer> numeros){
+
+        int maiorNumero = Collections.max(numeros);
+        int menorNumero = Collections.min(numeros);
+
+        out.printf("\nO MAIOR NÚMERO É: %d\nO MENOR NÚMERO É: %d\n\n", maiorNumero, menorNumero);
+    }
+
+    public static int continuarFluxoMaiorEMenorNumeros(){
+        out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
+        return entradaInteira();
 
     }
 }
