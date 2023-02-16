@@ -26,33 +26,35 @@ public class Exercicio13 {
                 mostrarMenuExercicioPoo10Excecao1();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            } while (option != 1 && option != 2 && option != 3);
-            switch (option) {
-                case 1:
-                    out.println("SACAR");
-                    out.println("SAQUE ONDE LANÇARÁ UMA EXCEÇÃO.");
-                    double saldo = 480;
-                    out.print("INFORME O VALOR DO SAQUE: R$ ");
-                    double saque = entradaDouble();
+                switch (option) {
+                    case 1:
+                        out.println("SACAR");
+                        out.println("SAQUE ONDE LANÇARÁ UMA EXCEÇÃO.");
+                        double saldo = 480;
+                        out.print("INFORME O VALOR DO SAQUE: R$ ");
+                        double saque = entradaDouble();
 
-                    if (saque > saldo) {
-                        throw new MinhaExceptionExercicio10("SALDO INSUFICIENTE PARA O SAQUE.\n" +
-                                "saldo == " + saldo + " saque == " + saque);
-                    }
-                    break;
-                case 2:
-                    out.println("DEPOSITAR");
-                    out.println();
-                    double tetoDeposito = 10000;
-                    out.print("INFORME O VALOR DO DEPÓSITO: R$ ");
-                    double valorDeposito = entradaDouble();
+                        if (saque > saldo) {
+                            throw new MinhaExceptionExercicio10("SALDO INSUFICIENTE PARA O SAQUE.\n" +
+                                    "saldo == " + saldo + " saque == " + saque);
+                        }
+                        break;
+                    case 2:
+                        out.println("DEPOSITAR");
+                        out.println();
+                        double tetoDeposito = 10000;
+                        out.print("INFORME O VALOR DO DEPÓSITO: R$ ");
+                        double valorDeposito = entradaDouble();
 
-                    if (valorDeposito > tetoDeposito) {
-                        throw new MinhaExceptionExercicio10("O VALOR DO DEPÓSITO É MAIOR QUE SEU TETO.\n" +
-                                "tetoDeposito == " + tetoDeposito + " valorDeposito == " + valorDeposito);
-                    }
-                    break;
-            }
+                        if (valorDeposito > tetoDeposito) {
+                            throw new MinhaExceptionExercicio10("O VALOR DO DEPÓSITO É MAIOR QUE SEU TETO.\n" +
+                                    "tetoDeposito == " + tetoDeposito + " valorDeposito == " + valorDeposito);
+                        }
+                        break;
+                    default:
+                        out.println("OPÇÃO INVÁLIDA");
+                }
+            }while(option != 3);
         }
     }
 }

@@ -31,48 +31,51 @@ public class Exercicio4 {
                 mostrarMenuJogador();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            } while (option != 1 && option != 2 && option != 3 && option != 4 && option != 5 && option != 6);
-            switch (option) {
-                case 1:
-                    out.println();
-                    out.println("ADICIONAR GOLS.");
-                    out.println();
-                    out.print("INFORME QUANTOS GOLS QUER ADICIONAR: ");
-                    int gol = entradaInteira();
-                    jogador.adicionarGol(gol);
-                    break;
-                case 2:
-                    out.println();
-                    out.println("ADICIONAR ASSISTÊNCIAS.");
-                    out.println();
-                    out.print("INFORME QUANTAS ASSISTÊNCIAS QUER ADICIONAR: ");
-                    int assistencia = entradaInteira();
-                    jogador.adicionarAssistencia(assistencia);
-                    break;
-                case 3:
-                    out.println();
-                    out.println("MOSTRAR NÚMERO DE GOLS.");
-                    out.println();
-                    jogador.mostrarNumerosDeGols();
-                    break;
-                case 4:
-                    out.println();
-                    out.println("MOSTRAR NÚMERO DE ASSISTÊNCIAS.");
-                    out.println();
-                    jogador.mostrarNumeroDeAssistencias();
-                    break;
-                case 5:
-                    out.println();
-                    out.println("MOSTRAR NÚMERO DE GOLS E ASSISTÊNCIAS.");
-                    out.println();
-                    jogador.mostrarNumeroDeGolsEAssistencias();
-                    break;
-                case 6:
-                    out.println();
-                    out.println("SAINDO.");
-                    loop = 1;
-                    break;
-            }
+
+                switch (option) {
+                    case 1:
+                        out.println();
+                        out.println("ADICIONAR GOLS.");
+                        out.println();
+                        out.print("INFORME QUANTOS GOLS QUER ADICIONAR: ");
+                        int gol = entradaInteira();
+                        jogador.adicionarGol(gol);
+                        break;
+                    case 2:
+                        out.println();
+                        out.println("ADICIONAR ASSISTÊNCIAS.");
+                        out.println();
+                        out.print("INFORME QUANTAS ASSISTÊNCIAS QUER ADICIONAR: ");
+                        int assistencia = entradaInteira();
+                        jogador.adicionarAssistencia(assistencia);
+                        break;
+                    case 3:
+                        out.println();
+                        out.println("MOSTRAR NÚMERO DE GOLS.");
+                        out.println();
+                        jogador.mostrarNumerosDeGols();
+                        break;
+                    case 4:
+                        out.println();
+                        out.println("MOSTRAR NÚMERO DE ASSISTÊNCIAS.");
+                        out.println();
+                        jogador.mostrarNumeroDeAssistencias();
+                        break;
+                    case 5:
+                        out.println();
+                        out.println("MOSTRAR NÚMERO DE GOLS E ASSISTÊNCIAS.");
+                        out.println();
+                        jogador.mostrarNumeroDeGolsEAssistencias();
+                        break;
+                    case 6:
+                        out.println();
+                        out.println("SAINDO.");
+                        loop = 1;
+                        break;
+                    default:
+                        out.println("OPÇÃO INVÁLIDA");
+                }
+            } while (option != 6);
         }
     }
 }

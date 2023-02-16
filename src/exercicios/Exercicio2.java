@@ -32,6 +32,5 @@ public class Exercicio2 {
             out.print("QUER CONTINUAR(1-SIM/2-NÃO): ");
             option = entradaInteira();
         }while(option != 2);
-
     }
 }
