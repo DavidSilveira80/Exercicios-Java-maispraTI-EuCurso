@@ -22,21 +22,24 @@ public class Exercicio17 {
                 mostrarMenuPrincipalExercicio17();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
-            }while(option != 1 && option != 2 && option != 3);
-            switch(option){
-                case 1:
-                    out.println("INSERIR COMPRA\n");
-                    adicionarCompra(compras);
-                    break;
-                case 2:
-                    out.println("LISTAR COMPRAS DE UM DIA ESPECIFICO\n");
-                    listarComprasPorDataEspecifica(compras);
-                    break;
-                case 3:
-                    out.println("SAIR.FINALIZANDO\n");
-                    loopExecucao = 1;
-                    break;
-            }
+                switch(option) {
+                    case 1:
+                        out.println("INSERIR COMPRA\n");
+                        adicionarCompra(compras);
+                        break;
+                    case 2:
+                        out.println("LISTAR COMPRAS DE UM DIA ESPECIFICO\n");
+                        listarComprasPorDataEspecifica(compras);
+                        break;
+                    case 3:
+                        out.println("SAIR.FINALIZANDO\n");
+                        loopExecucao = 1;
+                        break;
+                    default:
+                        out.println("OPÇÃO INVÁLIDA.");
+                        break;
+                }
+            }while(option != 3);
         }
     }
 //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------
