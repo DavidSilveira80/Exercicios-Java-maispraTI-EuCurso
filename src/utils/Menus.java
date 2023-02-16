@@ -162,4 +162,52 @@ public class Menus {
                 ● Sair do sistema e finalizar.
                 """);
     }
+
+    public static void mostrarEnunciadoExercicio2(){
+        out.println();
+        out.println("""
+                As maçãs custam 0,30 cada se forem compradas menos que uma dúzia e 0,25
+                se forem comprados pelo menos uma dúzia.
+                Escreva um programa que leia a quantidade de maçãs compradas e depois
+                imprima o valor total da compra no console.
+                """);
+        out.println();
+    }
+
+    public static void mostrarEnunciadoExercicio1(){
+        out.println("Escreva um programa para ler 3 valores e printe o " +
+                "maior e o menor entre eles.\n");
+    }
+
+    public static void mostrarEnunciadoExercicio3(){
+        out.println();
+        out.println("""
+                Escreva um programa que leia o salário bruto de um funcionário e mostre o
+                valor líquido.
+                Se o salário for menor que
+                 R$ 1.000 o desconto é 6%
+                Até R$ 2.500 é 8%
+                Até R$ 4.800 é 10%
+                Maior que 4.800 é 15%
+                """);
+        out.println();
+    }
+
+    public static void mostrarEnunciadoExercicio4(){
+        out.println("""
+                 Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
+                 E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
+                 quantidade de gols/assistências.
+                 Também criar dois métodos  para ver o número de gols e assistências.
+                """);
+        out.println();
+    }
+
+    public static void mostrarEnunciadoExercicio5(){
+        out.println("""
+                Criar uma classe aluno que receba um nome, nota1, nota2 e nota3, onde o montante das 
+                notas podem chegar no máximo 100.
+                Cria um método que retorne o nome do aluno, sua média, a maior e menor nota
+                """);
+    }
 }

@@ -6,76 +6,73 @@ import java.util.Scanner;
 
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
+import static utils.Menus.mostrarEnunciadoExercicio4;
 import static utils.Menus.mostrarMenuJogador;
 
 public class Exercicio4 {
     public static void executarExercicio4Poo1Jogador() {
-        Scanner entrada = new Scanner(System.in);
-        out.println("""
-                 Criar uma classe Jogador que tenha as propriedades nome, gols, assistências.
-                 E os métodos adicionarGol e adicionarAssistencia que receba como argumento os
-                 quantidade de gols/assistências.
-                 Também criar dois métodos  para ver o número de gols e assistências.
-                """);
-        out.println();
-        out.print("INFORME O NOME DO JOGADOR: ");
-        String nome = entrada.nextLine();
-        Jogador jogador = new Jogador(nome);
+        mostrarEnunciadoExercicio4();
+
+        Jogador jogador = instanciarJogador();
 
         int loop = 0;
         while (loop == 0) {
             int option;
             do {
-                out.println();
-                out.println("JOGADOR: " + jogador.getNomeJogador());
+                out.println("\nJOGADOR: " + jogador.getNomeJogador());
                 mostrarMenuJogador();
                 out.print("INFORME SUA ESCOLHA: ");
                 option = entradaInteira();
 
                 switch (option) {
                     case 1:
-                        out.println();
-                        out.println("ADICIONAR GOLS.");
-                        out.println();
-                        out.print("INFORME QUANTOS GOLS QUER ADICIONAR: ");
-                        int gol = entradaInteira();
-                        jogador.adicionarGol(gol);
+                        adicionarGols(jogador);
                         break;
                     case 2:
-                        out.println();
-                        out.println("ADICIONAR ASSISTÊNCIAS.");
-                        out.println();
-                        out.print("INFORME QUANTAS ASSISTÊNCIAS QUER ADICIONAR: ");
-                        int assistencia = entradaInteira();
-                        jogador.adicionarAssistencia(assistencia);
+                        adicionarAssistencia(jogador);
                         break;
                     case 3:
-                        out.println();
-                        out.println("MOSTRAR NÚMERO DE GOLS.");
-                        out.println();
+                        out.println("\nMOSTRAR NÚMERO DE GOLS.\n");
                         jogador.mostrarNumerosDeGols();
                         break;
                     case 4:
-                        out.println();
-                        out.println("MOSTRAR NÚMERO DE ASSISTÊNCIAS.");
-                        out.println();
+                        out.println("\nMOSTRAR NÚMERO DE ASSISTÊNCIAS.\n");
                         jogador.mostrarNumeroDeAssistencias();
                         break;
                     case 5:
-                        out.println();
-                        out.println("MOSTRAR NÚMERO DE GOLS E ASSISTÊNCIAS.");
-                        out.println();
+                        out.println("\nMOSTRAR NÚMERO DE GOLS E ASSISTÊNCIAS.\n");
                         jogador.mostrarNumeroDeGolsEAssistencias();
                         break;
                     case 6:
-                        out.println();
-                        out.println("SAINDO.");
+                        out.println("\nSAINDO.\n");
                         loop = 1;
                         break;
                     default:
-                        out.println("OPÇÃO INVÁLIDA");
+                        out.println("\nOPÇÃO INVÁLIDA\n");
                 }
             } while (option != 6);
         }
+    }
+//---------------------------------MÉTODOS AUXILIARES------------------------------------
+    public static Jogador instanciarJogador(){
+        Scanner entrada = new Scanner(System.in);
+        out.print("\nINFORME O NOME DO JOGADOR: ");
+        String nome = entrada.nextLine();
+        Jogador jogador = new Jogador(nome);
+        return jogador;
+    }
+
+    public static void adicionarGols(Jogador jogador){
+        out.println("\nADICIONAR GOLS.\n");
+        out.print("INFORME QUANTOS GOLS QUER ADICIONAR: ");
+        int gol = entradaInteira();
+        jogador.adicionarGol(gol);
+    }
+
+    public static void adicionarAssistencia(Jogador jogador){
+        out.println("\nADICIONAR ASSISTÊNCIAS.\n");
+        out.print("INFORME QUANTAS ASSISTÊNCIAS QUER ADICIONAR: ");
+        int assistencia = entradaInteira();
+        jogador.adicionarAssistencia(assistencia);
     }
 }
