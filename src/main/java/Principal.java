@@ -1,5 +1,3 @@
-package exercicios;
-
 import main.java.models.MinhaExceptionExercicio10;
 
 import static exercicios.Exercicio1.chamadaExercicio1;
