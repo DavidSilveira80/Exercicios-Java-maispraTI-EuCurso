@@ -1,26 +1,15 @@
 package exercicios;
 
 import main.java.models.Aluno3Streams;
-
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
-
 import static java.lang.System.out;
-import static utils.Entradas.entradaInteira;
+import static utils.Entradas.*;
+import static utils.Menus.mostrarEnunciadoExercicio16;
 
 public class Exercicio16 {
     public static void executarExercicio16Map1Aluno(){
-        Scanner entrada = new Scanner(System.in);
-        out.println();
-        out.println("""
-                Crie um sistema utilizando do-while que insira alunos em um Map. A chave
-                (Key) deverá ser a matrícula do aluno e o valor (Value) deverá ser o próprio
-                objeto Aluno.
-                Depois crie uma funcionalidade para remover alunos deste Map através da
-                chave
-                """);
-        out.println();
+        mostrarEnunciadoExercicio16();
 
         Map<String, Aluno3Streams> mapaAluno = new HashMap<>();
 
@@ -28,62 +17,62 @@ public class Exercicio16 {
         do {
             int option;
             do {
-                out.println("CADASTRO DE ALUNOS");
-                out.println();
+                cadastrarAluno(mapaAluno);
 
-                out.print("INFORME A MATRÍCULA DO ALUNO: ");
-                String matricula = entrada.nextLine();
-
-                out.print("INFORME O NOME DO ALUNO: ");
-                String nome = entrada.nextLine();
-
-                mapaAluno.put(matricula, new Aluno3Streams(matricula, nome));
-
-                out.println();
-                out.print("QUER ADICIONAR OUTRO ALUNO(1-SIM/2-NÃO): ");
+                out.print("\nQUER ADICIONAR OUTRO ALUNO(1-SIM/2-NÃO): ");
                 option = entradaInteira();
             } while (option != 2);
 
-            out.println();
-            out.println("SEGUE OS ALUNOS CADASTRADOS");
+            listarAlunos(mapaAluno);
 
-            for(Aluno3Streams aluno : mapaAluno.values()){
-                out.println(aluno.toString());
-            }
-
-            out.println();
             int loopExcluir;
             do{
+                removerAlunos(mapaAluno);
 
-                out.println("EXCLUSÃO DE ALUNOS");
-                out.print("INFORME A MATRICULADO ALUNO QUE QUER EXCLUIR: ");
-                String matriculaParaRemover = entrada.nextLine();
-
-                Aluno3Streams alunoParaRemover = mapaAluno.get(matriculaParaRemover);
-
-                mapaAluno.remove(alunoParaRemover.getMatricula());
-
-                out.println();
-                if(mapaAluno.isEmpty()){
-                    out.println("TODOS ALUNOS REMOVIDOS.");
-                }else{
-
-                    for(Aluno3Streams alunosQueRestam : mapaAluno.values()){
-                        out.println(alunosQueRestam.toString());
-                    }
-                }
-
-                out.println();
-                out.print("QUER EXCLUIR OUTRO ALUNO(1-SIM/2-NÃO): ");
+                out.print("\nQUER EXCLUIR OUTRO ALUNO(1-SIM/2-NÃO): ");
                 loopExcluir = entradaInteira();
             }while(loopExcluir != 2);
 
-            out.print("QUER EXECUTAR O PROGRAMA NOVAMENTE(1-SIM/2-NÃO): ");
-            loop = entradaInteira();
+            out.print("\n");
+            loop = informarFluxo1E2();
 
         }while(loop != 2);
     }
     //-------------------------------------Métodos auxiliares--------------------------------------------
+
+    public static void cadastrarAluno(Map<String, Aluno3Streams> mapaAluno){
+        out.println("\nCADASTRO DE ALUNOS\n");
+        out.print("INFORME A MATRÍCULA DO ALUNO: "); String matricula = entradaString();
+        out.print("INFORME O NOME DO ALUNO: ");  String nome = entradaString();
+
+        mapaAluno.put(matricula, new Aluno3Streams(matricula, nome));
+    }
+
+    public static void listarAlunos(Map<String, Aluno3Streams> mapaAluno){
+        out.println("\nSEGUE OS ALUNOS CADASTRADOS");
+
+        for(Aluno3Streams aluno : mapaAluno.values()){
+            out.println(aluno.toString());
+        }
+    }
+
+    public static void removerAlunos(Map<String,Aluno3Streams> mapaAluno){
+        out.println("\nEXCLUSÃO DE ALUNOS");
+        out.print("\nINFORME A MATRICULA DO ALUNO QUE QUER EXCLUIR: ");
+        String matriculaParaRemover = entradaString();
+
+        Aluno3Streams alunoParaRemover = mapaAluno.get(matriculaParaRemover);
+        mapaAluno.remove(alunoParaRemover.getMatricula());
+
+        if(mapaAluno.isEmpty()){
+            out.println("\nTODOS ALUNOS REMOVIDOS.");
+        }else{
+            for(Aluno3Streams alunosQueRestam : mapaAluno.values()){
+                out.println(alunosQueRestam.toString());
+            }
+        }
+    }
+
     public static void chamadaExercicio16(){
         out.println("\nEXERCÍCIO STREAM 2\n");
         executarExercicio16Map1Aluno();

@@ -221,4 +221,14 @@ public class Menus {
                 """);
 
     }
+
+    public static void mostrarEnunciadoExercicio16(){
+        out.println("""
+                Crie um sistema utilizando do-while que insira alunos em um Map. A chave
+                (Key) deverá ser a matrícula do aluno e o valor (Value) deverá ser o próprio
+                objeto Aluno.
+                Depois crie uma funcionalidade para remover alunos deste Map através da
+                chave
+                """);
+    }
 }
