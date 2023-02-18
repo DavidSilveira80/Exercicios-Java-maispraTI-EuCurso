@@ -1,4 +1,4 @@
-package main.java.models;
+package models;
 
 public class Compra {
     private String dataCompra;
@@ -23,13 +23,5 @@ public class Compra {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    @Override
-    public String toString() {
-        return "Compra{" +
-                "dataCompra='" + dataCompra + '\'' +
-                ", descricao='" + descricao + '\'' +
-                '}';
     }
 }

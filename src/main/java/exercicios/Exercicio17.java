@@ -1,11 +1,10 @@
 package exercicios;
 
-import main.java.models.Compra;
+import models.Compra;
 
 import java.util.*;
 import static java.lang.System.out;
-import static utils.Entradas.entradaInteira;
-import static utils.Entradas.informarFluxo1E2;
+import static utils.Entradas.*;
 import static utils.Menus.mostrarEnunciadoExercicio17;
 import static utils.Menus.mostrarMenuPrincipalExercicio17;
 
@@ -20,8 +19,7 @@ public class Exercicio17 {
             int option;
             do{
                 mostrarMenuPrincipalExercicio17();
-                out.print("INFORME SUA ESCOLHA: ");
-                option = entradaInteira();
+                out.print("INFORME SUA ESCOLHA: "); option = entradaInteira();
                 switch(option) {
                     case 1:
                         out.println("INSERIR COMPRA\n");
@@ -45,11 +43,8 @@ public class Exercicio17 {
 //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------
 
     public static Compra instanciarCompra(){
-        Scanner entrada = new Scanner(System.in);
-        out.print("INFORME A DATA DA COMPRA: ");
-        String dataCompra = entrada.nextLine();
-        out.print("INFORME A DESCRIÇÃO DA COMPRA: ");
-        String descricaoCompra = entrada.nextLine();
+        out.print("INFORME A DATA DA COMPRA: "); String dataCompra = entradaString();
+        out.print("INFORME A DESCRIÇÃO DA COMPRA: "); String descricaoCompra = entradaString();
         return new Compra(dataCompra, descricaoCompra);
     }
 
@@ -63,48 +58,45 @@ public class Exercicio17 {
     }
 
     public static void listarComprasPorDataEspecifica(List<Compra> compras){
-        Scanner entrada = new Scanner(System.in);
         if(compras.isEmpty()){
             out.println("NÃO HÁ COMPRAS CADASTRADAS");
         }else{
             int option;
             do{
-                out.print("INFORME A DATA DE COMPRA: ");
-                String dataCompra = entrada.nextLine();
+                String dataCompra = informarDataDaCompra();
                 listandoCompras(compras, dataCompra);
+
                 option = informarFluxo1E2();
             }while(option != 2);
         }
     }
 
+    public static String informarDataDaCompra(){
+        out.print("INFORME A DATA DE COMPRA: ");
+        return  entradaString();
+    }
+
     public static void listandoCompras(List<Compra> compras, String data){
-        if(verificaSeHaCompraData(compras, data)){
+        if(contabilizaOcorrenciasCompras(compras, data) > 0){
             for(Compra compra : compras){
                 if(!compra.getDataCompra().equals(data)){
                 }else{
-                    out.println(compra.toString());
+                    out.println(compra);
                 }
             }
         }else{
             out.println("NÃO HÁ COMPRAS NESTA DATA");
         }
     }
-
-    public static boolean verificaSeHaCompraData(List<Compra> compras, String data){
-        boolean retorno;
+    // TODO ver um Stream
+    public static int contabilizaOcorrenciasCompras(List<Compra> compras, String data){
         int ocorrencia = 0;
-
         for(Compra compra : compras){
             if(compra.getDataCompra().equals(data)){
                 ocorrencia += 1;
             }
         }
-        if(ocorrencia == 0){
-            retorno = false;
-        }else{
-            retorno = true;
-        }
-        return retorno;
+        return ocorrencia;
     }
 
     public static void chamadaExercicio17(){

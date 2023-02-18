@@ -36,6 +36,11 @@ public class Entradas {
         return entraDouble;
     }
 
+    public static String entradaString(){
+        Scanner entrada =  new Scanner(System.in);
+        return entrada.nextLine();
+    }
+
 
     public static String selecionarPedidoItem(int codigo, Pedidos pedido){
         String item = "";
