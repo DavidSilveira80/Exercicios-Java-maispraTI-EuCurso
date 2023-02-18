@@ -24,6 +24,7 @@ public class Menus {
         out.println("   16 - PARA EXECUTAR EXERCÍCIO 16 MAP 1 ALUNO                  ");
         out.println("   17 - PARA EXECUTAR EXERCÍCIO 17 PRÉ-SISTEMA COMPRA           ");
         out.println("   18 - PARA SAIR                                               ");
+        out.print("INFORME SUA ESCOLHA: ");
     }
 
     public static void mostrarMenuJogador(){
@@ -209,5 +210,15 @@ public class Menus {
                 notas podem chegar no máximo 100.
                 Cria um método que retorne o nome do aluno, sua média, a maior e menor nota
                 """);
+    }
+
+    public static void mostrarEnunciadoExercicio6(){
+        out.println("""
+                Crie uma classe Aluno com os campos nome, matrícula e notas[3].
+                Essa classe deve ser encapsulada e no momento de adicionar uma nova nota,
+                ela deve verificar se o somatório será maior que 100, caso for. Deixe uma
+                mensagem que não foi possível e peça para adicionar novamente uma nota.
+                """);
+
     }
 }

@@ -1,6 +1,5 @@
 package utils;
 
-import main.java.models.Aluno2;
 import models.Pedidos;
 import static java.lang.System.out;
 import java.util.Scanner;
@@ -37,19 +36,7 @@ public class Entradas {
         return entraDouble;
     }
 
-    //FUNÇÃO RECURSIVA
-    public static double validarNotas(double nota, Aluno2 aluno) {
 
-        if(aluno.getSomatorio() + nota >= 100){
-            out.println("NÃO FOI POSSÍVEL ADICIONAR NOTA. SOMATÓRIO MAIOR OU IGUAL À 100 PONTOS.");
-            out.print("INFORME A NOTA NOVAMENTE: ");
-            nota = entradaDouble();
-            nota = validarNotas(nota, aluno);
-        }else{
-            aluno.setSomatorio(aluno.getSomatorio() + nota);
-        }
-        return nota;
-    }
     public static String selecionarPedidoItem(int codigo, Pedidos pedido){
         String item = "";
         switch(codigo){
