@@ -1,6 +1,5 @@
 import main.java.models.MinhaExceptionExercicio10;
 
-import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.MenuPrincipal.executarMenu;
 
@@ -25,7 +24,4 @@ public class Principal {
             } while (option != 18);
         }
     }
-
-
-
 }
