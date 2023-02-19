@@ -12,6 +12,11 @@ public class Exercicio17 {
     public static void executarExercicio17PreSistemaCompra(){
         List<Compra> compras = new ArrayList<>();
 
+        // Cria um map com valor Runnable para referenciar métodos sem retorno e chama-los sem precisar de um switch ou if
+        Map<Integer, Runnable> metodos = new HashMap<>();
+
+        adicionaMetodos(metodos, compras);
+
         int loopExecucao = 0;
         while(loopExecucao == 0){
             mostrarEnunciadoExercicio17();
@@ -19,24 +24,13 @@ public class Exercicio17 {
             do{
                 mostrarMenuPrincipalExercicio17();
                 out.print("INFORME SUA ESCOLHA: "); option = entradaInteira();
-                switch(option) {
-                    case 1:
-                        out.println("INSERIR COMPRA\n");
-                        adicionarCompra(compras);
-                        break;
-                    case 2:
-                        out.println("LISTAR COMPRAS DE UM DIA ESPECIFICO\n");
-                        listarComprasPorDataEspecifica(compras);
-
-                        break;
-                    case 3:
-                        out.println("SAIR.FINALIZANDO\n");
-                        loopExecucao = 1;
-                        break;
-                    default:
-                        out.println("OPÇÃO INVÁLIDA.");
-                        break;
+                if(option == 3){
+                    out.println("SAIR.FINALIZANDO\n");
+                    loopExecucao = 1;
+                }else{
+                    chamaMetodos(metodos, option);
                 }
+
             }while(option != 3);
         }
     }
@@ -49,6 +43,7 @@ public class Exercicio17 {
     }
 
     public static void adicionarCompra(List<Compra> compras){
+        out.println("INSERIR COMPRA\n");
         int continuarAdicionar;
         do{
             Compra compra = instanciarCompra();
@@ -58,6 +53,7 @@ public class Exercicio17 {
     }
 
     public static void listarComprasPorDataEspecifica(List<Compra> compras){
+        out.println("LISTAR COMPRAS DE UM DIA ESPECIFICO\n");
         if(compras.isEmpty()){
             out.println("NÃO HÁ COMPRAS CADASTRADAS");
         }else{
@@ -81,7 +77,7 @@ public class Exercicio17 {
 
             compras.stream()
                     .filter(e -> e.getDataCompra().equals(data))
-                    .forEach(out::println);
+                    .forEach(out::println); // reference
 
         }else{
             out.println("NÃO HÁ COMPRAS NESTA DATA");
@@ -93,6 +89,17 @@ public class Exercicio17 {
         return (int) compras.stream()
                 .filter(compra -> compra.getDataCompra().equals(data))
                 .count();
+    }
+    // adiciona aos métodos encapsulando com uma expressão lambda
+    public static void adicionaMetodos(Map<Integer,Runnable> metodos, List<Compra> compras){
+        metodos.put(1, () -> adicionarCompra(compras));
+        metodos.put(2, () -> listarComprasPorDataEspecifica(compras));
+    }
+
+    // seleciona o método que quero chamar
+    public static void chamaMetodos(Map<Integer, Runnable> metodos, int option){
+        // rum faz o método rodar
+        metodos.get(option).run();
     }
 
     public static void chamadaExercicio17(){
