@@ -10,7 +10,6 @@ import static utils.Menus.mostrarMenuPrincipalExercicio17;
 
 public class Exercicio17 {
     public static void executarExercicio17PreSistemaCompra(){
-
         List<Compra> compras = new ArrayList<>();
 
         int loopExecucao = 0;
@@ -28,6 +27,7 @@ public class Exercicio17 {
                     case 2:
                         out.println("LISTAR COMPRAS DE UM DIA ESPECIFICO\n");
                         listarComprasPorDataEspecifica(compras);
+
                         break;
                     case 3:
                         out.println("SAIR.FINALIZANDO\n");
@@ -78,25 +78,21 @@ public class Exercicio17 {
 
     public static void listandoCompras(List<Compra> compras, String data){
         if(contabilizaOcorrenciasCompras(compras, data) > 0){
-            for(Compra compra : compras){
-                if(!compra.getDataCompra().equals(data)){
-                }else{
-                    out.println(compra);
-                }
-            }
+
+            compras.stream()
+                    .filter(e -> e.getDataCompra().equals(data))
+                    .forEach(out::println);
+
         }else{
             out.println("NÃO HÁ COMPRAS NESTA DATA");
         }
     }
     // TODO ver um Stream
     public static int contabilizaOcorrenciasCompras(List<Compra> compras, String data){
-        int ocorrencia = 0;
-        for(Compra compra : compras){
-            if(compra.getDataCompra().equals(data)){
-                ocorrencia += 1;
-            }
-        }
-        return ocorrencia;
+        //uso de filter
+        return (int) compras.stream()
+                .filter(compra -> compra.getDataCompra().equals(data))
+                .count();
     }
 
     public static void chamadaExercicio17(){

@@ -15,23 +15,11 @@ public class Exercicio16 {
 
         int loop;
         do {
-            int option;
-            do {
-                cadastrarAluno(mapaAluno);
-
-                out.print("\nQUER ADICIONAR OUTRO ALUNO(1-SIM/2-NÃO): ");
-                option = entradaInteira();
-            } while (option != 2);
+            chamarLoopCadastroAluno(mapaAluno);
 
             listarAlunos(mapaAluno);
 
-            int loopExcluir;
-            do{
-                removerAlunos(mapaAluno);
-
-                out.print("\nQUER EXCLUIR OUTRO ALUNO(1-SIM/2-NÃO): ");
-                loopExcluir = entradaInteira();
-            }while(loopExcluir != 2);
+            chamarLoopRemoverAluno(mapaAluno);
 
             out.print("\n");
             loop = informarFluxo1E2();
@@ -39,6 +27,16 @@ public class Exercicio16 {
         }while(loop != 2);
     }
     //-------------------------------------Métodos auxiliares--------------------------------------------
+
+    public static void chamarLoopCadastroAluno(Map<String, Aluno3Streams> mapaAluno){
+        int option;
+        do {
+            cadastrarAluno(mapaAluno);
+
+            out.print("\nQUER ADICIONAR OUTRO ALUNO(1-SIM/2-NÃO): ");
+            option = entradaInteira();
+        } while (option != 2);
+    }
 
     public static void cadastrarAluno(Map<String, Aluno3Streams> mapaAluno){
         out.println("\nCADASTRO DE ALUNOS\n");
@@ -54,6 +52,16 @@ public class Exercicio16 {
         for(Aluno3Streams aluno : mapaAluno.values()){
             out.println(aluno.toString());
         }
+    }
+
+    public static void chamarLoopRemoverAluno(Map<String, Aluno3Streams> mapaAluno){
+        int loopExcluir;
+        do{
+            removerAlunos(mapaAluno);
+
+            out.print("\nQUER EXCLUIR OUTRO ALUNO(1-SIM/2-NÃO): ");
+            loopExcluir = entradaInteira();
+        }while(loopExcluir != 2);
     }
 
     public static void removerAlunos(Map<String,Aluno3Streams> mapaAluno){
