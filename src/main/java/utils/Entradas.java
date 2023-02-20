@@ -2,6 +2,9 @@ package utils;
 
 import models.Pedidos;
 import static java.lang.System.out;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Entradas {

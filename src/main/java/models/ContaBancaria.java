@@ -2,9 +2,9 @@ package models;
 
 public interface ContaBancaria {
 
-    void depositar();
+    void depositar(double valorDeposito);
 
     public String verExtrato();
 
-    public void sacar();
+    public void sacar(double valorsaque);
 }

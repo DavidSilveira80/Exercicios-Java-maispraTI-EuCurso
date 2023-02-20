@@ -1,7 +1,5 @@
 import models.MinhaExceptionExercicio10;
 
-
-
 import static utils.Entradas.entradaInteira;
 import static java.lang.System.out;
 import static utils.MenuPrincipal.executarMenu;

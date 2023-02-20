@@ -1,30 +1,24 @@
 package models;
 
 import static java.lang.System.out;
-import static utils.Entradas.entradaDouble;
 
-public class ContaCorrente implements ContaBancaria {
+public  class ContaCorrente implements ContaBancaria {
     private int numeroDaConta;
     private String nomeDoTitular;
     private double saldo;
+
 
     final double taxaDeSaque = 10;
     final double acrescimoDeDeposito = 0.01;
     final double tetoParaAcrescimoDeposito = 10000;
 
-
-    public void setNumeroDaConta(int numeroDaConta) {
+    public ContaCorrente(int numeroDaConta, String nomeDoTitular) {
         this.numeroDaConta = numeroDaConta;
-    }
-    public void setNomeDoTitular(String nomeDoTitular) {
         this.nomeDoTitular = nomeDoTitular;
     }
 
-
     @Override
-    public void depositar() {
-        out.print("INFORME O VALOR DO DEPÓSITO: R$ ");
-        double valorDeposito = entradaDouble();
+    public void depositar(double valorDeposito) {
         if(valorDeposito <= this.tetoParaAcrescimoDeposito){
             this.saldo += valorDeposito + (valorDeposito * this.acrescimoDeDeposito);
             out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDeposito);
@@ -38,19 +32,17 @@ public class ContaCorrente implements ContaBancaria {
     }
 
     @Override
-    public void sacar() {
-        out.print("INFORME O VALOR DO SAQUE: R$ ");
-        double valorDoSaque = entradaDouble();
-        if(this.saldo == 0 || this.saldo < valorDoSaque){
+    public void sacar(double valorSaque) {
+        if(this.saldo == 0 || this.saldo < valorSaque){
             out.println("SALDO INSUFICIENTE PARA SAQUE.");
             out.println();
         }else{
-            this.saldo -= valorDoSaque - this.taxaDeSaque;
-            out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDoSaque);
+            this.saldo -= valorSaque - this.taxaDeSaque;
+            out.printf("%.2f R$ SACADO COM SUCESSO.\n", valorSaque);
             out.println();
         }
-
     }
+
 
     @Override
     public String verExtrato() {

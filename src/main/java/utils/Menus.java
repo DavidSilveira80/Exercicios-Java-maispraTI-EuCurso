@@ -223,4 +223,19 @@ public class Menus {
                 chave
                 """);
     }
+
+    public static void mostrarEnunciadoExercicio12(){
+        out.println("""
+                Criar uma interface ContaBancaria com as funcionalidades: sacar, ver extrato e depositar.
+                Depois crie classes que usarão esta Interface.
+                Exemplos de classe: ContaCorrente, ContaPoupanca, ContaSalario;
+                No método de saque, a conta corrente deverá ter um taxa de 10, conta poupança de 5 e
+                conta salário 0.
+                No método para depósito a conta corrente deverá ter um acréscimo de 1% até 10.000,
+                conta poupança de 3% até 3.000 e na conta salário não ter.
+                No método para ver Extrato deverá aparecer informações do titular e qual tipo de conta
+                                            
+                """);
+        out.println();
+    }
 }

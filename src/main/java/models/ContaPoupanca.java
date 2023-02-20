@@ -1,6 +1,8 @@
 package models;
 
-public class ContaPoupanca extends ContaCorrente {
+import static java.lang.System.out;
+
+public class ContaPoupanca implements ContaBancaria{
 
     private int numeroDaConta;
     private String nomeDoTitular;
@@ -10,14 +12,36 @@ public class ContaPoupanca extends ContaCorrente {
     final double acrescimoDeDeposito = 0.03;
     final double tetoParaAcrescimoDeposito = 3000;
 
-
-    public void setNumeroDaConta(int numeroDaConta) {
+    public ContaPoupanca(int numeroDaConta, String nomeDoTitular) {
         this.numeroDaConta = numeroDaConta;
-    }
-    public void setNomeDoTitular(String nomeDoTitular) {
         this.nomeDoTitular = nomeDoTitular;
     }
 
+    @Override
+    public void depositar(double valorDeposito) {
+        if(valorDeposito <= this.tetoParaAcrescimoDeposito){
+            this.saldo += valorDeposito + (valorDeposito * this.acrescimoDeDeposito);
+            out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDeposito);
+            out.println();
+        }else{
+            this.saldo += valorDeposito;
+            out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDeposito);
+            out.println();
+        }
+    }
+
+    @Override
+    public void sacar(double valorSaque) {
+        if(this.saldo == 0 || this.saldo < valorSaque){
+            out.println("SALDO INSUFICIENTE PARA SAQUE.");
+            out.println();
+        }else{
+            this.saldo -= valorSaque - this.taxaDeSaque;
+            out.printf("%.2f R$ SACADO COM SUCESSO.\n", valorSaque);
+            out.println();
+        }
+
+    }
 
     @Override
     public String verExtrato() {
