@@ -1,6 +1,7 @@
 package utils;
 
 import exercicios.*;
+import models.MinhaExceptionExercicio10;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class MenuPrincipal {
         chamarExercicios(chamadas, option);
     }
     //-----------------------------------------Métodos auxiliares-------------------------------------------------------
-    // :: faz referencia ao método adicionado ao Map
+    // :: faz referência ao método adicionado ao Map
     public static void adicionarChamadasExercicios(Map<Integer, Runnable> chamadas){
         chamadas.put(1, Exercicio1::chamadaExercicio1);  chamadas.put(7, Exercicio7::chamadaExercicio7);
         chamadas.put(2, Exercicio2::chamadaExercicio2);  chamadas.put(8, Exercicio8::chamadaExercicio8);
@@ -29,7 +30,14 @@ public class MenuPrincipal {
         chamadas.put(14, Exercicio14::chamadaExercicio14);  chamadas.put(16, Exercicio16::chamadaExercicio16);
         chamadas.put(15, Exercicio15::chamadaExercicio15);  chamadas.put(17, Exercicio17::chamadaExercicio17);
 
-        chamadas.put(13, Exercicio13::MinhaExceptionExercicio13);
+        // Aqui a ide pediu para fazer o try catch pra tratar a exception simulada
+        chamadas.put(13, () -> {
+            try {
+                chamadaExercicio13();
+            } catch (MinhaExceptionExercicio10 e) {
+                throw new RuntimeException(e);
+            }
+        });
 
     }
 

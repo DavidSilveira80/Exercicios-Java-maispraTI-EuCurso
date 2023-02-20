@@ -1,7 +1,6 @@
 package exercicios;
 
-import main.java.models.MinhaExceptionExercicio10;
-
+import models.MinhaExceptionExercicio10;
 import static java.lang.System.out;
 import static utils.Entradas.entradaDouble;
 import static utils.Entradas.entradaInteira;
@@ -68,3 +67,4 @@ public class Exercicio13 {
         executarExercicio13Poo10Excecao1();
     }
 }
+

@@ -1,4 +1,6 @@
-import main.java.models.MinhaExceptionExercicio10;
+import models.MinhaExceptionExercicio10;
+
+
 
 import static utils.Entradas.entradaInteira;
 import static java.lang.System.out;
