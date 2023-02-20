@@ -1,4 +1,4 @@
-package main.java.models;
+package models;
 
 public abstract class Funcionario2 {
     public String nome;
