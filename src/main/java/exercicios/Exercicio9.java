@@ -1,6 +1,6 @@
 package exercicios;
 
-import main.java.models.Funcionario;
+import models.Funcionario;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package exercicios;
 
-import main.java.models.Jogador;
+import models.Jogador;
 
 import java.util.Scanner;
 

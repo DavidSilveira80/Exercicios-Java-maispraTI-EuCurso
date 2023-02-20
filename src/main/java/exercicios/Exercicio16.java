@@ -1,6 +1,6 @@
 package exercicios;
 
-import main.java.models.Aluno3Streams;
+import models.Aluno3Streams;
 import java.util.HashMap;
 import java.util.Map;
 import static java.lang.System.out;

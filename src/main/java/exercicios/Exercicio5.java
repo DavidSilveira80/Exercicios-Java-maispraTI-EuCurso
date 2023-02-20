@@ -1,6 +1,6 @@
 package exercicios;
 
-import main.java.models.Aluno;
+import models.Aluno;
 
 import java.util.Locale;
 import java.util.Scanner;
