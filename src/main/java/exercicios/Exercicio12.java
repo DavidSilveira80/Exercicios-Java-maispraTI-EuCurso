@@ -44,11 +44,11 @@ public class Exercicio12 {
         out.print("INFORME O NOME DO TITULAR DA CONTA: ");
         String nomeTitularConta = entradaString();
 
-        excutarConta(numeroConta, nomeTitularConta, tipoConta);
+        executarConta(numeroConta, nomeTitularConta, tipoConta);
 
     }
 
-    public static void excutarConta(int numeroConta, String nomeTitularConta, int tipoConta){
+    public static void executarConta(int numeroConta, String nomeTitularConta, int tipoConta){
         Map<Integer, Runnable> contas = new HashMap<>();
         // () -> expressao lambda para um método que está na mesma classe
         contas.put(1, () -> rodarContaCorrente(numeroConta, nomeTitularConta));
@@ -58,27 +58,27 @@ public class Exercicio12 {
         contas.get(tipoConta).run();
     }
 
-    public static Runnable rodarContaCorrente(int numeroConta, String nomeTitularConta){
+    public static void rodarContaCorrente(int numeroConta, String nomeTitularConta){
         out.println("CONTA CORRENTE");
         ContaBancaria contaC = new ContaCorrente(numeroConta, nomeTitularConta);
         rodarFluxoServicos(contaC);
-        return null;
+        //return null;
     }
 
-    public static Runnable rodarContaPoupanca(int numeroConta, String nomeTitularConta){
+    public static void rodarContaPoupanca(int numeroConta, String nomeTitularConta){
         out.println("CONTA POUPANÇA");
         ContaBancaria contaP = new ContaPoupanca(numeroConta,
                 nomeTitularConta);
         rodarFluxoServicos(contaP);
-        return null;
+        //return null;
     }
 
-    public static Runnable rodarContaSalario(int numeroConta, String nomeTitularConta){
+    public static void rodarContaSalario(int numeroConta, String nomeTitularConta){
         out.println("CONTA SALÁRIO");
         ContaBancaria contaS = new ContaSalario(numeroConta,
                 nomeTitularConta);
         rodarFluxoServicos(contaS);
-        return null;
+        //return null;
     }
 
     public static void rodarFluxoServicos(ContaBancaria conta){
