@@ -11,8 +11,7 @@ no curso de Java.
 Haverá um **esforço** em aplicar os princípios de:
 * Clean Code do livro Código Limpo
 * Single-responsibility principle (Princípio de responsabilidade única)
-* Testes
-* TDD
+* Adição de técnicas conforme o avanço no aprendizado
 ---
 ## Prévia da execução do sistema
 ![](demoSemana1.gif)
