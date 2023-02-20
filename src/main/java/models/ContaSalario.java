@@ -23,9 +23,10 @@ public class ContaSalario implements ContaBancaria{
     public void sacar(double valorSaque) {
         if(this.saldo == 0 || this.saldo < valorSaque){
             out.println("SALDO INSUFICIÊNTE PARA EXECUTAR O SAQUE.");
+            out.println();
         }else{
             this.saldo -= valorSaque;
-            out.printf("%.2f R$ SACADO COM SUCESSO.\n", valorSaque);
+            out.printf("R$ %.2f SACADO COM SUCESSO.\n", valorSaque);
             out.println();
         }
     }

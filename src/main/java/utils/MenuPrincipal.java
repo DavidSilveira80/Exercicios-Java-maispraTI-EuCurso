@@ -19,7 +19,7 @@ public class MenuPrincipal {
         chamarExercicios(chamadas, option);
     }
     //-----------------------------------------Métodos auxiliares-------------------------------------------------------
-    // :: faz referência ao método adicionado ao Map
+    // :: expressão lambda que faz referência ao método que está em outra Classe
     public static void adicionarChamadasExercicios(Map<Integer, Runnable> chamadas){
         chamadas.put(1, Exercicio1::chamadaExercicio1);  chamadas.put(7, Exercicio7::chamadaExercicio7);
         chamadas.put(2, Exercicio2::chamadaExercicio2);  chamadas.put(8, Exercicio8::chamadaExercicio8);

@@ -100,7 +100,7 @@ public class Menus {
         out.println("        1 - PARA DEPOSITAR                 ");
         out.println("        2 - PARA SACAR                     ");
         out.println("        3 - PARA MOSTRAR EXTRATO           ");
-        out.println("        4 - PARA SAIR                      ");
+        out.println("        4 - PARA VOLTAR                    ");
     }
 
     public static void mostrarMenuExercicioPoo10Excecao1(){

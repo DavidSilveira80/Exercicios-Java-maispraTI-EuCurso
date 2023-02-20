@@ -19,6 +19,7 @@ public  class ContaCorrente implements ContaBancaria {
 
     @Override
     public void depositar(double valorDeposito) {
+
         if(valorDeposito <= this.tetoParaAcrescimoDeposito){
             this.saldo += valorDeposito + (valorDeposito * this.acrescimoDeDeposito);
             out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDeposito);
@@ -28,7 +29,6 @@ public  class ContaCorrente implements ContaBancaria {
             out.printf("%.2f R$ DEPOSITADO COM SUCESSO.\n", valorDeposito);
             out.println();
         }
-
     }
 
     @Override
@@ -42,7 +42,6 @@ public  class ContaCorrente implements ContaBancaria {
             out.println();
         }
     }
-
 
     @Override
     public String verExtrato() {
