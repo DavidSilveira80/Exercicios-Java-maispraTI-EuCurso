@@ -25,57 +25,19 @@ public class Exercicio7 {
             } while (option != 1 && option != 2 && option != 3 && option != 4);
             switch (option) {
                 case 1:
-                    out.println("FAZER PEDIDO.");
 
-                    int loop = 0;
-                    int option2;
-                    int codigoItem;
+                    fazerPedido(pedido);
 
-                    while (loop == 0) {
-                        do {
-
-                            out.println();
-                            mostrarMenuLanchesValor();
-                            out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
-                            codigoItem = entradaInteira();
-
-                        }while (codigoItem != 1 && codigoItem != 2 && codigoItem != 3 && codigoItem != 4
-                                && codigoItem != 5 && codigoItem != 6 && codigoItem != 7
-                                && codigoItem != 8 && codigoItem != 9 && codigoItem != 10);
-                        String item;
-                        double vItem;
-
-                        item = selecionarPedidoItem(codigoItem, pedido);
-                        vItem = selecionarValorItemPedido(item, pedido);
-
-                        pedido.adicionarItens(item, vItem);
-                        out.print("CONTINUAR COM O PEDIDO?(1 - SIM/ 2 - NÃO): ");
-                        option2 = entradaInteira();
-                        if (option2 == 2) {
-                            loop = 1;
-                        }
-                    }
-                    pedido.setStatus(Status.ANOTANDO_PEDIDO);
-                    pedido.mostrarPedido(pedido);
                     break;
                 case 2:
 
-                    out.println("ALTERAR STATUS DO PEDIDO.");
-                    if (pedido.itens.isEmpty()) {
-                        out.println("NÃO HÁ PEDIDOS FEITOS.");
-                    } else {
-                        pedido.alterarStatusPedido();
-                        pedido.mostrarPedido(pedido);
-                    }
+                    alterarStatus(pedido);
+
                     break;
                 case 3:
 
-                    out.println("GERAR NOTA DO PEDIDO");
-                    if (pedido.itens.isEmpty()) {
-                        out.println("NÃO HÁ PEDIDOS FEITOS.");
-                    } else {
-                        pedido.mostrarPedido(pedido);
-                    }
+                    gerarNota(pedido);
+
                     break;
                 case 4:
 
@@ -86,9 +48,56 @@ public class Exercicio7 {
         }
     }
 //----------------------------------Métodos auxiliares--------------------------------------------------
-    public static void chamadaExercicio7(){
-        out.println("\nEXERCÍCIO POO 4\n");
-        executarExercicio7Poo4Pedido();
+    public static void fazerPedido(Pedidos pedido){
+        int loop = 0;
+        int option2;
+        int codigoItem;
+
+        while (loop == 0) {
+            do {
+
+                out.println();
+                mostrarMenuLanchesValor();
+                out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");
+                codigoItem = entradaInteira();
+
+            }while (codigoItem != 1 && codigoItem != 2 && codigoItem != 3 && codigoItem != 4
+                    && codigoItem != 5 && codigoItem != 6 && codigoItem != 7
+                    && codigoItem != 8 && codigoItem != 9 && codigoItem != 10);
+            String item;
+            double vItem;
+
+            item = selecionarPedidoItem(codigoItem, pedido);
+            vItem = selecionarValorItemPedido(item, pedido);
+
+            pedido.adicionarItens(item, vItem);
+            out.print("CONTINUAR COM O PEDIDO?(1 - SIM/ 2 - NÃO): ");
+            option2 = entradaInteira();
+            if (option2 == 2) {
+                loop = 1;
+            }
+        }
+        pedido.setStatus(Status.ANOTANDO_PEDIDO);
+        pedido.mostrarPedido(pedido);
+    }
+
+    public static void alterarStatus(Pedidos pedido){
+        out.println("ALTERAR STATUS DO PEDIDO.");
+        if (pedido.itens.isEmpty()) {
+            out.println("NÃO HÁ PEDIDOS FEITOS.");
+        } else {
+            pedido.alterarStatusPedido();
+            pedido.mostrarPedido(pedido);
+        }
+    }
+
+    public static void gerarNota(Pedidos pedido){
+        out.println("GERAR NOTA DO PEDIDO");
+        if (pedido.itens.isEmpty()) {
+            out.println("NÃO HÁ PEDIDOS FEITOS.");
+        } else {
+            pedido.mostrarPedido(pedido);
+        }
     }
 
     public static String selecionarPedidoItem(int codigo, Pedidos pedido){
@@ -117,5 +126,10 @@ public class Exercicio7 {
 
         pedido.setValorDoItem(valor);
         return valor;
+    }
+
+    public static void chamadaExercicio7(){
+        out.println("\nEXERCÍCIO POO 4\n");
+        executarExercicio7Poo4Pedido();
     }
 }
