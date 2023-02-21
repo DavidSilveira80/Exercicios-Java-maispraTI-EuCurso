@@ -1,22 +1,22 @@
 package models;
 
 public class Itens {
-    private String iten;
-    private double valorDoIten;
+    private String item;
+    private double valorDoItem;
 
-    public String getIten() {
-        return iten;
+    public String getItem() {
+        return item;
     }
 
-    public void setIten(String iten) {
-        this.iten = iten;
+    public void setItem(String item) {
+        this.item = item;
     }
 
-    public double getValorDoIten() {
-        return valorDoIten;
+    public double getValorDoItem() {
+        return valorDoItem;
     }
 
-    public void setValorDoIten(double valor) {
-        this.valorDoIten = valor;
+    public void setValorDoItem(double valor) {
+        this.valorDoItem = valor;
     }
 }

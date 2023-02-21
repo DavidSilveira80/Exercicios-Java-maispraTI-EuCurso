@@ -238,4 +238,13 @@ public class Menus {
                 """);
         out.println();
     }
+
+    public static void mostrarEnunciadoExercicio7(){
+        out.println("""
+                Crie uma classe Pedido com os campos Itens[10], status e valorTotal.
+                Essa classe deverá ter os métodos para adicionar itens, que receberá como
+                parâmetro o item e o valor.
+                Também deverá ter um método para alterar o status do pedido.
+                """);
+    }
 }

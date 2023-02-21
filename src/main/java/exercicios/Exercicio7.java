@@ -2,19 +2,16 @@ package exercicios;
 
 import models.Pedidos;
 import utils.Status;
+import java.util.HashMap;
+import java.util.Map;
+
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
-import static utils.Menus.mostrarMenuLanchesValor;
-import static utils.Menus.mostrarMenuPrincipalLancheria;
+import static utils.Menus.*;
 
 public class Exercicio7 {
     public static void executarExercicio7Poo4Pedido() {
-        out.println("""
-                Crie uma classe Pedido com os campos Itens[10], status e valorTotal.
-                Essa classe deverá ter os métodos para adicionar itens, que receberá como
-                parâmetro o item e o valor.
-                Também deverá ter um método para alterar o status do pedido.
-                """);
+        mostrarEnunciadoExercicio7();
 
         Pedidos pedido = new Pedidos();
         out.println();
@@ -95,78 +92,30 @@ public class Exercicio7 {
     }
 
     public static String selecionarPedidoItem(int codigo, Pedidos pedido){
-        String item = "";
-        switch(codigo){
-            case 1:
-                item = "X SALADA";
-                break;
-            case 2:
-                item = "X FRANGO";
-                break;
-            case 3:
-                item = "X CALABRESA";
-                break;
-            case 4:
-                item = "X CORAÇÃO";
-                break;
-            case 5:
-                item = "X BACON";
-                break;
-            case 6:
-                item = "CACHORRO-QUENTE SIMPLES";
-                break;
-            case 7:
-                item = "CACHORRO-QUENTE DUPLO";
-                break;
-            case 8:
-                item = "PIZZAS TODOS OS SABORES";
-                break;
-            case 9:
-                item = "REFRIGERANTE";
-                break;
-            case 10:
-                item = "CERVEJA";
-                break;
-        }
-        pedido.setIten(item);
-        return item;
+        Map<Integer, String> itens = new HashMap<>();
+        itens.put(1, "X SALADA");       itens.put(6, "CACHORRO-QUENTE SIMPLES");
+        itens.put(2, "X FRANGO");       itens.put(7, "CACHORRO-QUENTE DUPLO");
+        itens.put(3, "X CALABRESA");    itens.put(8, "PIZZAS TODOS OS SABORES");
+        itens.put(4, "X CORAÇÃO");      itens.put(9, "REFRIGERANTE");
+        itens.put(5, "X BACON");        itens.put(10, "CERVEJA");
+
+        String itemPedido = itens.get(codigo);
+
+        pedido.setItem(itemPedido);
+        return itemPedido;
     }
 
     public static double selecionarValorItemPedido(String item, Pedidos pedido){
-        double valorItem = 0.0;
-        switch(item){
-            case "X SALADA":
-                valorItem = 18.00;
-                break;
-            case "X FRANGO":
-                valorItem = 19.00 ;
-                break;
-            case "X CALABRESA":
-                valorItem = 20.00;
-                break;
-            case  "X CORAÇÃO":
-                valorItem = 20.00;
-                break;
-            case "X BACON":
-                valorItem = 22.00;
-                break;
-            case "CACHORRO-QUENTE SIMPLES":
-                valorItem = 15.00;
-                break;
-            case "CACHORRO-QUENTE DUPLO":
-                valorItem = 17.00;
-                break;
-            case "PIZZAS TODOS OS SABORES":
-                valorItem = 30.00;
-                break;
-            case "REFRIGERANTE":
-                valorItem = 12.00;
-                break;
-            case "CERVEJA":
-                valorItem = 18.00;
-                break;
-        }
-        pedido.setValorDoIten(valorItem);
-        return valorItem;
+        Map<String, Double> valores = new HashMap<>();
+        valores.put("X SALADA", 18.00);    valores.put("CACHORRO-QUENTE SIMPLES", 15.00);
+        valores.put("X FRANGO", 19.00);    valores.put("CACHORRO-QUENTE DUPLO", 17.00);
+        valores.put("X CALABRESA", 20.00); valores.put("PIZZAS TODOS OS SABORES", 30.00);
+        valores.put("X CORAÇÃO", 20.00);   valores.put("REFRIGERANTE", 12.00);
+        valores.put("X BACON", 22.00);     valores.put("CERVEJA", 18.00);
+
+        double valor = valores.get(item);
+
+        pedido.setValorDoItem(valor);
+        return valor;
     }
 }

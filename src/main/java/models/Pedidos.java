@@ -3,15 +3,12 @@ package models;
 import utils.Entradas;
 import utils.Menus;
 import utils.Status;
-import models.Itens;
-
 import static java.lang.System.out;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Pedidos extends Itens {
-    private Itens iten;
+    private Itens item;
     private Status status;
     public List<Itens> itens = new ArrayList<>();
 
@@ -19,11 +16,11 @@ public class Pedidos extends Itens {
         this.status = status;
     }
 
-    public void adicionarItens(String itenExterno, double valorIten){
-        iten = new Itens();
-        iten.setIten(itenExterno);
-        iten.setValorDoIten(valorIten);
-        itens.add(iten);
+    public void adicionarItens(String itenExterno, double valorItem){
+        item = new Itens();
+        item.setItem(itenExterno);
+        item.setValorDoItem(valorItem);
+        itens.add(item);
 
     }
 
@@ -32,9 +29,9 @@ public class Pedidos extends Itens {
        out.printf("STATUS PEDIDO --> %s\n", this.status);
        out.println("ITENS                              VALOR: ");
        for(Itens item : pedido.itens){
-          String itenFormatado = String.format("%s----------------------------->", item.getIten());
-          String valorFormatado = String.format("R$ %.2f", item.getValorDoIten());
-          out.printf("%s   %s\n",itenFormatado, valorFormatado);
+          String itemFormatado = String.format("%s----------------------------->", item.getItem());
+          String valorFormatado = String.format("R$ %.2f", item.getValorDoItem());
+          out.printf("%s   %s\n",itemFormatado, valorFormatado);
        }
        out.printf("TOTAL: R$ %.2f\n",calcularValorTotal());
        out.println();
@@ -44,15 +41,13 @@ public class Pedidos extends Itens {
     public double calcularValorTotal(){
         double total = 0.0;
         for(Itens item : this.itens ){
-            total += item.getValorDoIten();
+            total += item.getValorDoItem();
         }
         return total;
     }
 
     public void alterarStatusPedido(){
-
         int option;
-
         do{
             Menus.mostrarMenuStatus();
             out.print("INFORME SUA ESCOLHA: ");
