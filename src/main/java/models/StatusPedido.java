@@ -1,6 +1,6 @@
-package utils;
+package models;
 
-public enum Status {
+public enum StatusPedido {
     ANOTANDO_PEDIDO,
     EM_ANDAMENTO,
     ENTREGUE,

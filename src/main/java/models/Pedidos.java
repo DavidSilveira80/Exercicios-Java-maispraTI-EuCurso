@@ -2,17 +2,17 @@ package models;
 
 import utils.Entradas;
 import utils.Menus;
-import utils.Status;
+
 import static java.lang.System.out;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Pedidos extends Itens {
     private Itens item;
-    private Status status;
+    private StatusPedido status;
     public List<Itens> itens = new ArrayList<>();
 
-    public void setStatus(Status status) {
+    public void setStatus(StatusPedido status) {
         this.status = status;
     }
 
@@ -56,19 +56,19 @@ public class Pedidos extends Itens {
         switch(option){
             case 1:
                 out.println("ALTERANDO PARA ANOTANDO_PEDIDO");
-                this.status = Status.ANOTANDO_PEDIDO;
+                this.status = StatusPedido.ANOTANDO_PEDIDO;
                 break;
             case 2:
                 out.println("ALTERANDO PARA EM_ANDAMENTO");
-                this.status = Status.EM_ANDAMENTO;
+                this.status = StatusPedido.EM_ANDAMENTO;
                 break;
             case 3:
                 out.println("ALTERANDO PARA ENTREGUE");
-                this.status = Status.ENTREGUE;
+                this.status = StatusPedido.ENTREGUE;
                 break;
             case 4:
                 out.println("ALTERANDO PARA PAGO");
-                this.status = Status.PAGO;
+                this.status = StatusPedido.PAGO;
                 break;
         }
     }

@@ -34,6 +34,19 @@ public class Exercicio2 {
         return String.format("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", macas, valor * macas);
    }
 
+   public static double calcularValorTotalMacas(int quantidadeDeMacas){
+        double valorApartirDeUmaDuzia = 0.25;
+        double valorAbaixoDeUmaDuzia = 0.30;
+
+        double total = 0.0;
+        if (quantidadeDeMacas >= 12){
+            total = quantidadeDeMacas * valorApartirDeUmaDuzia;
+        }else if(quantidadeDeMacas < 12){
+            total = quantidadeDeMacas * valorAbaixoDeUmaDuzia;
+        }
+        return total;
+   }
+
    public static void chamadaExercicio2(){
        out.println("\nEXERCÍCIO 2\n");
        executarExercicio2();

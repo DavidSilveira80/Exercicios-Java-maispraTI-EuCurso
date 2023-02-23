@@ -1,7 +1,7 @@
 package exercicios;
 
 import models.Pedidos;
-import utils.Status;
+import models.StatusPedido;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -77,7 +77,7 @@ public class Exercicio7 {
                 loop = 1;
             }
         }
-        pedido.setStatus(Status.ANOTANDO_PEDIDO);
+        pedido.setStatus(StatusPedido.ANOTANDO_PEDIDO);
         pedido.mostrarPedido(pedido);
     }
 
