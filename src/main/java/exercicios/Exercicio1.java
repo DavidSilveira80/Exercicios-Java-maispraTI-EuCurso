@@ -22,6 +22,7 @@ public class Exercicio1 {
             option = informarFluxo1E2();
         }while(option != 2);
     }
+
     //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------
 
     public static List<Integer> informarNumeros(List<Integer> numerosInformados){

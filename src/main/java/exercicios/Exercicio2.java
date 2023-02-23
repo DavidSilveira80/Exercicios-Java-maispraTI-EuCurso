@@ -26,8 +26,10 @@ public class Exercicio2 {
             option = informarFluxo1E2();
         }while(option != 2);
     }
-//------------------------------------MÉTODOS AUXILIARES---------------------------------------------------
-   public static String rValorDasMacas(int macas, double valor) {
+
+    //------------------------------------MÉTODOS AUXILIARES---------------------------------------------------
+
+    public static String rValorDasMacas(int macas, double valor) {
 
         return String.format("O VALOR TOTAL DAS %d MAÇÃS É DE R$ %.2f\n", macas, valor * macas);
    }

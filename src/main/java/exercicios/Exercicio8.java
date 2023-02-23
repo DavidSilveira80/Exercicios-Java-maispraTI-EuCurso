@@ -53,7 +53,9 @@ public class Exercicio8 {
             } while (option != 5);
         }
     }
-//------------------------------------Métodos auxiliares---------------------------------------------------
+
+    //------------------------------------Métodos auxiliares---------------------------------------------------
+
     public static void chamadaExercicio8(){
         out.println("\nEXERCÍCIO POO 5\n");
         executarExercicio8Poo5Calculadora();

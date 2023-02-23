@@ -55,7 +55,9 @@ public class Exercicio14 {
             option = entradaInteira();
         }while(option != 2);
     }
+
     //-----------------------------------Métodos auxiliares----------------------------------------------
+
     public static void chamadaExercicio14(){
         out.println("\nEXERCÍCIO POO 11\n");
         executarExercicio14Poo11Excecao2();

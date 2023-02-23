@@ -35,7 +35,9 @@ public class Exercicio3 {
             option = informarFluxo1E2();
         }while(option != 2);
     }
-//-------------------------------MÉTODOS AUXILIARES---------------------------------
+
+    //-------------------------------MÉTODOS AUXILIARES---------------------------------
+
     public static String retornaSalarioELiquido(double salarioBruto, double percentual){
         double salarioLiquido = salarioBruto - (salarioBruto * percentual);
 

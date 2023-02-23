@@ -50,7 +50,9 @@ public class Exercicio15 {
             parada = entradaInteira();
         } while (parada != 1);
     }
+
     //-----------------------------Método auxiliares----------------------------------------------------
+
     public static void chamadaExercicio15(){
         out.println("\nEXERCÍCIO STREAMS 1\n");
         executarExercicio15StreamsFrutas();
