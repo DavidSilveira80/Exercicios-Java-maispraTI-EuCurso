@@ -20,18 +20,18 @@ public class Exercicio17 {
         int loopExecucao = 0;
         while(loopExecucao == 0){
             mostrarEnunciadoExercicio17();
-            int option;
+            int servico;
             do{
                 mostrarMenuPrincipalExercicio17();
-                out.print("INFORME SUA ESCOLHA: "); option = entradaInteira();
-                if(option == 3){
+                out.print("INFORME SUA ESCOLHA: "); servico = entradaInteira();
+                if(servico == 3){
                     out.println("SAIR.FINALIZANDO\n");
                     loopExecucao = 1;
                 }else{
-                    chamaMetodos(metodos, option);
+                    chamaMetodos(metodos, servico);
                 }
 
-            }while(option != 3);
+            }while(servico != 3);
         }
     }
 //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------

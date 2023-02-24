@@ -2,10 +2,9 @@ package exercicios;
 
 import models.Jogador;
 
-import java.util.Scanner;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
+import static utils.Entradas.entradaString;
 import static utils.Menus.mostrarEnunciadoExercicio4;
 import static utils.Menus.mostrarMenuJogador;
 
@@ -17,14 +16,14 @@ public class Exercicio4 {
 
         int loop = 0;
         while (loop == 0) {
-            int option;
+            int acao;
             do {
                 out.println("\nJOGADOR: " + jogador.getNomeJogador());
                 mostrarMenuJogador();
                 out.print("INFORME SUA ESCOLHA: ");
-                option = entradaInteira();
+                acao = entradaInteira();
 
-                switch (option) {
+                switch (acao) {
                     case 1:
                         adicionarGols(jogador);
                         break;
@@ -50,14 +49,13 @@ public class Exercicio4 {
                     default:
                         out.println("\nOPÇÃO INVÁLIDA\n");
                 }
-            } while (option != 6);
+            } while (acao != 6);
         }
     }
 //---------------------------------MÉTODOS AUXILIARES------------------------------------
     public static Jogador instanciarJogador(){
-        Scanner entrada = new Scanner(System.in);
         out.print("\nINFORME O NOME DO JOGADOR: ");
-        String nome = entrada.nextLine();
+        String nome = entradaString();
         Jogador jogador = new Jogador(nome);
         return jogador;
     }

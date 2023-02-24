@@ -3,7 +3,6 @@ package exercicios;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Entradas.informarFluxo1E2;
@@ -11,7 +10,7 @@ import static utils.Menus.mostrarEnunciadoExercicio1;
 
 public class Exercicio1 {
     public static void executarExercicio1() {
-        int option;
+        int acao;
         do{
             mostrarEnunciadoExercicio1();
 
@@ -19,8 +18,8 @@ public class Exercicio1 {
 
             out.println(maiorEMenorNumeros(informarNumeros(numerosInformados)));
 
-            option = informarFluxo1E2();
-        }while(option != 2);
+            acao = informarFluxo1E2();
+        }while(acao != 2);
     }
 
     //-----------------------------------MÉTODOS AUXILIARES--------------------------------------------

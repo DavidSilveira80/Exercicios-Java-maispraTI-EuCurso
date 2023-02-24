@@ -1,10 +1,7 @@
 package exercicios;
 
 import models.Aluno;
-
 import java.util.Locale;
-import java.util.Scanner;
-
 import static java.lang.System.out;
 import static utils.Entradas.*;
 import static utils.Menus.mostrarEnunciadoExercicio5;
@@ -14,12 +11,10 @@ public class Exercicio5 {
         Locale.setDefault(Locale.US);
 
         mostrarEnunciadoExercicio5();
-        int option;
+        int acao;
         do{
             Aluno aluno = new Aluno();
-
-            informarNomeAluno(aluno);
-            informarNotasDoAluno(aluno);
+            informarDadosDoAluno(aluno);
             aluno.somarNotas();
 
             if (aluno.getNotasSomadas() <= 100) {
@@ -28,25 +23,28 @@ public class Exercicio5 {
             } else {
                 out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
             }
-            option = informarFluxo1E2();
-        }while(option != 2);
+            acao = informarFluxo1E2();
+        }while(acao != 2);
     }
 //--------------------------------MÉTODOS AUXILIARES-----------------------------------
 
-    public static void informarNomeAluno(Aluno aluno){
-        Scanner entrada = new Scanner(System.in);
+    public static void informarDadosDoAluno(Aluno aluno){
         out.print("\nINFORME O NOME DO ALUNO: ");
-        aluno.setNomeAluno(entrada.nextLine());
-    }
-    public static void informarNotasDoAluno(Aluno aluno){
+        String nome = entradaString();
         out.print("INFORME O PRIMEIRA NOTA DO ALUNO: ");
-        aluno.setNota1(entradaDouble());
-
+        double nota1 = entradaDouble();
         out.print("INFORME A SEGUNDA NOTA DO ALUNO: ");
-        aluno.setNota2(entradaDouble());
-
+        double nota2 = entradaDouble();
         out.print("INFORME A TERCEIRA NOTA DO ALUNO: ");
-        aluno.setNota3(entradaDouble());
+        double nota3 = entradaDouble();
+        cadastrarAluno(aluno, nome, nota1, nota2, nota3);
+    }
+
+    public static void cadastrarAluno(Aluno aluno, String nome, double nota1, double nota2, double nota3){
+        aluno.setNomeAluno(nome);
+        aluno.setNota1(nota1);
+        aluno.setNota2(nota2);
+        aluno.setNota3(nota3);
     }
 
     public static void executaMetodosDoAluno(Aluno aluno){

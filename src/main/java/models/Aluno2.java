@@ -3,29 +3,45 @@ package models;
 import java.util.Locale;
 
 public class Aluno2 {
-    private String nomeAluno;
+    private String nome;
     private int matricula;
     private double nota1, nota2, nota3;
     private double somatorio = 0;
 
-    public String getNomeAluno() {
-        return nomeAluno;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getMatricula() {
+        return matricula;
     }
 
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 
+    public double getNota1() {
+        return nota1;
+    }
+
     public void setNota1(double nota1) {
         this.nota1 = nota1;
     }
 
+    public double getNota2() {
+        return nota2;
+    }
+
     public void setNota2(double nota2) {
         this.nota2 = nota2;
+    }
+
+    public double getNota3() {
+        return nota3;
     }
 
     public void setNota3(double nota3) {
@@ -49,6 +65,6 @@ public class Aluno2 {
                 NOTA 1: %.1f
                 NOTA 2: %.1f
                 NOTA 3: %.1f
-                """, this.nomeAluno, this.matricula, this.nota1, this.nota2, this.nota3);
+                """, this.nome, this.matricula, this.nota1, this.nota2, this.nota3);
     }
 }

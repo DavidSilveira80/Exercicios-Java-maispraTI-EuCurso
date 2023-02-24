@@ -4,7 +4,6 @@ import models.Pedidos;
 import models.StatusPedido;
 import java.util.HashMap;
 import java.util.Map;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Menus.*;
@@ -15,15 +14,15 @@ public class Exercicio7 {
 
         Pedidos pedido = new Pedidos();
         out.println();
-        int option;
+        int opcaoMenu;
         int loopPrincipal = 0;
         while (loopPrincipal == 0) {
             do {
                 mostrarMenuPrincipalLancheria();
                 out.print("INFORME SUA ESCOLHA: ");
-                option = entradaInteira();
-            } while (option != 1 && option != 2 && option != 3 && option != 4);
-            switch (option) {
+                opcaoMenu = entradaInteira();
+            } while (opcaoMenu != 1 && opcaoMenu != 2 && opcaoMenu != 3 && opcaoMenu != 4);
+            switch (opcaoMenu) {
                 case 1:
 
                     fazerPedido(pedido);

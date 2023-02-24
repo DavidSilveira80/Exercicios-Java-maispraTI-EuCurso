@@ -11,7 +11,7 @@ public class Exercicio3 {
         Locale.setDefault(Locale.US);
         mostrarEnunciadoExercicio3();
 
-        int option;
+        int acao;
         do{
             out.print("INFORME O SEU SALÁRIO BRUTO: R$ ");
             double salarioBruto = entradaDouble();
@@ -32,8 +32,8 @@ public class Exercicio3 {
                 out.println(retornaSalarioELiquido(salarioBruto, 0.15));
 
             }
-            option = informarFluxo1E2();
-        }while(option != 2);
+            acao = informarFluxo1E2();
+        }while(acao != 2);
     }
 
     //-------------------------------MÉTODOS AUXILIARES---------------------------------
