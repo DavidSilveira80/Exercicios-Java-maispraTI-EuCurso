@@ -9,7 +9,7 @@ public class Exercicio2 {
     public static void executarExercicio2() {
 
         mostrarEnunciadoExercicio2();
-        int option;
+        int acao;
         do{
             out.print("INFORME A QUANTIDADE DE MAÇÃS QUE VOCÊ QUER COMPRAR: ");
             int quantidadeMacas = entradaInteira();
@@ -17,8 +17,8 @@ public class Exercicio2 {
             out.println(rValorDasMacas(quantidadeMacas,
                     calcularValorTotalMacas(quantidadeMacas)));
 
-            option = informarFluxo1E2();
-        }while(option != 2);
+            acao = informarFluxo1E2();
+        }while(acao != 2);
     }
 
     //------------------------------------MÉTODOS AUXILIARES---------------------------------------------------

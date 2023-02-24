@@ -19,14 +19,14 @@ public class Exercicio8 {
                 """);
         out.println();
         int loop = 0;
-        int option;
+        int operacao;
         while (loop == 0) {
             do {
                 mostrarmenuCalculadora();
                 out.print("INFORME SUA ESCOLHA: ");
-                option = entradaInteira();
+                operacao = entradaInteira();
 
-                switch (option) {
+                switch (operacao) {
                     case 1:
                         out.println("ADIÇÃO");
                         Calculadora.somar();
@@ -50,7 +50,7 @@ public class Exercicio8 {
                     default:
                         out.println("OPÇÃO INVÁLIDA");
                 }
-            } while (option != 5);
+            } while (operacao != 5);
         }
     }
 
