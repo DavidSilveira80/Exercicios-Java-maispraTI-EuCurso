@@ -2,7 +2,6 @@ package exercicios;
 
 import models.Animal;
 import models.Tigre;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Menus.mostrarEnunciadoExercicioAnimal;

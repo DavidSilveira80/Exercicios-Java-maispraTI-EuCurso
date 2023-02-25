@@ -35,29 +35,34 @@ public class Exercicio10 {
         out.println();
 
         out.print("INFORME O NOME DO PROFISSIONAL: ");
-        String nomeProfissional = entradaString();
+        String nome = entradaString();
 
         out.print("INFORME O TOTAL DE HORAS TRABALHADAS: ");
-        int totalHorasProfissional = entradaInteira();
+        int horasTrabalhadas = entradaInteira();
 
         out.print("INFORME O VALOR POR HORA TRABALHADA: ");
-        double valorHorasProfissional = entradaDouble();
+        double valorHora = entradaDouble();
 
+        montarProfissional(nome, horasTrabalhadas, valorHora, tipoProfissional);
+    }
+
+    public static void montarProfissional(String nome, int horasTrabalhadas, double valorHora,
+                                          int tipoProfissional){
         if (tipoProfissional == 1) {
             out.println("PROGRAMADOR");
-            Programador programador = new Programador(nomeProfissional, totalHorasProfissional,
-                    valorHorasProfissional);
+            Programador programador = new Programador(nome, horasTrabalhadas,
+                    valorHora);
             out.println(programador.mostrarRelatorio());
 
         } else if (tipoProfissional == 2) {
             out.println("CONTADOR");
-            Contador contador = new Contador(nomeProfissional, totalHorasProfissional, valorHorasProfissional);
+            Contador contador = new Contador(nome, horasTrabalhadas, valorHora);
             out.println(contador.mostrarRelatorio());
 
         } else if (tipoProfissional == 3) {
             out.println("ADMINISTRADOR");
-            Administrador administrador = new Administrador(nomeProfissional, totalHorasProfissional,
-                    valorHorasProfissional);
+            Administrador administrador = new Administrador(nome, horasTrabalhadas,
+                    valorHora);
             out.println(administrador.mostrarRelatorio());
         }
     }
