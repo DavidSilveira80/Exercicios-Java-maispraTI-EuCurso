@@ -247,4 +247,15 @@ public class Menus {
                 Também deverá ter um método para alterar o status do pedido.
                 """);
     }
+
+    public static void mostrarEnunciadoExercicio9(){
+        out.println("""
+                Crie uma classe do tipo funcionário com os campos:
+                nome
+                função
+                setor
+                Crie uma lista com 10 objetos do tipo funcionário dentro dela.
+                Depois exiba no console todas as informações de cada objeto.
+                """);
+    }
 }
