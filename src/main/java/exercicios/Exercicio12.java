@@ -4,10 +4,8 @@ import models.ContaBancaria;
 import models.ContaCorrente;
 import models.ContaPoupanca;
 import models.ContaSalario;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import static java.lang.System.out;
 import static utils.Entradas.*;
 import static utils.Menus.*;
@@ -45,7 +43,6 @@ public class Exercicio12 {
         String nomeTitularConta = entradaString();
 
         executarConta(numeroConta, nomeTitularConta, tipoConta);
-
     }
 
     public static void executarConta(int numeroConta, String nomeTitularConta, int tipoConta){
@@ -116,19 +113,16 @@ public class Exercicio12 {
        out.print("INFORME O VALOR DO DEPOSITO: R$ ");
        double valorDeposito = entradaDouble();
        contaBancaria.depositar(valorDeposito);
-
    }
 
     public static void sacar(ContaBancaria contaBancaria){
         out.print("INFORME O VALOR DO SAQUE: R$ ");
         double valorSaque = entradaDouble();
         contaBancaria.sacar(valorSaque);
-
     }
 
     public static void verExtrato(ContaBancaria contaBancaria){
         out.print(contaBancaria.verExtrato());
-
     }
 
     public static void chamadaExercicio12(){

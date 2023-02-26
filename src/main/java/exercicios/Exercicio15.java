@@ -10,7 +10,6 @@ import static utils.Entradas.entradaInteira;
 
 public class Exercicio15 {
     public static void executarExercicio15StreamsFrutas() {
-
         out.println("""
                 Nós temos uma lista com várias frutas: 
                 Maçã, Laranja, Limão, Pêra, Abacate,

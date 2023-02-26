@@ -54,7 +54,6 @@ public class Exercicio7 {
 
         while (loop == 0) {
             do {
-
                 out.println();
                 mostrarMenuLanchesValor();
                 out.print("INFORME O CÓDIGO DO ITEM(1 - 10): ");

@@ -19,7 +19,6 @@ public class Exercicio5 {
 
             if (aluno.getNotasSomadas() <= 100) {
                 executaMetodosDoAluno(aluno);
-
             } else {
                 out.println("A SOMA TOTAL DAS NOTAS ULTRAPASSA 100 PONTOS.");
             }
