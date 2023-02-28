@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import static java.lang.System.out;
 import static utils.Entradas.*;
-import static utils.Menus.mostrarEnunciadoExercicio16;
+import static utils.Enunciados.mostrarEnunciadoExercicio16;
 
 public class Exercicio16 {
     public static void executarExercicio16Map1Aluno(){

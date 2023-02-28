@@ -1,7 +1,6 @@
 package exercicios;
 
 import models.Calculadora;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Menus.mostrarmenuCalculadora;

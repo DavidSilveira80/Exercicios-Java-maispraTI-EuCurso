@@ -1,10 +1,9 @@
 package exercicios;
 
 import java.util.Locale;
-
 import static java.lang.System.out;
 import static utils.Entradas.*;
-import static utils.Menus.mostrarEnunciadoExercicio3;
+import static utils.Enunciados.mostrarEnunciadoExercicio3;
 
 public class Exercicio3 {
     public static void executarExercicio3() {

@@ -3,10 +3,9 @@ package exercicios;
 import models.Administrador;
 import models.Contador;
 import models.Programador;
-
 import static java.lang.System.out;
 import static utils.Entradas.*;
-import static utils.Menus.mostrarEnunciadoExercicioFuncionario2;
+import static utils.Enunciados.mostrarEnunciadoExercicioFuncionario2;
 import static utils.Menus.mostrarMenuExercicioFuncionario2;
 
 public class Exercicio10 {

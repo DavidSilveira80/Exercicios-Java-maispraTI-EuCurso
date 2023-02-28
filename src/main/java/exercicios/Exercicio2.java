@@ -3,7 +3,7 @@ package exercicios;
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Entradas.informarFluxo1E2;
-import static utils.Menus.mostrarEnunciadoExercicio2;
+import static utils.Enunciados.mostrarEnunciadoExercicio2;
 
 public class Exercicio2 {
     public static void executarExercicio2() {

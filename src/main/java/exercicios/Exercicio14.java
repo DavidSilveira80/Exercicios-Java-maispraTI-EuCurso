@@ -1,7 +1,6 @@
 package exercicios;
 
 import java.util.List;
-
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 

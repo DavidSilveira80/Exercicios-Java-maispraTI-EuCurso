@@ -4,7 +4,7 @@ import models.Aluno2;
 import static java.lang.System.out;
 import static utils.Entradas.*;
 import static utils.Entradas.entradaInteira;
-import static utils.Menus.mostrarEnunciadoExercicio6;
+import static utils.Enunciados.mostrarEnunciadoExercicio6;
 
 public class Exercicio6 {
     public static void executarExercicio6Poo3Aluno2() {

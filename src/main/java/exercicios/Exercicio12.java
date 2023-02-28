@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import static java.lang.System.out;
 import static utils.Entradas.*;
+import static utils.Enunciados.mostrarEnunciadoExercicio12;
 import static utils.Menus.*;
 
 public class Exercicio12 {

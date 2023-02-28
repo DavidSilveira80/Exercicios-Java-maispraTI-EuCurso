@@ -6,7 +6,7 @@ import java.util.List;
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
 import static utils.Entradas.entradaString;
-import static utils.Menus.mostrarEnunciadoExercicio9;
+import static utils.Enunciados.mostrarEnunciadoExercicio9;
 
 public class Exercicio9 {
     public static void executarExercicio9Poo6Funcionario1() {

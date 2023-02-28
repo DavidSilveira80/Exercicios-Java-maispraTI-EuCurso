@@ -1,11 +1,10 @@
 package exercicios;
 
 import models.Compra;
-
 import java.util.*;
 import static java.lang.System.out;
 import static utils.Entradas.*;
-import static utils.Menus.mostrarEnunciadoExercicio17;
+import static utils.Enunciados.mostrarEnunciadoExercicio17;
 import static utils.Menus.mostrarMenuPrincipalExercicio17;
 
 public class Exercicio17 {

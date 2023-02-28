@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
+import static utils.Enunciados.mostrarEnunciadoExercicio7;
 import static utils.Menus.*;
 
 public class Exercicio7 {

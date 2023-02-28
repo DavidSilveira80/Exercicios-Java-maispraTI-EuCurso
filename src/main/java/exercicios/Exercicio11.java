@@ -4,7 +4,7 @@ import models.Animal;
 import models.Tigre;
 import static java.lang.System.out;
 import static utils.Entradas.entradaInteira;
-import static utils.Menus.mostrarEnunciadoExercicioAnimal;
+import static utils.Enunciados.mostrarEnunciadoExercicioAnimal;
 
 public class Exercicio11 {
     public static void executarExercicio11Poo8Animal() {
